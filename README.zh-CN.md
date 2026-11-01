@@ -63,17 +63,136 @@
 
 ## 其余 9 组对比
 
-| # | 案例（考验点） | 社区参考图（© 原作者 · 模型未验证） | Qwen-Image 2.1 |
-|---|---|---|---|
-| 1 | [城市生命系统图谱](https://aiwork4me.github.io/open-image-showdown/#/case/case-1) —— 12 组中英双语面板 | <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-1.md#case-1"><img src="gallery/reference/images/case-1.jpg" width="130" alt="参考图 case 1"></a> | <a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-1"><img src="gallery/qwen/case-1.png" width="130" alt="Qwen —— 城市生命系统图谱"></a> |
-| 13 | [数学试卷实拍](https://aiwork4me.github.io/open-image-showdown/#/case/case-13) —— 照相写实 + 中文密排 · 参考图竖版 vs 方形画布 | <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-1.md#case-13"><img src="gallery/reference/images/case-13.jpg" width="130" alt="参考图 case 13"></a> | <a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-13"><img src="gallery/qwen/case-13.png" width="130" alt="Qwen —— 数学试卷实拍"></a> |
-| 14 | [番茄炒蛋食谱信息图](https://aiwork4me.github.io/open-image-showdown/#/case/case-14) —— 中文书法 + 版式 | <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-1.md#case-14"><img src="gallery/reference/images/case-14.jpg" width="130" alt="参考图 case 14"></a> | <a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-14"><img src="gallery/qwen/case-14.png" width="130" alt="Qwen —— 番茄炒蛋食谱信息图"></a> |
-| 344 | [NOIR 街头服饰海报](https://aiwork4me.github.io/open-image-showdown/#/case/case-344) —— 品牌质感 · 参考图横版 vs 方形画布 | <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-344"><img src="gallery/reference/images/case-344.jpg" width="130" alt="参考图 case 344"></a> | <a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-344"><img src="gallery/qwen/case-344.png" width="130" alt="Qwen —— NOIR 街头服饰海报"></a> |
-| 414 | [室内晨间写实摄影](https://aiwork4me.github.io/open-image-showdown/#/case/case-414) —— 自然光写实 | <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-414"><img src="gallery/reference/images/case-414.jpg" width="130" alt="参考图 case 414"></a> | <a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-414"><img src="gallery/qwen/case-414.png" width="130" alt="Qwen —— 室内晨间写实摄影"></a> |
-| 434 | [东京街头胶片人像](https://aiwork4me.github.io/open-image-showdown/#/case/case-434) —— 胶片颗粒 + 签名 | <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-434"><img src="gallery/reference/images/case-434.jpg" width="130" alt="参考图 case 434"></a> | <a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-434"><img src="gallery/qwen/case-434.png" width="130" alt="Qwen —— 东京街头胶片人像"></a> |
-| 390 | [羊毛毡微缩世界](https://aiwork4me.github.io/open-image-showdown/#/case/case-390) —— 手工材质小世界 · **参考图=伊斯坦布尔，冻结提示词=日本 —— 见[精确配对土耳其变体](https://aiwork4me.github.io/open-image-showdown/#/case/case-390t)** | <a href="https://x.com/volkan_iras/status/2051403524966141980"><img src="gallery/reference/images/case-390.jpg" width="130" alt="参考图 case 390 —— 伊斯坦布尔"></a> | <a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-390"><img src="gallery/qwen/case-390.png" width="130" alt="Qwen —— 羊毛毡微缩世界·日本"></a> <a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-390t"><img src="gallery/qwen/case-390t.png" width="130" alt="Qwen —— 羊毛毡微缩世界·土耳其（配对变体）"></a> |
-| 396 | [龙类复古百科海报](https://aiwork4me.github.io/open-image-showdown/#/case/case-396) —— 复古信息密度 · 参考图 9:16 vs A4 画布 | <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-396"><img src="gallery/reference/images/case-396.jpg" width="130" alt="参考图 case 396"></a> | <a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-396"><img src="gallery/qwen/case-396.png" width="130" alt="Qwen —— 龙类复古百科海报"></a> |
-| 474 | [四城极简旅行海报](https://aiwork4me.github.io/open-image-showdown/#/case/case-474) —— 扁平设计 + 城名排版 | <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-474"><img src="gallery/reference/images/case-474.jpg" width="130" alt="参考图 case 474"></a> | <a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-474"><img src="gallery/qwen/case-474.png" width="130" alt="Qwen —— 四城极简旅行海报"></a> |
+与上方完全相同的排版 —— **左：社区参考图（模型未验证），右：真实 Qwen 运行**，逐案一块。
+
+### #1 · 城市生命系统图谱 —— 12 组中英双语面板
+
+<table><tr>
+<th width="50%">🟡 社区参考图<br><sub>模型未验证 · 已获作者授权镜像</sub></th>
+<th width="50%">🟣 Qwen-Image 2.1 · 本机 ROCm 运行</th>
+</tr><tr>
+<td align="center"><a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-1.md#case-1"><img src="gallery/reference/images/case-1.jpg" width="240" alt="社区参考图 —— 城市生命系统图谱（模型未验证）"></a><br><sub>941×1672 · © 小红书 insight_express · <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-1.md#case-1">案例库 ↗</a></sub></td>
+<td align="center"><a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-1"><img src="gallery/qwen/case-1.png" width="240" alt="Qwen-Image 2.1 —— 城市生命系统图谱"></a><br><sub>720×1280 · <a href="gallery/qwen/case-1.run.json">运行记录</a></sub></td>
+</tr></table>
+
+<sub>提示词与上游**逐字节一致**。[提示词](cases/case-1/prompt.txt) · [案例页](https://aiwork4me.github.io/open-image-showdown/#/case/case-1)</sub>
+
+---
+
+### #13 · 数学试卷实拍 —— 照相写实 + 中文密排
+
+<table><tr>
+<th width="50%">🟡 社区参考图<br><sub>模型未验证 · 已获作者授权镜像</sub></th>
+<th width="50%">🟣 Qwen-Image 2.1 · 本机 ROCm 运行</th>
+</tr><tr>
+<td align="center"><a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-1.md#case-13"><img src="gallery/reference/images/case-13.jpg" width="230" alt="社区参考图 —— 数学试卷实拍（模型未验证）"></a><br><sub>647×1149 · © 小红书 94156710894 · <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-1.md#case-13">案例库 ↗</a></sub></td>
+<td align="center"><a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-13"><img src="gallery/qwen/case-13.png" width="260" alt="Qwen-Image 2.1 —— 数学试卷实拍"></a><br><sub>1024×1024 · <a href="gallery/qwen/case-13.run.json">运行记录</a></sub></td>
+</tr></table>
+
+<sub>画布不同（参考图竖版，Qwen 方形）——各自完整展示，绝不裁切。提示词**逐字节一致**。[提示词](cases/case-13/prompt.txt) · [案例页](https://aiwork4me.github.io/open-image-showdown/#/case/case-13)</sub>
+
+---
+
+### #14 · 番茄炒蛋食谱信息图 —— 中文书法 + 版式
+
+<table><tr>
+<th width="50%">🟡 社区参考图<br><sub>模型未验证 · 已获作者授权镜像</sub></th>
+<th width="50%">🟣 Qwen-Image 2.1 · 本机 ROCm 运行</th>
+</tr><tr>
+<td align="center"><a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-1.md#case-14"><img src="gallery/reference/images/case-14.jpg" width="240" alt="社区参考图 —— 番茄炒蛋食谱信息图（模型未验证）"></a><br><sub>941×1672 · © 小红书 Roy_Jay · <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-1.md#case-14">案例库 ↗</a></sub></td>
+<td align="center"><a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-14"><img src="gallery/qwen/case-14.png" width="240" alt="Qwen-Image 2.1 —— 番茄炒蛋食谱信息图"></a><br><sub>720×1280 · <a href="gallery/qwen/case-14.run.json">运行记录</a></sub></td>
+</tr></table>
+
+<sub>提示词与上游**逐字节一致**。[提示词](cases/case-14/prompt.txt) · [案例页](https://aiwork4me.github.io/open-image-showdown/#/case/case-14)</sub>
+
+---
+
+### #344 · NOIR 街头服饰海报 —— 品牌质感
+
+<table><tr>
+<th width="50%">🟡 社区参考图<br><sub>模型未验证 · 已获作者授权镜像</sub></th>
+<th width="50%">🟣 Qwen-Image 2.1 · 本机 ROCm 运行</th>
+</tr><tr>
+<td align="center"><a href="https://x.com/Daniel_adsss/status/2048542581638701446"><img src="gallery/reference/images/case-344.jpg" width="400" alt="社区参考图 —— NOIR 街头服饰海报（模型未验证）"></a><br><sub>1376×768 · © @Daniel_adsss · <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-344">案例库 ↗</a></sub></td>
+<td align="center"><a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-344"><img src="gallery/qwen/case-344.png" width="260" alt="Qwen-Image 2.1 —— NOIR 街头服饰海报"></a><br><sub>1024×1024 · <a href="gallery/qwen/case-344.run.json">运行记录</a></sub></td>
+</tr></table>
+
+<sub>画布不同（参考图横版，Qwen 方形）——各自完整展示，绝不裁切。提示词**逐字节一致**。[提示词](cases/case-344/prompt.txt) · [案例页](https://aiwork4me.github.io/open-image-showdown/#/case/case-344)</sub>
+
+---
+
+### #414 · 室内晨间写实摄影 —— 自然光写实
+
+<table><tr>
+<th width="50%">🟡 社区参考图<br><sub>模型未验证 · 已获作者授权镜像</sub></th>
+<th width="50%">🟣 Qwen-Image 2.1 · 本机 ROCm 运行</th>
+</tr><tr>
+<td align="center"><a href="https://x.com/ToroJushiAi/status/2053078195482632421"><img src="gallery/reference/images/case-414.jpg" width="240" alt="社区参考图 —— 室内晨间写实摄影（模型未验证）"></a><br><sub>1024×1536 · © @ToroJushiAi · <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-414">案例库 ↗</a></sub></td>
+<td align="center"><a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-414"><img src="gallery/qwen/case-414.png" width="240" alt="Qwen-Image 2.1 —— 室内晨间写实摄影"></a><br><sub>832×1248 · <a href="gallery/qwen/case-414.run.json">运行记录</a></sub></td>
+</tr></table>
+
+<sub>提示词与上游**逐字节一致**。[提示词](cases/case-414/prompt.txt) · [案例页](https://aiwork4me.github.io/open-image-showdown/#/case/case-414)</sub>
+
+---
+
+### #434 · 东京街头胶片人像 —— 胶片颗粒 + 签名
+
+<table><tr>
+<th width="50%">🟡 社区参考图<br><sub>模型未验证 · 已获作者授权镜像</sub></th>
+<th width="50%">🟣 Qwen-Image 2.1 · 本机 ROCm 运行</th>
+</tr><tr>
+<td align="center"><a href="https://x.com/BubbleBrain/status/2055491616392052887"><img src="gallery/reference/images/case-434.jpg" width="240" alt="社区参考图 —— 东京街头胶片人像（模型未验证）"></a><br><sub>941×1672 · © @BubbleBrain · <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-434">案例库 ↗</a></sub></td>
+<td align="center"><a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-434"><img src="gallery/qwen/case-434.png" width="240" alt="Qwen-Image 2.1 —— 东京街头胶片人像"></a><br><sub>720×1280 · <a href="gallery/qwen/case-434.run.json">运行记录</a></sub></td>
+</tr></table>
+
+<sub>提示词与上游**逐字节一致**。[提示词](cases/case-434/prompt.txt) · [案例页](https://aiwork4me.github.io/open-image-showdown/#/case/case-434)</sub>
+
+---
+
+### #390 · 羊毛毡微缩世界 —— 手工材质小世界
+
+<table><tr>
+<th width="50%">🟡 社区参考图<br><sub>模型未验证 · 已获作者授权镜像</sub></th>
+<th width="50%">🟣 Qwen-Image 2.1 · 本机 ROCm 运行</th>
+</tr><tr>
+<td align="center"><a href="https://x.com/volkan_iras/status/2051403524966141980"><img src="gallery/reference/images/case-390.jpg" width="240" alt="社区参考图 —— 羊毛毡微缩世界：伊斯坦布尔（模型未验证）"></a><br><sub>1024×1536 · © @volkan_iras · <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-390">案例库 ↗</a></sub></td>
+<td align="center">
+<a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-390"><img src="gallery/qwen/case-390.png" width="190" alt="Qwen-Image 2.1 —— 羊毛毡微缩世界·日本"></a> <a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-390t"><img src="gallery/qwen/case-390t.png" width="190" alt="Qwen-Image 2.1 —— 羊毛毡微缩世界·土耳其变体"></a><br>
+<sub>日本 · 冻结提示词（<a href="gallery/qwen/case-390.run.json">运行</a>）—— 土耳其 · 精确配对变体（<a href="gallery/qwen/case-390t.run.json">运行</a>）</sub>
+</td>
+</tr></table>
+
+<sub>参考图描绘的是**伊斯坦布尔**；冻结提示词把上游模板 `[INSERT COUNTRY NAME]` 填成了日本，因此该配对为*派生* —— **土耳其变体才是精确提示词配对**（国家参数由参考图内容推断，非作者确认）。[提示词](cases/case-390/prompt.txt) · [变体提示词](cases/case-390t/prompt.txt) · [案例页](https://aiwork4me.github.io/open-image-showdown/#/case/case-390)</sub>
+
+---
+
+### #396 · 龙类复古百科海报 —— 复古信息密度
+
+<table><tr>
+<th width="50%">🟡 社区参考图<br><sub>模型未验证 · 已获作者授权镜像</sub></th>
+<th width="50%">🟣 Qwen-Image 2.1 · 本机 ROCm 运行</th>
+</tr><tr>
+<td align="center"><a href="https://x.com/sha_zdiii/status/2052237839119835280"><img src="gallery/reference/images/case-396.jpg" width="235" alt="社区参考图 —— 龙类复古百科海报（模型未验证）"></a><br><sub>768×1376 · © @sha_zdiii · <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-396">案例库 ↗</a></sub></td>
+<td align="center"><a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-396"><img src="gallery/qwen/case-396.png" width="235" alt="Qwen-Image 2.1 —— 龙类复古百科海报"></a><br><sub>768×1088 · <a href="gallery/qwen/case-396.run.json">运行记录</a></sub></td>
+</tr></table>
+
+<sub>画布不同（参考图 9:16，Qwen 近 A4）——各自完整展示，绝不裁切。提示词**逐字节一致**。[提示词](cases/case-396/prompt.txt) · [案例页](https://aiwork4me.github.io/open-image-showdown/#/case/case-396)</sub>
+
+---
+
+### #474 · 四城极简旅行海报 —— 扁平设计 + 城名排版
+
+<table><tr>
+<th width="50%">🟡 社区参考图<br><sub>模型未验证 · 已获作者授权镜像</sub></th>
+<th width="50%">🟣 Qwen-Image 2.1 · 本机 ROCm 运行</th>
+</tr><tr>
+<td align="center"><a href="https://x.com/Taaruk_/status/2059188921096085888"><img src="gallery/reference/images/case-474.jpg" width="400" alt="社区参考图 —— 四城极简旅行海报（模型未验证）"></a><br><sub>1080×608 · © @Taaruk_ · <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-474">案例库 ↗</a></sub></td>
+<td align="center"><a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-474"><img src="gallery/qwen/case-474.png" width="400" alt="Qwen-Image 2.1 —— 四城极简旅行海报"></a><br><sub>1280×720 · <a href="gallery/qwen/case-474.run.json">运行记录</a></sub></td>
+</tr></table>
+
+<sub>提示词与上游**逐字节一致**。[提示词](cases/case-474/prompt.txt) · [案例页](https://aiwork4me.github.io/open-image-showdown/#/case/case-474)</sub>
+
+---
 
 每张 Qwen 图都是真实、未修图的运行结果：bf16 权重、40 步、seed 42，完整运行记录见
 [gallery/qwen](gallery/qwen) · 结果文档：[docs/QWEN_12_CASE_RESULTS.md](docs/QWEN_12_CASE_RESULTS.md)。

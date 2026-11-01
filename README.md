@@ -65,17 +65,136 @@ contributor submits one with run evidence. [Rights audit →](docs/REFERENCE_IMA
 
 ## The other 9 comparisons
 
-| # | Case (what it stresses) | Community reference (© author, model unverified) | Qwen-Image 2.1 |
-|---|---|---|---|
-| 1 | [Urban Metabolism Atlas](https://aiwork4me.github.io/open-image-showdown/#/case/case-1) — 12 bilingual panels | <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-1.md#case-1"><img src="gallery/reference/images/case-1.jpg" width="130" alt="reference case 1"></a> | <a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-1"><img src="gallery/qwen/case-1.png" width="130" alt="Qwen — Urban Metabolism Atlas"></a> |
-| 13 | [Math Exam Paper Photo](https://aiwork4me.github.io/open-image-showdown/#/case/case-13) — dense CJK text, photoreal · ref portrait vs square canvas | <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-1.md#case-13"><img src="gallery/reference/images/case-13.jpg" width="130" alt="reference case 13"></a> | <a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-13"><img src="gallery/qwen/case-13.png" width="130" alt="Qwen — Math Exam Paper Photo"></a> |
-| 14 | [Tomato & Egg Recipe Infographic](https://aiwork4me.github.io/open-image-showdown/#/case/case-14) — Chinese calligraphy + layout | <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-1.md#case-14"><img src="gallery/reference/images/case-14.jpg" width="130" alt="reference case 14"></a> | <a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-14"><img src="gallery/qwen/case-14.png" width="130" alt="Qwen — Tomato & Egg Recipe Infographic"></a> |
-| 344 | [NOIR Streetwear Campaign](https://aiwork4me.github.io/open-image-showdown/#/case/case-344) — brand realism · ref landscape vs square canvas | <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-344"><img src="gallery/reference/images/case-344.jpg" width="130" alt="reference case 344"></a> | <a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-344"><img src="gallery/qwen/case-344.png" width="130" alt="Qwen — NOIR Streetwear Campaign"></a> |
-| 414 | [Morning Bedroom Photography](https://aiwork4me.github.io/open-image-showdown/#/case/case-414) — candid photorealism | <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-414"><img src="gallery/reference/images/case-414.jpg" width="130" alt="reference case 414"></a> | <a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-414"><img src="gallery/qwen/case-414.png" width="130" alt="Qwen — Morning Bedroom Photography"></a> |
-| 434 | [Tokyo Street Film Portrait](https://aiwork4me.github.io/open-image-showdown/#/case/case-434) — film grain + signature | <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-434"><img src="gallery/reference/images/case-434.jpg" width="130" alt="reference case 434"></a> | <a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-434"><img src="gallery/qwen/case-434.png" width="130" alt="Qwen — Tokyo Street Film Portrait"></a> |
-| 390 | [Felt Diorama](https://aiwork4me.github.io/open-image-showdown/#/case/case-390) — handmade texture world · **ref = Istanbul; frozen prompt = Japan — see the [exact-prompt Turkey variant](https://aiwork4me.github.io/open-image-showdown/#/case/case-390t)** | <a href="https://x.com/volkan_iras/status/2051403524966141980"><img src="gallery/reference/images/case-390.jpg" width="130" alt="reference case 390 — Istanbul"></a> | <a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-390"><img src="gallery/qwen/case-390.png" width="130" alt="Qwen — Felt Diorama Japan"></a> <a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-390t"><img src="gallery/qwen/case-390t.png" width="130" alt="Qwen — Felt Diorama Turkey variant"></a> |
-| 396 | [Vintage Dragon Encyclopedia](https://aiwork4me.github.io/open-image-showdown/#/case/case-396) — retro infographic density · ref 9:16 vs A4 canvas | <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-396"><img src="gallery/reference/images/case-396.jpg" width="130" alt="reference case 396"></a> | <a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-396"><img src="gallery/qwen/case-396.png" width="130" alt="Qwen — Vintage Dragon Encyclopedia"></a> |
-| 474 | [Minimal Travel Poster Series](https://aiwork4me.github.io/open-image-showdown/#/case/case-474) — flat design + destination type | <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-474"><img src="gallery/reference/images/case-474.jpg" width="130" alt="reference case 474"></a> | <a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-474"><img src="gallery/qwen/case-474.png" width="130" alt="Qwen — Minimal Travel Poster Series"></a> |
+Same layout as above — **left: community reference (model unverified), right: real Qwen run** — one block per case.
+
+### #1 · Urban Metabolism Atlas — 12 bilingual panels
+
+<table><tr>
+<th width="50%">🟡 Community Gallery Reference<br><sub>model unverified · mirrored with author permission</sub></th>
+<th width="50%">🟣 Qwen-Image 2.1 · local ROCm run</th>
+</tr><tr>
+<td align="center"><a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-1.md#case-1"><img src="gallery/reference/images/case-1.jpg" width="240" alt="Community reference — Urban Metabolism Atlas (model unverified)"></a><br><sub>941×1672 · © 小红书 insight_express · <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-1.md#case-1">library ↗</a></sub></td>
+<td align="center"><a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-1"><img src="gallery/qwen/case-1.png" width="240" alt="Qwen-Image 2.1 — Urban Metabolism Atlas"></a><br><sub>720×1280 · <a href="gallery/qwen/case-1.run.json">run record</a></sub></td>
+</tr></table>
+
+<sub>Prompt: **byte-exact** vs upstream. [prompt](cases/case-1/prompt.txt) · [case page](https://aiwork4me.github.io/open-image-showdown/#/case/case-1)</sub>
+
+---
+
+### #13 · Math Exam Paper Photo — dense CJK text, photoreal
+
+<table><tr>
+<th width="50%">🟡 Community Gallery Reference<br><sub>model unverified · mirrored with author permission</sub></th>
+<th width="50%">🟣 Qwen-Image 2.1 · local ROCm run</th>
+</tr><tr>
+<td align="center"><a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-1.md#case-13"><img src="gallery/reference/images/case-13.jpg" width="230" alt="Community reference — Math Exam Paper Photo (model unverified)"></a><br><sub>647×1149 · © 小红书 94156710894 · <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-1.md#case-13">library ↗</a></sub></td>
+<td align="center"><a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-13"><img src="gallery/qwen/case-13.png" width="260" alt="Qwen-Image 2.1 — Math Exam Paper Photo"></a><br><sub>1024×1024 · <a href="gallery/qwen/case-13.run.json">run record</a></sub></td>
+</tr></table>
+
+<sub>Different canvases (reference portrait, Qwen square) — shown complete, never cropped. Prompt: **byte-exact**. [prompt](cases/case-13/prompt.txt) · [case page](https://aiwork4me.github.io/open-image-showdown/#/case/case-13)</sub>
+
+---
+
+### #14 · Tomato & Egg Recipe Infographic — Chinese calligraphy + layout
+
+<table><tr>
+<th width="50%">🟡 Community Gallery Reference<br><sub>model unverified · mirrored with author permission</sub></th>
+<th width="50%">🟣 Qwen-Image 2.1 · local ROCm run</th>
+</tr><tr>
+<td align="center"><a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-1.md#case-14"><img src="gallery/reference/images/case-14.jpg" width="240" alt="Community reference — Tomato & Egg Recipe Infographic (model unverified)"></a><br><sub>941×1672 · © 小红书 Roy_Jay · <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-1.md#case-14">library ↗</a></sub></td>
+<td align="center"><a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-14"><img src="gallery/qwen/case-14.png" width="240" alt="Qwen-Image 2.1 — Tomato & Egg Recipe Infographic"></a><br><sub>720×1280 · <a href="gallery/qwen/case-14.run.json">run record</a></sub></td>
+</tr></table>
+
+<sub>Prompt: **byte-exact** vs upstream. [prompt](cases/case-14/prompt.txt) · [case page](https://aiwork4me.github.io/open-image-showdown/#/case/case-14)</sub>
+
+---
+
+### #344 · NOIR Streetwear Campaign — brand realism
+
+<table><tr>
+<th width="50%">🟡 Community Gallery Reference<br><sub>model unverified · mirrored with author permission</sub></th>
+<th width="50%">🟣 Qwen-Image 2.1 · local ROCm run</th>
+</tr><tr>
+<td align="center"><a href="https://x.com/Daniel_adsss/status/2048542581638701446"><img src="gallery/reference/images/case-344.jpg" width="400" alt="Community reference — NOIR Streetwear Campaign (model unverified)"></a><br><sub>1376×768 · © @Daniel_adsss · <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-344">library ↗</a></sub></td>
+<td align="center"><a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-344"><img src="gallery/qwen/case-344.png" width="260" alt="Qwen-Image 2.1 — NOIR Streetwear Campaign"></a><br><sub>1024×1024 · <a href="gallery/qwen/case-344.run.json">run record</a></sub></td>
+</tr></table>
+
+<sub>Different canvases (reference landscape, Qwen square) — shown complete, never cropped. Prompt: **byte-exact**. [prompt](cases/case-344/prompt.txt) · [case page](https://aiwork4me.github.io/open-image-showdown/#/case/case-344)</sub>
+
+---
+
+### #414 · Morning Bedroom Photography — candid photorealism
+
+<table><tr>
+<th width="50%">🟡 Community Gallery Reference<br><sub>model unverified · mirrored with author permission</sub></th>
+<th width="50%">🟣 Qwen-Image 2.1 · local ROCm run</th>
+</tr><tr>
+<td align="center"><a href="https://x.com/ToroJushiAi/status/2053078195482632421"><img src="gallery/reference/images/case-414.jpg" width="240" alt="Community reference — Morning Bedroom Photography (model unverified)"></a><br><sub>1024×1536 · © @ToroJushiAi · <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-414">library ↗</a></sub></td>
+<td align="center"><a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-414"><img src="gallery/qwen/case-414.png" width="240" alt="Qwen-Image 2.1 — Morning Bedroom Photography"></a><br><sub>832×1248 · <a href="gallery/qwen/case-414.run.json">run record</a></sub></td>
+</tr></table>
+
+<sub>Prompt: **byte-exact** vs upstream. [prompt](cases/case-414/prompt.txt) · [case page](https://aiwork4me.github.io/open-image-showdown/#/case/case-414)</sub>
+
+---
+
+### #434 · Tokyo Street Film Portrait — film grain + signature
+
+<table><tr>
+<th width="50%">🟡 Community Gallery Reference<br><sub>model unverified · mirrored with author permission</sub></th>
+<th width="50%">🟣 Qwen-Image 2.1 · local ROCm run</th>
+</tr><tr>
+<td align="center"><a href="https://x.com/BubbleBrain/status/2055491616392052887"><img src="gallery/reference/images/case-434.jpg" width="240" alt="Community reference — Tokyo Street Film Portrait (model unverified)"></a><br><sub>941×1672 · © @BubbleBrain · <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-434">library ↗</a></sub></td>
+<td align="center"><a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-434"><img src="gallery/qwen/case-434.png" width="240" alt="Qwen-Image 2.1 — Tokyo Street Film Portrait"></a><br><sub>720×1280 · <a href="gallery/qwen/case-434.run.json">run record</a></sub></td>
+</tr></table>
+
+<sub>Prompt: **byte-exact** vs upstream. [prompt](cases/case-434/prompt.txt) · [case page](https://aiwork4me.github.io/open-image-showdown/#/case/case-434)</sub>
+
+---
+
+### #390 · Felt Diorama — handmade miniature world
+
+<table><tr>
+<th width="50%">🟡 Community Gallery Reference<br><sub>model unverified · mirrored with author permission</sub></th>
+<th width="50%">🟣 Qwen-Image 2.1 · local ROCm run</th>
+</tr><tr>
+<td align="center"><a href="https://x.com/volkan_iras/status/2051403524966141980"><img src="gallery/reference/images/case-390.jpg" width="240" alt="Community reference — Felt Diorama: Istanbul (model unverified)"></a><br><sub>1024×1536 · © @volkan_iras · <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-390">library ↗</a></sub></td>
+<td align="center">
+<a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-390"><img src="gallery/qwen/case-390.png" width="190" alt="Qwen-Image 2.1 — Felt Diorama Japan"></a> <a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-390t"><img src="gallery/qwen/case-390t.png" width="190" alt="Qwen-Image 2.1 — Felt Diorama Turkey variant"></a><br>
+<sub>Japan · frozen prompt (<a href="gallery/qwen/case-390.run.json">run</a>) — Turkey · exact-prompt variant (<a href="gallery/qwen/case-390t.run.json">run</a>)</sub>
+</td>
+</tr></table>
+
+<sub>The reference depicts **Istanbul**; the frozen prompt resolved the upstream `[INSERT COUNTRY NAME]` template to Japan, so that pairing is *derived* — the **Turkey variant is the exact-prompt pairing** (country inferred from the reference, not author-confirmed). [prompt](cases/case-390/prompt.txt) · [variant prompt](cases/case-390t/prompt.txt) · [case page](https://aiwork4me.github.io/open-image-showdown/#/case/case-390)</sub>
+
+---
+
+### #396 · Vintage Dragon Encyclopedia — retro infographic density
+
+<table><tr>
+<th width="50%">🟡 Community Gallery Reference<br><sub>model unverified · mirrored with author permission</sub></th>
+<th width="50%">🟣 Qwen-Image 2.1 · local ROCm run</th>
+</tr><tr>
+<td align="center"><a href="https://x.com/sha_zdiii/status/2052237839119835280"><img src="gallery/reference/images/case-396.jpg" width="235" alt="Community reference — Vintage Dragon Encyclopedia (model unverified)"></a><br><sub>768×1376 · © @sha_zdiii · <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-396">library ↗</a></sub></td>
+<td align="center"><a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-396"><img src="gallery/qwen/case-396.png" width="235" alt="Qwen-Image 2.1 — Vintage Dragon Encyclopedia"></a><br><sub>768×1088 · <a href="gallery/qwen/case-396.run.json">run record</a></sub></td>
+</tr></table>
+
+<sub>Different canvases (reference 9:16, Qwen A4-ish) — shown complete, never cropped. Prompt: **byte-exact**. [prompt](cases/case-396/prompt.txt) · [case page](https://aiwork4me.github.io/open-image-showdown/#/case/case-396)</sub>
+
+---
+
+### #474 · Minimal Travel Poster Series — flat design + destination type
+
+<table><tr>
+<th width="50%">🟡 Community Gallery Reference<br><sub>model unverified · mirrored with author permission</sub></th>
+<th width="50%">🟣 Qwen-Image 2.1 · local ROCm run</th>
+</tr><tr>
+<td align="center"><a href="https://x.com/Taaruk_/status/2059188921096085888"><img src="gallery/reference/images/case-474.jpg" width="400" alt="Community reference — Minimal Travel Poster Series (model unverified)"></a><br><sub>1080×608 · © @Taaruk_ · <a href="https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-474">library ↗</a></sub></td>
+<td align="center"><a href="https://aiwork4me.github.io/open-image-showdown/#/case/case-474"><img src="gallery/qwen/case-474.png" width="400" alt="Qwen-Image 2.1 — Minimal Travel Poster Series"></a><br><sub>1280×720 · <a href="gallery/qwen/case-474.run.json">run record</a></sub></td>
+</tr></table>
+
+<sub>Prompt: **byte-exact** vs upstream. [prompt](cases/case-474/prompt.txt) · [case page](https://aiwork4me.github.io/open-image-showdown/#/case/case-474)</sub>
+
+---
 
 Every Qwen image is a real, unedited run: bf16 weights, 40 steps, seed 42, full run records in
 [gallery/qwen](gallery/qwen) · results doc: [docs/QWEN_12_CASE_RESULTS.md](docs/QWEN_12_CASE_RESULTS.md).
