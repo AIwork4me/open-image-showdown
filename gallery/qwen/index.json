@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "session": "p2-quality-12case",
+  "base_url": "http://127.0.0.1:8188",
+  "mode": "quality (bf16, 40 steps)",
+  "generated_utc": "2026-11-01T12:58:09+00:00",
+  "environment": {
+    "engine_repo": "AIwork4me/qwen-image-rocm",
+    "engine_commit": "cbd9e74eb121c281d97cf25130cd8de6ffa1be04",
+    "comfyui_commit": "b5a432157de6b8884f81104cd02926adf4d597e4",
+    "weights_repo": "Comfy-Org/Qwen-Image-2.1",
+    "weights_revision": "aacf31a6d48e707f352ecba714cee0680da3479b",
+    "engine_manifest": "p4-qs-quality-1024x1024",
+    "gpu_devices": [
+      {
+        "name": "cuda:0 AMD Radeon RX 7900 XTX : native",
+        "type": "cuda",
+        "index": 0,
+        "vram_total": 25753026560,
+        "vram_free": 25586434048,
+        "torch_vram_total": 2097152,
+        "torch_vram_free": 2097152
+      }
+    ],
+    "comfyui_version": "0.43.0",
+    "os": "win32",
+    "client_python": "3.12.16"
+  },
+  "runs": [
+    {
+      "case_id": "case-1",
+      "status": "ok",
+      "total_s": 55.478,
+      "image_sha256": "302815bcbf90801d354238b2976b7b889ec1ba25712126dcf7514fb4863fcb79",
+      "width": 720,
+      "height": 1280
+    },
+    {
+      "case_id": "case-13",
+      "status": "ok",
+      "total_s": 56.718,
+      "image_sha256": "f30f22a231e0b4b94480fa90d67cf0b4631452e70bc21d820c050ec8cebdd844",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "case_id": "case-14",
+      "status": "ok",
+      "total_s": 50.448,
+      "image_sha256": "09ab26a0784deb48c10880eaddf0981dda07c229ac7f959be80af034e72f71f2",
+      "width": 720,
+      "height": 1280
+    },
+    {
+      "case_id": "case-344",
+      "status": "ok",
+      "total_s": 55.364,
+      "image_sha256": "e1fe81b9def9a52fc0ced04679833aac6348f4ea23e9772ec2e4ee0647e5b6da",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "case_id": "case-443",
+      "status": "ok",
+      "total_s": 57.313,
+      "image_sha256": "4081af22c2ad53f6799c6fd1deaac8a94f7c683af3f9573ec0d1cd327eb0fdc6",
+      "width": 832,
+      "height": 1248
+    },
+    {
+      "case_id": "case-510",
+      "status": "ok",
+      "total_s": 57.258,
+      "image_sha256": "db9144e8cc828f5bf93f5eea8d1e0c24c31de1f75d734f2e5b066cf49841f0d4",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "case_id": "case-414",
+      "status": "ok",
+      "total_s": 53.276,
+      "image_sha256": "db9dbcde3c226adcf5f728a702702b544d195aaaf37f7fe76fa64d51c57a343b",
+      "width": 832,
+      "height": 1248
+    },
+    {
+      "case_id": "case-434",
+      "status": "ok",
+      "total_s": 52.529,
+      "image_sha256": "7b82b4bcfaa315f2e03b7d6f02b7fa33db77d22a12e979309c0a502e3525c8b1",
+      "width": 720,
+      "height": 1280
+    },
+    {
+      "case_id": "case-419",
+      "status": "ok",
+      "total_s": 52.463,
+      "image_sha256": "ba97688334781f89cb38d41298a703b4066c17849a458307ac6ae33d695d6951",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "case_id": "case-390",
+      "status": "ok",
+      "total_s": 57.452,
+      "image_sha256": "5c9e0c4eb9eed2fa04021c0cee1d605bf98c4bd7afb02536c47028b191e0825a",
+      "width": 832,
+      "height": 1248
+    },
+    {
+      "case_id": "case-396",
+      "status": "ok",
+      "total_s": 46.411,
+      "image_sha256": "6c9d7e15fa9714850feba9b60427c7a02227c5542ef99290b7d306b444c0a71a",
+      "width": 768,
+      "height": 1088
+    },
+    {
+      "case_id": "case-474",
+      "status": "ok",
+      "total_s": 51.347,
+      "image_sha256": "ab78464ba34e038a9caffaf9de5a150da3ced02fecab264c467fe4e81cb47bb8",
+      "width": 1280,
+      "height": 720
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "case_id": "case-443",
+  "session": "p2-quality-12case",
+  "started_utc": "2026-11-01T12:50:57+00:00",
+  "prompt": {
+    "sha256": "c9bd4f23e9fad229382532b1cab65104943328360db035ed57a75a01e468b40b",
+    "chars": 666,
+    "verified_against_manifest": true
+  },
+  "params": {
+    "mode": "quality",
+    "steps": 40,
+    "cfg": 1.0,
+    "sampler": "euler",
+    "scheduler": "simple",
+    "seed": 42,
+    "negative_prompt": "",
+    "width": 832,
+    "height": 1248,
+    "unet": "qwen_image_2.1_bf16.safetensors",
+    "clip": "qwen3vl_8b_bf16.safetensors",
+    "vae": "qwen_image_2.1_vae_bf16.safetensors",
+    "weight_dtype": "default",
+    "tiled_vae": false,
+    "server_flags": [
+      "--disable-smart-memory"
+    ]
+  },
+  "canvas_note": "first non-square canvas in this GPU stack's recorded history — probe semantics, same ~<=1.05 MP budget as validated 1024^2",
+  "environment": {
+    "engine_repo": "AIwork4me/qwen-image-rocm",
+    "engine_commit": "cbd9e74eb121c281d97cf25130cd8de6ffa1be04",
+    "comfyui_commit": "b5a432157de6b8884f81104cd02926adf4d597e4",
+    "weights_repo": "Comfy-Org/Qwen-Image-2.1",
+    "weights_revision": "aacf31a6d48e707f352ecba714cee0680da3479b",
+    "engine_manifest": "p4-qs-quality-1024x1024",
+    "gpu_devices": [
+      {
+        "name": "cuda:0 AMD Radeon RX 7900 XTX : native",
+        "type": "cuda",
+        "index": 0,
+        "vram_total": 25753026560,
+        "vram_free": 25586434048,
+        "torch_vram_total": 2097152,
+        "torch_vram_free": 2097152
+      }
+    ],
+    "comfyui_version": "0.43.0",
+    "os": "win32",
+    "client_python": "3.12.16"
+  },
+  "finished_utc": "2026-11-01T12:51:54+00:00",
+  "timing": {
+    "total_s": 57.313
+  },
+  "monitor": {
+    "text_encode_s": 6.306,
+    "vae_decode_s": 1.067,
+    "ksampler_s": 49.109,
+    "step_times_s": [
+      6.836,
+      1.13,
+      1.08,
+      1.082,
+      1.082,
+      1.082,
+      1.08,
+      1.081,
+      1.082,
+      1.082,
+      1.082,
+      1.084,
+      1.085,
+      1.084,
+      1.083,
+      1.085,
+      1.084,
+      1.08,
+      1.084,
+      1.086,
+      1.082,
+      1.083,
+      1.084,
+      1.082,
+      1.083,
+      1.085,
+      1.083,
+      1.085,
+      1.081,
+      1.084,
+      1.085,
+      1.085,
+      1.087,
+      1.084,
+      1.083,
+      1.087,
+      1.086,
+      1.085,
+      1.085
+    ],
+    "node_timings_s": {
+      "EmptyLatentImage#latent_28b1267e": 0.001,
+      "CLIPTextEncode#pos_862e1e36": 6.306,
+      "KSampler#ks_83a796f7": 49.109,
+      "VAEDecode#dec_f692d65c": 1.067,
+      "SaveImage#save_989ed95a": 0.269
+    },
+    "cached_nodes": [
+      "UNETLoader#unet_c788dcd0",
+      "CLIPLoader#clip_ac454125",
+      "VAELoader#vae_d1b05bc4",
+      "CLIPTextEncode#neg_3b4c0d37"
+    ],
+    "vram_peak_mb": 14613.2,
+    "vram_residency_mb": 428.0,
+    "monitor_error": null
+  },
+  "status": "ok",
+  "image": {
+    "file": "case-443.png",
+    "bytes": 1823202,
+    "sha256": "4081af22c2ad53f6799c6fd1deaac8a94f7c683af3f9573ec0d1cd327eb0fdc6",
+    "width": 832,
+    "height": 1248,
+    "dimensions_match_canvas": true,
+    "edited": false
+  }
+}

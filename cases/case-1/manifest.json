@@ -59,8 +59,17 @@
   "gpt_plan": {
     "model": "gpt-image-2-2026-04-21",
     "model_pinned_snapshot": true,
-    "size": "1024x1536",
-    "size_note": "Intended closest supported size; exact allowed sizes are frozen in P4 against the official Images API spec before any contributor run.",
+    "size": "720x1280",
+    "size_note": "Pixel- and aspect-matched to the Qwen canvas. Verified against the official gpt-image-2 size rules on 2026-11-01 (custom WIDTHxHEIGHT allowed: 16-px multiples, ratio <= 3:1, 655,360-8,294,400 px, max edge 3840) — every case canvas satisfies them. Contributors may override; overrides are recorded.",
+    "size_verified": true,
+    "quality": "medium",
+    "quality_options": [
+      "low",
+      "medium",
+      "high",
+      "auto"
+    ],
+    "api_endpoint": "POST https://api.openai.com/v1/images/generations",
     "byok": true,
     "project_has_no_openai_key": true
   },

@@ -59,7 +59,6 @@ SPEC: list[dict] = [
         "aspect": "9:16",
         "width": 720,
         "height": 1280,
-        "gpt_size": "1024x1536",
         "notes": [
             "Prompt demands 12 numbered bilingual CN/EN panels — extreme typography stress test.",
             "First-ever non-square canvas on this GPU stack; same ~0.92 MP budget as validated 1024^2.",
@@ -73,7 +72,6 @@ SPEC: list[dict] = [
         "aspect": "1:1",
         "width": 1024,
         "height": 1024,
-        "gpt_size": "1024x1024",
         "notes": [
             "Upstream prompt text contains original spacing typos (e.g. 'inblack', 'asmartphone'); frozen verbatim — fixing them would silently edit the source prompt.",
             "Chinese text content inside an English prompt (mixed-language stress).",
@@ -87,7 +85,6 @@ SPEC: list[dict] = [
         "aspect": "9:16",
         "width": 720,
         "height": 1280,
-        "gpt_size": "1024x1536",
         "notes": [
             "Dense Chinese typography: 5 recipe steps, chef tips, calligraphy title, seal stamp, signature line.",
         ],
@@ -100,7 +97,6 @@ SPEC: list[dict] = [
         "aspect": "1:1",
         "width": 1024,
         "height": 1024,
-        "gpt_size": "1024x1024",
         "notes": [
             "Prompt itself specifies 1:1; minimal text (brand name + short headline).",
         ],
@@ -113,7 +109,6 @@ SPEC: list[dict] = [
         "aspect": "2:3",
         "width": 832,
         "height": 1248,
-        "gpt_size": "1024x1536",
         "notes": [
             "Prompt says 'vertical' without a ratio; 2:3 chosen at the full 1.04 MP budget.",
             "Five exact English labels required (Lettuce/Salsa/Cheese/Meat/Shell).",
@@ -127,7 +122,6 @@ SPEC: list[dict] = [
         "aspect": "1:1",
         "width": 1024,
         "height": 1024,
-        "gpt_size": "1024x1024",
         "notes": [
             "Lightest text load of the 12 — clean-app-icon contrast case.",
         ],
@@ -140,7 +134,6 @@ SPEC: list[dict] = [
         "aspect": "2:3",
         "width": 832,
         "height": 1248,
-        "gpt_size": "1024x1536",
         "notes": [
             "Prompt specifies 'Aspect ratio 2:3' and forbids watermarks/text.",
         ],
@@ -153,7 +146,6 @@ SPEC: list[dict] = [
         "aspect": "9:16",
         "width": 720,
         "height": 1280,
-        "gpt_size": "1024x1536",
         "notes": [
             "Embeds a Midjourney-style '--ar 9:16' parameter and the artist signature string 'BubbleBrain'; both kept verbatim — every model receives the same literal text.",
             "Longest single-block style chain among the 12.",
@@ -167,7 +159,6 @@ SPEC: list[dict] = [
         "aspect": "16:9",
         "width": 1280,
         "height": 720,
-        "gpt_size": "1536x1024",
         "notes": [
             "Prompt specifies 'Wide 16:9 layout'; 8 storyboard panels + header/footer typography.",
         ],
@@ -180,7 +171,6 @@ SPEC: list[dict] = [
         "aspect": "2:3",
         "width": 832,
         "height": 1248,
-        "gpt_size": "1024x1536",
         "notes": [
             "Upstream prompt carries the template variable '[INSERT COUNTRY NAME]'; resolved to 'Japan' before freeze (strong identity anchor, rich street life suits the diorama structure). Derivation recorded; upstream sha256 preserved.",
         ],
@@ -198,7 +188,6 @@ SPEC: list[dict] = [
         "aspect": "1:1.414 (A4 portrait)",
         "width": 768,
         "height": 1088,
-        "gpt_size": "1024x1536",
         "notes": [
             "A4 ratio approximated as 768x1088 (1:1.4167, 0.84 MP) — closest 16-px-multiple canvas within budget.",
             "Ten infographic sections + engraved-sketch marginalia.",
@@ -212,7 +201,6 @@ SPEC: list[dict] = [
         "aspect": "16:9",
         "width": 1280,
         "height": 720,
-        "gpt_size": "1536x1024",
         "notes": [
             "Four named destinations in one wide canvas; destination-name typography in elegant type.",
         ],
@@ -311,11 +299,17 @@ def build_manifest(spec: dict, upstream: dict) -> tuple[dict, bytes]:
         "gpt_plan": {
             "model": "gpt-image-2-2026-04-21",
             "model_pinned_snapshot": True,
-            "size": spec["gpt_size"],
+            "size": f"{spec['width']}x{spec['height']}",
             "size_note": (
-                "Intended closest supported size; exact allowed sizes are frozen in P4 "
-                "against the official Images API spec before any contributor run."
+                "Pixel- and aspect-matched to the Qwen canvas. Verified against the official "
+                "gpt-image-2 size rules on 2026-11-01 (custom WIDTHxHEIGHT allowed: 16-px "
+                "multiples, ratio <= 3:1, 655,360-8,294,400 px, max edge 3840) — every case "
+                "canvas satisfies them. Contributors may override; overrides are recorded."
             ),
+            "size_verified": True,
+            "quality": "medium",
+            "quality_options": ["low", "medium", "high", "auto"],
+            "api_endpoint": "POST https://api.openai.com/v1/images/generations",
             "byok": True,
             "project_has_no_openai_key": True,
         },
