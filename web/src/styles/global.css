@@ -444,6 +444,11 @@ img { display: block; max-width: 100%; }
 
 .detail-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 18px; align-items: start; }
 @media (max-width: 900px) { .detail-grid { grid-template-columns: 1fr; } }
+/* grid tracks must shrink below the intrinsic width of <pre> content —
+   otherwise long prompt/reproduce lines force horizontal overflow on phones
+   (caught in the P8 mobile review at 375px) */
+.detail-grid > div, .detail-grid > aside { min-width: 0; max-width: 100%; }
+.detail-grid pre, .prompt-block pre, .callout pre { max-width: 100%; overflow-x: auto; }
 
 .meta-table { width: 100%; border-collapse: collapse; font-size: 13px; }
 .meta-table th { text-align: left; color: var(--text-faint); font-weight: 500; padding: 6px 14px 6px 0; vertical-align: top; white-space: nowrap; width: 40%; }
