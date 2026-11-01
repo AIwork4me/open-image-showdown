@@ -1,20 +1,27 @@
 {
   "schema_version": 1,
-  "built_at": "2026-11-01T13:11:17Z",
+  "built_at": "2026-11-01T23:01:44Z",
   "project": "open-image-showdown",
   "tagline": "Same Prompt. Two Models. You Decide.",
   "totals": {
     "cases": 12,
-    "qwen_generated": 12,
-    "open_challenges": 12,
+    "variants": 1,
+    "qwen_generated": 13,
+    "open_challenges": 13,
     "community_submitted": 0,
     "reviewed_comparisons": 0,
-    "blocked": 0
+    "blocked": 0,
+    "references_total": 12,
+    "references_approved": 12,
+    "reference_pairings_ready": 12
   },
   "cases": [
     {
       "case_id": "case-1",
       "status": "OPEN_CHALLENGE",
+      "display_mode": "REFERENCE_RECREATION",
+      "variant_of": null,
+      "variant_kind": null,
       "blocked_reason": null,
       "title": {
         "en": "Urban Metabolism Atlas",
@@ -41,12 +48,33 @@
         "source_url": null,
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
+      "reference_image": {
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-1.jpg",
+        "image_sha256": "eed45ad06a5db696df983c369aa2cc29dfcb406debd5c3623b0eaa9bd03daf61",
+        "width": 941,
+        "height": 1672,
+        "original_author": "小红书号 insight_express",
+        "original_post_url": null,
+        "original_author_profile_url": null,
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-1.md#case-1",
+        "source_commit_sha": "63e6176fa01be51c000108dacd72716d3e46784b",
+        "model_identity": "community-reported GPT Image 2 — UNVERIFIED",
+        "prompt_match_level": "EXACT",
+        "prompt_match_note": "upstream prompt byte-identical to frozen prompt.txt",
+        "aspect_match": true,
+        "aspect_disclosure_required": false,
+        "attribution": "Image © original author (小红书号 insight_express), collected by awesome-gpt-image-2 (no public post URL)",
+        "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project."
+      },
       "notes": [
         "Prompt demands 12 numbered bilingual CN/EN panels — extreme typography stress test.",
         "First-ever non-square canvas on this GPU stack; same ~0.92 MP budget as validated 1024^2."
       ],
       "qwen": {
         "image": "gallery/qwen/case-1.png",
+        "image_web": "gallery/qwen/case-1.webp",
         "image_sha256": "302815bcbf90801d354238b2976b7b889ec1ba25712126dcf7514fb4863fcb79",
         "width": 720,
         "height": 1280,
@@ -83,6 +111,9 @@
     {
       "case_id": "case-13",
       "status": "OPEN_CHALLENGE",
+      "display_mode": "REFERENCE_RECREATION",
+      "variant_of": null,
+      "variant_kind": null,
       "blocked_reason": null,
       "title": {
         "en": "Math Exam Paper Photo",
@@ -109,12 +140,33 @@
         "source_url": null,
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
+      "reference_image": {
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-13.jpg",
+        "image_sha256": "b37abba16f256a98a9d18dd64dda5c9960b763b78d8e516354dff4a8703b227f",
+        "width": 647,
+        "height": 1149,
+        "original_author": "小红书号 94156710894",
+        "original_post_url": null,
+        "original_author_profile_url": null,
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-1.md#case-13",
+        "source_commit_sha": "63e6176fa01be51c000108dacd72716d3e46784b",
+        "model_identity": "community-reported GPT Image 2 — UNVERIFIED",
+        "prompt_match_level": "EXACT",
+        "prompt_match_note": "upstream prompt byte-identical to frozen prompt.txt",
+        "aspect_match": false,
+        "aspect_disclosure_required": true,
+        "attribution": "Image © original author (小红书号 94156710894), collected by awesome-gpt-image-2 (no public post URL)",
+        "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project."
+      },
       "notes": [
         "Upstream prompt text contains original spacing typos (e.g. 'inblack', 'asmartphone'); frozen verbatim — fixing them would silently edit the source prompt.",
         "Chinese text content inside an English prompt (mixed-language stress)."
       ],
       "qwen": {
         "image": "gallery/qwen/case-13.png",
+        "image_web": "gallery/qwen/case-13.webp",
         "image_sha256": "f30f22a231e0b4b94480fa90d67cf0b4631452e70bc21d820c050ec8cebdd844",
         "width": 1024,
         "height": 1024,
@@ -151,6 +203,9 @@
     {
       "case_id": "case-14",
       "status": "OPEN_CHALLENGE",
+      "display_mode": "REFERENCE_RECREATION",
+      "variant_of": null,
+      "variant_kind": null,
       "blocked_reason": null,
       "title": {
         "en": "Tomato & Egg Recipe Infographic",
@@ -177,11 +232,32 @@
         "source_url": null,
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
+      "reference_image": {
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-14.jpg",
+        "image_sha256": "46ff3923a99f405ab87f2d00e05e64d129c3f64879c0b25da9ee490088143075",
+        "width": 941,
+        "height": 1672,
+        "original_author": "小红书号 Roy_Jay",
+        "original_post_url": null,
+        "original_author_profile_url": null,
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-1.md#case-14",
+        "source_commit_sha": "63e6176fa01be51c000108dacd72716d3e46784b",
+        "model_identity": "community-reported GPT Image 2 — UNVERIFIED",
+        "prompt_match_level": "EXACT",
+        "prompt_match_note": "upstream prompt byte-identical to frozen prompt.txt",
+        "aspect_match": true,
+        "aspect_disclosure_required": false,
+        "attribution": "Image © original author (小红书号 Roy_Jay), collected by awesome-gpt-image-2 (no public post URL)",
+        "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project."
+      },
       "notes": [
         "Dense Chinese typography: 5 recipe steps, chef tips, calligraphy title, seal stamp, signature line."
       ],
       "qwen": {
         "image": "gallery/qwen/case-14.png",
+        "image_web": "gallery/qwen/case-14.webp",
         "image_sha256": "09ab26a0784deb48c10880eaddf0981dda07c229ac7f959be80af034e72f71f2",
         "width": 720,
         "height": 1280,
@@ -218,6 +294,9 @@
     {
       "case_id": "case-344",
       "status": "OPEN_CHALLENGE",
+      "display_mode": "REFERENCE_RECREATION",
+      "variant_of": null,
+      "variant_kind": null,
       "blocked_reason": null,
       "title": {
         "en": "NOIR Streetwear Campaign",
@@ -244,11 +323,32 @@
         "source_url": "https://x.com/Daniel_adsss/status/2048542581638701446",
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
+      "reference_image": {
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-344.jpg",
+        "image_sha256": "035022a432aabbc4e8b03b73bf0c2bb152bfafea7bb2b9dd77b872a194fb50e2",
+        "width": 1376,
+        "height": 768,
+        "original_author": "@Daniel_adsss",
+        "original_post_url": "https://x.com/Daniel_adsss/status/2048542581638701446",
+        "original_author_profile_url": "https://x.com/Daniel_adsss",
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-344",
+        "source_commit_sha": "63e6176fa01be51c000108dacd72716d3e46784b",
+        "model_identity": "community-reported GPT Image 2 — UNVERIFIED",
+        "prompt_match_level": "EXACT",
+        "prompt_match_note": "upstream prompt byte-identical to frozen prompt.txt",
+        "aspect_match": false,
+        "aspect_disclosure_required": true,
+        "attribution": "Image © original author (@Daniel_adsss), collected by awesome-gpt-image-2, source post: https://x.com/Daniel_adsss/status/2048542581638701446",
+        "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project."
+      },
       "notes": [
         "Prompt itself specifies 1:1; minimal text (brand name + short headline)."
       ],
       "qwen": {
         "image": "gallery/qwen/case-344.png",
+        "image_web": "gallery/qwen/case-344.webp",
         "image_sha256": "e1fe81b9def9a52fc0ced04679833aac6348f4ea23e9772ec2e4ee0647e5b6da",
         "width": 1024,
         "height": 1024,
@@ -285,6 +385,9 @@
     {
       "case_id": "case-443",
       "status": "OPEN_CHALLENGE",
+      "display_mode": "REFERENCE_RECREATION",
+      "variant_of": null,
+      "variant_kind": null,
       "blocked_reason": null,
       "title": {
         "en": "Exploded Taco Infographic",
@@ -311,12 +414,33 @@
         "source_url": "https://x.com/Strength04_X/status/2056018963084226866",
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
+      "reference_image": {
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-443.jpg",
+        "image_sha256": "ac5352395e25f0dc342928357d8a88c2f4f524e9d56263804233a213805984a3",
+        "width": 1254,
+        "height": 1254,
+        "original_author": "@Strength04_X",
+        "original_post_url": "https://x.com/Strength04_X/status/2056018963084226866",
+        "original_author_profile_url": "https://x.com/Strength04_X",
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-443",
+        "source_commit_sha": "63e6176fa01be51c000108dacd72716d3e46784b",
+        "model_identity": "community-reported GPT Image 2 — UNVERIFIED",
+        "prompt_match_level": "EXACT",
+        "prompt_match_note": "upstream prompt byte-identical to frozen prompt.txt",
+        "aspect_match": false,
+        "aspect_disclosure_required": true,
+        "attribution": "Image © original author (@Strength04_X), collected by awesome-gpt-image-2, source post: https://x.com/Strength04_X/status/2056018963084226866",
+        "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project."
+      },
       "notes": [
         "Prompt says 'vertical' without a ratio; 2:3 chosen at the full 1.04 MP budget.",
         "Five exact English labels required (Lettuce/Salsa/Cheese/Meat/Shell)."
       ],
       "qwen": {
         "image": "gallery/qwen/case-443.png",
+        "image_web": "gallery/qwen/case-443.webp",
         "image_sha256": "4081af22c2ad53f6799c6fd1deaac8a94f7c683af3f9573ec0d1cd327eb0fdc6",
         "width": 832,
         "height": 1248,
@@ -353,6 +477,9 @@
     {
       "case_id": "case-510",
       "status": "OPEN_CHALLENGE",
+      "display_mode": "REFERENCE_RECREATION",
+      "variant_of": null,
+      "variant_kind": null,
       "blocked_reason": null,
       "title": {
         "en": "Bichon Shop App Icon",
@@ -379,11 +506,32 @@
         "source_url": "https://x.com/iamaiistudio/status/2071923809788285125",
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
+      "reference_image": {
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-510.jpg",
+        "image_sha256": "f2422d47e1ecc53ce285088b36b574c8c082784759a07ec3fb3e8da0545be3ec",
+        "width": 1254,
+        "height": 1254,
+        "original_author": "@iamaiistudio",
+        "original_post_url": "https://x.com/iamaiistudio/status/2071923809788285125",
+        "original_author_profile_url": "https://x.com/iamaiistudio",
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-510",
+        "source_commit_sha": "63e6176fa01be51c000108dacd72716d3e46784b",
+        "model_identity": "community-reported GPT Image 2 — UNVERIFIED",
+        "prompt_match_level": "EXACT",
+        "prompt_match_note": "upstream prompt byte-identical to frozen prompt.txt",
+        "aspect_match": true,
+        "aspect_disclosure_required": false,
+        "attribution": "Image © original author (@iamaiistudio), collected by awesome-gpt-image-2, source post: https://x.com/iamaiistudio/status/2071923809788285125",
+        "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project."
+      },
       "notes": [
         "Lightest text load of the 12 — clean-app-icon contrast case."
       ],
       "qwen": {
         "image": "gallery/qwen/case-510.png",
+        "image_web": "gallery/qwen/case-510.webp",
         "image_sha256": "db9144e8cc828f5bf93f5eea8d1e0c24c31de1f75d734f2e5b066cf49841f0d4",
         "width": 1024,
         "height": 1024,
@@ -420,6 +568,9 @@
     {
       "case_id": "case-414",
       "status": "OPEN_CHALLENGE",
+      "display_mode": "REFERENCE_RECREATION",
+      "variant_of": null,
+      "variant_kind": null,
       "blocked_reason": null,
       "title": {
         "en": "Morning Bedroom Photography",
@@ -446,11 +597,32 @@
         "source_url": "https://x.com/ToroJushiAi/status/2053078195482632421",
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
+      "reference_image": {
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-414.jpg",
+        "image_sha256": "dd72d7f330c906696e8806267d3819a08b2e3934ae46bc234200dcba224df037",
+        "width": 1024,
+        "height": 1536,
+        "original_author": "@ToroJushiAi",
+        "original_post_url": "https://x.com/ToroJushiAi/status/2053078195482632421",
+        "original_author_profile_url": "https://x.com/ToroJushiAi",
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-414",
+        "source_commit_sha": "63e6176fa01be51c000108dacd72716d3e46784b",
+        "model_identity": "community-reported GPT Image 2 — UNVERIFIED",
+        "prompt_match_level": "EXACT",
+        "prompt_match_note": "upstream prompt byte-identical to frozen prompt.txt",
+        "aspect_match": true,
+        "aspect_disclosure_required": false,
+        "attribution": "Image © original author (@ToroJushiAi), collected by awesome-gpt-image-2, source post: https://x.com/ToroJushiAi/status/2053078195482632421",
+        "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project."
+      },
       "notes": [
         "Prompt specifies 'Aspect ratio 2:3' and forbids watermarks/text."
       ],
       "qwen": {
         "image": "gallery/qwen/case-414.png",
+        "image_web": "gallery/qwen/case-414.webp",
         "image_sha256": "db9dbcde3c226adcf5f728a702702b544d195aaaf37f7fe76fa64d51c57a343b",
         "width": 832,
         "height": 1248,
@@ -487,6 +659,9 @@
     {
       "case_id": "case-434",
       "status": "OPEN_CHALLENGE",
+      "display_mode": "REFERENCE_RECREATION",
+      "variant_of": null,
+      "variant_kind": null,
       "blocked_reason": null,
       "title": {
         "en": "Tokyo Street Film Portrait",
@@ -513,12 +688,33 @@
         "source_url": "https://x.com/BubbleBrain/status/2055491616392052887",
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
+      "reference_image": {
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-434.jpg",
+        "image_sha256": "dd391dffeec73e8311e53a9d9175e28d458116e7e5a021e3083861e3d983d1a8",
+        "width": 941,
+        "height": 1672,
+        "original_author": "@BubbleBrain",
+        "original_post_url": "https://x.com/BubbleBrain/status/2055491616392052887",
+        "original_author_profile_url": "https://x.com/BubbleBrain",
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-434",
+        "source_commit_sha": "63e6176fa01be51c000108dacd72716d3e46784b",
+        "model_identity": "community-reported GPT Image 2 — UNVERIFIED",
+        "prompt_match_level": "EXACT",
+        "prompt_match_note": "upstream prompt byte-identical to frozen prompt.txt",
+        "aspect_match": true,
+        "aspect_disclosure_required": false,
+        "attribution": "Image © original author (@BubbleBrain), collected by awesome-gpt-image-2, source post: https://x.com/BubbleBrain/status/2055491616392052887",
+        "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project."
+      },
       "notes": [
         "Embeds a Midjourney-style '--ar 9:16' parameter and the artist signature string 'BubbleBrain'; both kept verbatim — every model receives the same literal text.",
         "Longest single-block style chain among the 12."
       ],
       "qwen": {
         "image": "gallery/qwen/case-434.png",
+        "image_web": "gallery/qwen/case-434.webp",
         "image_sha256": "7b82b4bcfaa315f2e03b7d6f02b7fa33db77d22a12e979309c0a502e3525c8b1",
         "width": 720,
         "height": 1280,
@@ -555,6 +751,9 @@
     {
       "case_id": "case-419",
       "status": "OPEN_CHALLENGE",
+      "display_mode": "REFERENCE_RECREATION",
+      "variant_of": null,
+      "variant_kind": null,
       "blocked_reason": null,
       "title": {
         "en": "Croissant Baker Storyboard",
@@ -581,11 +780,32 @@
         "source_url": "https://x.com/TechieBySA/status/2053523784481554759",
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
+      "reference_image": {
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-419.jpg",
+        "image_sha256": "b5b83e4423af8550ed50bc9251e3fe3e397822f8b5936162ef1a1ff11c92777f",
+        "width": 1248,
+        "height": 832,
+        "original_author": "@TechieBySA",
+        "original_post_url": "https://x.com/TechieBySA/status/2053523784481554759",
+        "original_author_profile_url": "https://x.com/TechieBySA",
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-419",
+        "source_commit_sha": "63e6176fa01be51c000108dacd72716d3e46784b",
+        "model_identity": "community-reported GPT Image 2 — UNVERIFIED",
+        "prompt_match_level": "EXACT",
+        "prompt_match_note": "upstream prompt byte-identical to frozen prompt.txt",
+        "aspect_match": false,
+        "aspect_disclosure_required": true,
+        "attribution": "Image © original author (@TechieBySA), collected by awesome-gpt-image-2, source post: https://x.com/TechieBySA/status/2053523784481554759",
+        "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project."
+      },
       "notes": [
         "Prompt specifies 'Wide 16:9 layout'; 8 storyboard panels + header/footer typography."
       ],
       "qwen": {
         "image": "gallery/qwen/case-419.png",
+        "image_web": "gallery/qwen/case-419.webp",
         "image_sha256": "ba97688334781f89cb38d41298a703b4066c17849a458307ac6ae33d695d6951",
         "width": 1280,
         "height": 720,
@@ -622,6 +842,9 @@
     {
       "case_id": "case-390",
       "status": "OPEN_CHALLENGE",
+      "display_mode": "REFERENCE_RECREATION",
+      "variant_of": null,
+      "variant_kind": null,
       "blocked_reason": null,
       "title": {
         "en": "Felt Diorama: Japan",
@@ -654,11 +877,32 @@
         "source_url": "https://x.com/volkan_iras/status/2051403524966141980",
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
+      "reference_image": {
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-390.jpg",
+        "image_sha256": "a1723c725b4cdfc82afff601679b562810d7ee3d3425a052017299edece3c3da",
+        "width": 1024,
+        "height": 1536,
+        "original_author": "@volkan_iras",
+        "original_post_url": "https://x.com/volkan_iras/status/2051403524966141980",
+        "original_author_profile_url": "https://x.com/volkan_iras",
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-390",
+        "source_commit_sha": "63e6176fa01be51c000108dacd72716d3e46784b",
+        "model_identity": "community-reported GPT Image 2 — UNVERIFIED",
+        "prompt_match_level": "DERIVED_TEMPLATE_FILL",
+        "prompt_match_note": "upstream template variable [INSERT COUNTRY NAME] resolved to 'Japan' before freeze (both sha256 recorded in manifest); reference image depicts Istanbul/Turkey — see variant case-390t",
+        "aspect_match": true,
+        "aspect_disclosure_required": false,
+        "attribution": "Image © original author (@volkan_iras), collected by awesome-gpt-image-2, source post: https://x.com/volkan_iras/status/2051403524966141980",
+        "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project."
+      },
       "notes": [
         "Upstream prompt carries the template variable '[INSERT COUNTRY NAME]'; resolved to 'Japan' before freeze (strong identity anchor, rich street life suits the diorama structure). Derivation recorded; upstream sha256 preserved."
       ],
       "qwen": {
         "image": "gallery/qwen/case-390.png",
+        "image_web": "gallery/qwen/case-390.webp",
         "image_sha256": "5c9e0c4eb9eed2fa04021c0cee1d605bf98c4bd7afb02536c47028b191e0825a",
         "width": 832,
         "height": 1248,
@@ -695,6 +939,9 @@
     {
       "case_id": "case-396",
       "status": "OPEN_CHALLENGE",
+      "display_mode": "REFERENCE_RECREATION",
+      "variant_of": null,
+      "variant_kind": null,
       "blocked_reason": null,
       "title": {
         "en": "Vintage Dragon Encyclopedia",
@@ -721,12 +968,33 @@
         "source_url": "https://x.com/sha_zdiii/status/2052237839119835280",
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
+      "reference_image": {
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-396.jpg",
+        "image_sha256": "1eb4b190c8379f6ed9f855b10573649f5883572c8f2e570c72cf84d552fbfc97",
+        "width": 768,
+        "height": 1376,
+        "original_author": "@sha_zdiii",
+        "original_post_url": "https://x.com/sha_zdiii/status/2052237839119835280",
+        "original_author_profile_url": "https://x.com/sha_zdiii",
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-396",
+        "source_commit_sha": "63e6176fa01be51c000108dacd72716d3e46784b",
+        "model_identity": "community-reported GPT Image 2 — UNVERIFIED",
+        "prompt_match_level": "EXACT",
+        "prompt_match_note": "upstream prompt byte-identical to frozen prompt.txt",
+        "aspect_match": false,
+        "aspect_disclosure_required": true,
+        "attribution": "Image © original author (@sha_zdiii), collected by awesome-gpt-image-2, source post: https://x.com/sha_zdiii/status/2052237839119835280",
+        "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project."
+      },
       "notes": [
         "A4 ratio approximated as 768x1088 (1:1.4167, 0.84 MP) — closest 16-px-multiple canvas within budget.",
         "Ten infographic sections + engraved-sketch marginalia."
       ],
       "qwen": {
         "image": "gallery/qwen/case-396.png",
+        "image_web": "gallery/qwen/case-396.webp",
         "image_sha256": "6c9d7e15fa9714850feba9b60427c7a02227c5542ef99290b7d306b444c0a71a",
         "width": 768,
         "height": 1088,
@@ -763,6 +1031,9 @@
     {
       "case_id": "case-474",
       "status": "OPEN_CHALLENGE",
+      "display_mode": "REFERENCE_RECREATION",
+      "variant_of": null,
+      "variant_kind": null,
       "blocked_reason": null,
       "title": {
         "en": "Minimal Travel Poster Series",
@@ -789,11 +1060,32 @@
         "source_url": "https://x.com/Taaruk_/status/2059188921096085888",
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
+      "reference_image": {
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-474.jpg",
+        "image_sha256": "6e78abf6c2c9890785d03f1b83c4de582ae80293e8dc7f8b5381cc3fab2910d8",
+        "width": 1080,
+        "height": 608,
+        "original_author": "@Taaruk_",
+        "original_post_url": "https://x.com/Taaruk_/status/2059188921096085888",
+        "original_author_profile_url": "https://x.com/Taaruk_",
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-474",
+        "source_commit_sha": "63e6176fa01be51c000108dacd72716d3e46784b",
+        "model_identity": "community-reported GPT Image 2 — UNVERIFIED",
+        "prompt_match_level": "EXACT",
+        "prompt_match_note": "upstream prompt byte-identical to frozen prompt.txt",
+        "aspect_match": true,
+        "aspect_disclosure_required": false,
+        "attribution": "Image © original author (@Taaruk_), collected by awesome-gpt-image-2, source post: https://x.com/Taaruk_/status/2059188921096085888",
+        "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project."
+      },
       "notes": [
         "Four named destinations in one wide canvas; destination-name typography in elegant type."
       ],
       "qwen": {
         "image": "gallery/qwen/case-474.png",
+        "image_web": "gallery/qwen/case-474.webp",
         "image_sha256": "ab78464ba34e038a9caffaf9de5a150da3ced02fecab264c467fe4e81cb47bb8",
         "width": 1280,
         "height": 720,
@@ -820,6 +1112,105 @@
       },
       "gpt": {
         "planned_size": "1280x720",
+        "planned_quality": "medium",
+        "model": "gpt-image-2-2026-04-21",
+        "byok": true,
+        "submissions": 0
+      },
+      "submissions": []
+    },
+    {
+      "case_id": "case-390t",
+      "status": "OPEN_CHALLENGE",
+      "display_mode": "REFERENCE_RECREATION",
+      "variant_of": "case-390",
+      "variant_kind": "reference_pairing_variant",
+      "blocked_reason": null,
+      "title": {
+        "en": "Felt Diorama: Turkey",
+        "zh": "羊毛毡微缩世界·土耳其",
+        "library_title_zh": "羊毛毡国家微缩世界"
+      },
+      "category": "Scenes & Storytelling",
+      "aspect": "2:3",
+      "canvas": {
+        "width": 832,
+        "height": 1248
+      },
+      "prompt": "Country: Turkey\n\nA miniature felt diorama made of fluffy yarn, wool, and needlework, designed as a single cohesive small world (not a collage), reflecting the real landscape, culture, and daily life of the country.\n\nStructure:\n- Select 4–7 naturally integrated elements (landscape, architecture, transport, street life, culture)\n- Everything must flow together as one environment\n\nForeground:\nEveryday life — small shops, cafes, markets, people interacting, local clothing, street details, subtle movement, warm human presence\n\nMidground:\nConnecting flow — streets, bridges, rivers, paths, transport, cultural spaces that guide the eye naturally from front to back\n\nBackground:\nOne strong identity anchor — landmark, skyline, mountain, or symbolic landscape clearly representing the country (keep it clean, not overcrowded)\n\nStyle:\nHandmade wool felt, yarn, needle-felt textures, visible fibers, soft edges, miniature craftsmanship, premium diorama realism\n\nLighting:\nWarm golden hour or bright noon, soft shadows, clear visibility, gentle glow enhancing depth\n\nColor:\nSoft but saturated palette reflecting the country’s natural tones (greens, sky blues, architectural hues, cultural accents), warm and balanced\n\nComposition:\nVertical frame, balanced or centered perspective, slight top-down or immersive angle, clear foreground–midground–background depth\n\nMood:\nWarm, emotional, calm, refined — like a handcrafted fairy-tale version of real life (not childish)\n\nRules:\n- No logos or text overlays\n- No collage-style composition\n- No random symbolic clutter\n- Keep it realistic but stylized as a handmade miniature world\n\nQuality:\n16K, ultra-detailed, hyper-realistic miniature textures, cinematic depth, sharp focus\n\noutput_goal:\nA single, cohesive felt diorama world that instantly conveys the identity and atmosphere of the chosen country through integrated landscape, culture, and daily life",
+      "prompt_sha256": "20284d61af6bd7b93d6b74b8c122f6c984c01c8b39eae6a3e941dbff409903ed",
+      "prompt_language": "en",
+      "prompt_derivation": {
+        "type": "template-variable-fill",
+        "variable": "[INSERT COUNTRY NAME]",
+        "value": "Turkey",
+        "upstream_prompt_sha256": "160b0b607287ee6f7278f49839eaba18a00340a7b7b10ed503cf7a6761026644",
+        "description": "Same upstream template as case-390 with the variable resolved to 'Turkey' exactly once. The country value is INFERRED from the reference image's content (Istanbul landmarks: Süleymaniye-style mosque, Galata Tower, 'TAKSİM' tram, Turkish flags) — it has NOT been confirmed by the original author. Prompt-match level vs the reference: exact template fill with an inferred parameter, not an author-confirmed input."
+      },
+      "reference": {
+        "library": "freestylefly/awesome-gpt-image-2",
+        "library_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+        "library_case_id": 390,
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-390",
+        "library_license": "MIT",
+        "source_label": "@volkan_iras",
+        "source_url": "https://x.com/volkan_iras/status/2051403524966141980",
+        "source_note": "Variant of case-390 created for the reference pairing: the library's reference image for case 390 depicts Istanbul/Turkey (visually verified 2026-11-01), while the primary frozen prompt resolved the template variable to Japan. This variant resolves the same template to Turkey so the eventual reference comparison is an exact-prompt pairing. The library's image is NOT reused in this project unless its rights record is APPROVED (gallery/reference/index.json)."
+      },
+      "reference_image": {
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-390.jpg",
+        "image_sha256": "a1723c725b4cdfc82afff601679b562810d7ee3d3425a052017299edece3c3da",
+        "width": 1024,
+        "height": 1536,
+        "original_author": "@volkan_iras",
+        "original_post_url": "https://x.com/volkan_iras/status/2051403524966141980",
+        "original_author_profile_url": "https://x.com/volkan_iras",
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-390",
+        "source_commit_sha": "63e6176fa01be51c000108dacd72716d3e46784b",
+        "model_identity": "community-reported GPT Image 2 — UNVERIFIED",
+        "prompt_match_level": "DERIVED_TEMPLATE_FILL",
+        "prompt_match_note": "variant pairing: upstream template resolved to 'Turkey' (parameter inferred from the reference image content, not author-confirmed)",
+        "aspect_match": true,
+        "aspect_disclosure_required": false,
+        "attribution": "Image © original author (@volkan_iras), collected by awesome-gpt-image-2, source post: https://x.com/volkan_iras/status/2051403524966141980",
+        "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project."
+      },
+      "notes": [
+        "Reference-pairing variant of case-390: the frozen Japan case and its run record are untouched.",
+        "Country parameter inferred from reference-image content (Istanbul landmarks), not author-confirmed — labeled THEME-CONSISTENT, INFERRED PARAMETER wherever the pairing is shown.",
+        "Not counted as a 13th challenge: display surfaces count 12 primary cases; this variant appears inside case-390's comparison context."
+      ],
+      "qwen": {
+        "image": "gallery/qwen/case-390t.png",
+        "image_web": "gallery/qwen/case-390t.webp",
+        "image_sha256": "7a6530f0e6b443cedb6b9fe5ee5fb90ea0cee9aca05bad8a68eb237520ec6da5",
+        "width": 832,
+        "height": 1248,
+        "generation": {
+          "model": "Qwen-Image-2.1",
+          "weights_repo": "Comfy-Org/Qwen-Image-2.1",
+          "weights_revision": "aacf31a6d48e707f352ecba714cee0680da3479b",
+          "comfyui_commit": "b5a432157de6b8884f81104cd02926adf4d597e4",
+          "engine_repo": "AIwork4me/qwen-image-rocm",
+          "engine_commit": "cbd9e74eb121c281d97cf25130cd8de6ffa1be04",
+          "gpu": "AMD Radeon RX 7900 XTX 24 GB (gfx1100, native Windows ROCm)",
+          "precision": "bf16",
+          "steps": 40,
+          "cfg": 1,
+          "sampler": "euler/simple",
+          "seed": 42,
+          "size": "832x1248",
+          "wall_time_s": 60.372,
+          "vram_peak_mb": 14797.3,
+          "generated_utc": "2026-11-01T14:05:53+00:00",
+          "non_square_probe": true
+        },
+        "license": "CC BY-NC 4.0 (generated with Qwen-Image-2.1 under the Qwen Research License)"
+      },
+      "gpt": {
+        "planned_size": "832x1248",
         "planned_quality": "medium",
         "model": "gpt-image-2-2026-04-21",
         "byok": true,

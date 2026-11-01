@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "case_id": "case-390t",
+  "variant_of": "case-390",
+  "variant_kind": "reference_pairing_variant",
+  "status": "OPEN_CHALLENGE",
+  "blocked_reason": null,
+  "title": {
+    "en": "Felt Diorama: Turkey",
+    "zh": "羊毛毡微缩世界·土耳其",
+    "library_title_zh": "羊毛毡国家微缩世界"
+  },
+  "category": "Scenes & Storytelling",
+  "summary": {
+    "one_liner": null
+  },
+  "reference": {
+    "library": "freestylefly/awesome-gpt-image-2",
+    "library_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+    "library_case_id": 390,
+    "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/63e6176fa01be51c000108dacd72716d3e46784b/docs/gallery-part-2.md#case-390",
+    "library_license": "MIT",
+    "source_label": "@volkan_iras",
+    "source_url": "https://x.com/volkan_iras/status/2051403524966141980",
+    "source_note": "Variant of case-390 created for the reference pairing: the library's reference image for case 390 depicts Istanbul/Turkey (visually verified 2026-11-01), while the primary frozen prompt resolved the template variable to Japan. This variant resolves the same template to Turkey so the eventual reference comparison is an exact-prompt pairing. The library's image is NOT reused in this project unless its rights record is APPROVED (gallery/reference/index.json)."
+  },
+  "prompt": {
+    "frozen": true,
+    "language": "en",
+    "file": "prompt.txt",
+    "sha256": "20284d61af6bd7b93d6b74b8c122f6c984c01c8b39eae6a3e941dbff409903ed",
+    "bytes": 1911,
+    "chars": 1895,
+    "derivation": {
+      "type": "template-variable-fill",
+      "variable": "[INSERT COUNTRY NAME]",
+      "value": "Turkey",
+      "upstream_prompt_sha256": "160b0b607287ee6f7278f49839eaba18a00340a7b7b10ed503cf7a6761026644",
+      "description": "Same upstream template as case-390 with the variable resolved to 'Turkey' exactly once. The country value is INFERRED from the reference image's content (Istanbul landmarks: Süleymaniye-style mosque, Galata Tower, 'TAKSİM' tram, Turkish flags) — it has NOT been confirmed by the original author. Prompt-match level vs the reference: exact template fill with an inferred parameter, not an author-confirmed input."
+    },
+    "freeze_policy": "prompt.txt is the canonical artifact (UTF-8, no trailing newline). After gallery publication the prompt text is immutable; corrections require a new case id."
+  },
+  "canvas": {
+    "aspect_ratio": "2:3",
+    "width": 832,
+    "height": 1248,
+    "megapixels": 1.0383,
+    "multiple_of": 16
+  },
+  "qwen_plan": {
+    "mode": "quality",
+    "steps": 40,
+    "cfg": 1.0,
+    "sampler": "euler",
+    "scheduler": "simple",
+    "negative_prompt": "",
+    "seed": 42,
+    "engine_manifest": "p4-qs-quality-1024x1024",
+    "width": 832,
+    "height": 1248,
+    "weights_repo": "Comfy-Org/Qwen-Image-2.1",
+    "weights_revision": "aacf31a6d48e707f352ecba714cee0680da3479b",
+    "comfyui_commit": "b5a432157de6b8884f81104cd02926adf4d597e4",
+    "engine_repo": "AIwork4me/qwen-image-rocm",
+    "gpu": "AMD Radeon RX 7900 XTX 24 GB (gfx1100, native Windows ROCm)"
+  },
+  "gpt_plan": {
+    "model": "gpt-image-2-2026-04-21",
+    "model_pinned_snapshot": true,
+    "size": "832x1248",
+    "size_note": "Pixel- and aspect-matched to the Qwen canvas. Verified against the official gpt-image-2 size rules on 2026-11-01 (custom WIDTHxHEIGHT allowed: 16-px multiples, ratio <= 3:1, 655,360-8,294,400 px, max edge 3840) — every case canvas satisfies them. Contributors may override; overrides are recorded.",
+    "size_verified": true,
+    "quality": "medium",
+    "quality_options": [
+      "low",
+      "medium",
+      "high",
+      "auto"
+    ],
+    "api_endpoint": "POST https://api.openai.com/v1/images/generations",
+    "byok": true,
+    "project_has_no_openai_key": true
+  },
+  "verification": {
+    "gpt_side": "PENDING_COMMUNITY_SUBMISSION",
+    "rules": "Model attribution is never inferred from visual similarity. COMMUNITY_SUBMITTED -> REVIEWED_COMPARISON only after maintainer review of run evidence per METHODOLOGY.md."
+  },
+  "notes": [
+    "Reference-pairing variant of case-390: the frozen Japan case and its run record are untouched.",
+    "Country parameter inferred from reference-image content (Istanbul landmarks), not author-confirmed — labeled THEME-CONSISTENT, INFERRED PARAMETER wherever the pairing is shown.",
+    "Not counted as a 13th challenge: display surfaces count 12 primary cases; this variant appears inside case-390's comparison context."
+  ]
+}

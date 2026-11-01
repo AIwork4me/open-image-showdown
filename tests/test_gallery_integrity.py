@@ -14,3 +14,9 @@ import validate_gallery  # noqa: E402
 def test_gallery_integrity():
     fails = validate_gallery.validate(REPO)
     assert not fails, "gallery integrity failures:\n  - " + "\n  - ".join(fails)
+
+
+def test_reference_rights_integrity():
+    fails = validate_gallery.Failures()
+    validate_gallery.validate_reference_rights(REPO, fails)
+    assert not fails, "reference rights failures:\n  - " + "\n  - ".join(fails)

@@ -1,14 +1,29 @@
 import { siteModel, repoUrl, asset } from '../components/Layout';
 import CaseCard from '../components/CaseCard';
+import ReferencePanel from '../components/ReferencePanel';
 
 function pick<T>(arr: T[], n: number): T[] {
   return arr.slice(0, n);
 }
 
+/** The hero case: the curated strongest pairing (#443 taco) when its reference
+ *  is rights-cleared, else the first approved pairing, else a curated case
+ *  (reference renders as a link-out card — never a fake image). */
+function heroCase() {
+  const primary = siteModel.cases.filter((c) => !c.variant_of && c.status !== 'BLOCKED');
+  const paired = primary.filter((c) => c.display_mode === 'REFERENCE_RECREATION' && c.qwen);
+  return paired.find((c) => c.case_id === 'case-443') ?? paired[0]
+    ?? primary.find((c) => c.case_id === 'case-443' && c.qwen)
+    ?? primary.find((c) => c.qwen) ?? null;
+}
+
 export default function Home() {
   const t = siteModel.totals;
-  const heroCases = pick(
-    siteModel.cases.filter((c) => c.qwen && c.status !== 'BLOCKED'),
+  const primaryCases = siteModel.cases.filter((c) => !c.variant_of);
+  const variantCases = siteModel.cases.filter((c) => c.variant_of);
+  const hero = heroCase();
+  const heroStripCases = pick(
+    primaryCases.filter((c) => c.qwen && c.status !== 'BLOCKED' && c.case_id !== hero?.case_id),
     3
   );
 
@@ -26,19 +41,52 @@ export default function Home() {
           <p className="tagline">
             Same Prompt. Two Models. You Decide. <span className="zh">同一提示词，两个模型，你来评判。</span>
           </p>
-          <p className="sub">
-            Every challenge below was run for real: Qwen-Image 2.1 generated locally on an AMD
-            RX 7900 XTX under ROCm, with seeds, weights revisions and run records in the open.
-            The GPT Image 2 side is deliberately <b>empty</b> — this project has no OpenAI key.
-            Bring yours, generate the GPT side on your machine, and turn open challenges into
-            verified comparisons.
+          <p className="hero-count">
+            {t.references_approved > 0 ? (
+              <>
+                <b>{t.references_approved}</b> community gallery references × <b>{t.qwen_generated}</b> real Qwen
+                reproductions
+              </>
+            ) : (
+              <>
+                <b>{t.qwen_generated}</b> real Qwen reproductions of <b>{t.references_total}</b> community prompts ·
+                reference mirroring <b>{t.references_approved}/{t.references_total}</b> (author permissions pending)
+              </>
+            )}
           </p>
+
+          {hero && hero.qwen && (
+            <div className="hero-pair">
+              <ReferencePanel c={hero} compact />
+              <div className="panel side-qwen">
+                <div className="panel-head">
+                  Qwen-Image 2.1
+                  <span className="sub">
+                    bf16 · {hero.qwen.generation.steps} steps · seed {hero.qwen.generation.seed} · local ROCm run
+                  </span>
+                </div>
+                <div className="img-holder">
+                  <a href={`#/case/${hero.case_id}`}>
+                    <img src={asset(hero.qwen.image_web ?? hero.qwen.image)} alt={`${hero.title.en} — Qwen-Image 2.1 output`} />
+                  </a>
+                </div>
+                <div className="panel-foot">
+                  <span className="chip">{hero.qwen.generation.size}</span>
+                  <span className="chip">{hero.category}</span>
+                  <a className="chip link-chip" href={`#/case/${hero.case_id}`}>
+                    prompt · source · reproduce →
+                  </a>
+                </div>
+              </div>
+            </div>
+          )}
+
           <div className="hero-actions">
-            <a className="btn primary" href="#/contribute">
-              Bring your OpenAI key →
+            <a className="btn primary" href="#challenges">
+              View the {t.cases} comparisons
             </a>
-            <a className="btn ghost" href="#challenges">
-              Browse the {t.cases} challenges
+            <a className="btn ghost" href="#/contribute">
+              Copy a prompt · Bring your key →
             </a>
           </div>
           <div className="hero-stats">
@@ -47,12 +95,14 @@ export default function Home() {
               <span>real Qwen generations</span>
             </div>
             <div className="stat">
-              <b>{t.open_challenges}</b>
-              <span>open challenges awaiting GPT</span>
+              <b>
+                {t.references_approved}/{t.references_total}
+              </b>
+              <span>references mirrored (rights-gated)</span>
             </div>
             <div className="stat">
               <b>{t.reviewed_comparisons}</b>
-              <span>reviewed comparisons</span>
+              <span>verified GPT comparisons</span>
             </div>
             <div className="stat">
               <b>bf16 · 40 steps</b>
@@ -60,11 +110,11 @@ export default function Home() {
             </div>
           </div>
 
-          {heroCases.length > 0 && (
+          {heroStripCases.length > 0 && (
             <div className="hero-strip">
-              {heroCases.map((c) => (
+              {heroStripCases.map((c) => (
                 <a key={c.case_id} href={`#/case/${c.case_id}`}>
-                  <img src={asset(c.qwen!.image)} alt={`${c.title.en} — Qwen-Image 2.1`} />
+                  <img src={asset(c.qwen!.image_web ?? c.qwen!.image)} alt={`${c.title.en} — Qwen-Image 2.1`} />
                   <span className="cap">
                     <b>{c.title.en}</b>
                     Qwen-Image 2.1 · {c.canvas.width}×{c.canvas.height} · seed {c.qwen!.generation.seed}
@@ -79,7 +129,7 @@ export default function Home() {
       <section className="section" id="challenges">
         <div className="container">
           <div className="section-head">
-            <h2>The Challenges</h2>
+            <h2>The Comparisons</h2>
             <span className="count">
               {t.cases} frozen prompts · {t.open_challenges} open · {t.reviewed_comparisons} reviewed
             </span>
@@ -89,7 +139,7 @@ export default function Home() {
             </a>
           </div>
           <div className="case-grid">
-            {siteModel.cases.map((c) => (
+            {primaryCases.map((c) => (
               <CaseCard key={c.case_id} c={c} />
             ))}
           </div>
@@ -99,13 +149,36 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <div className="callout">
-            <b>No fake pairs, ever.</b> A GPT image only appears on a case page after a
-            contributor submits it with run evidence and a maintainer reviews it against the{' '}
-            <a href="#/methodology">public standard</a>. Until then you see exactly what exists:
-            one real Qwen output and an honest empty slot. Prompt texts come from the MIT-licensed{' '}
-            <a href="https://github.com/freestylefly/awesome-gpt-image-2">awesome-gpt-image-2</a>{' '}
-            library with per-case attribution. Full audit trail:{' '}
-            <a href={`${repoUrl}/blob/main/docs/P0_AUDIT.md`}>docs/P0_AUDIT.md</a>.
+            {t.references_approved === t.references_total ? (
+              <>
+                <b>Left: community references, mirrored with each author's permission.</b>{' '}
+                All {t.references_total} original authors approved display with attribution
+                (owner-recorded, 2026-11-02) — each mirrored byte is sha256-verified against the
+                audited upstream fingerprint. Right: always real — every Qwen image is a genuine
+                local run with committed provenance.
+              </>
+            ) : (
+              <>
+                <b>Left side: community references, rights-gated. Right side: always real.</b> Every
+                card's Qwen image is a genuine local run with its provenance committed. A community
+                reference appears as an image only after its original author approves (
+                {t.references_approved}/{t.references_total} cleared) — until then you get an honest
+                link-out, never a placeholder.
+              </>
+            )}{' '}
+            A reference is <b>never</b> labeled as a verified GPT Image 2 output — its generating
+            model is unverified; that label is reserved for reviewed submissions with run evidence.{' '}
+            {variantCases.length > 0 && (
+              <>
+                Case #390 also ships an exact-prompt Turkey variant (
+                {variantCases.map((v) => `#${v.case_id.replace('case-', '')}`).join(', ')}
+                ){' '}
+                for its Istanbul reference.{' '}
+              </>
+            )}
+            Full audit trail:{' '}
+            <a href={`${repoUrl}/blob/main/docs/REFERENCE_IMAGE_AUDIT.md`}>reference image audit</a> ·{' '}
+            <a href={`${repoUrl}/blob/main/docs/PERMISSION_REQUEST_KIT.md`}>permission workflow</a>.
           </div>
         </div>
       </section>

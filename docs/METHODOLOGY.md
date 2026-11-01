@@ -21,6 +21,46 @@ REVIEWED_COMPARISON   ── or REJECTED (archived with reason)
 Any stage can instead be `BLOCKED` (technical, licensing, or rights issue)
 with a recorded reason.
 
+## Reference images and display modes (gallery-first release)
+
+Every case also has a **community gallery reference** — the image that
+accompanied the prompt in the library. References live in a separate rights
+regime from GPT submissions, and the two are never conflated:
+
+| Display mode | Requires | Meaning |
+|---|---|---|
+| `QWEN_ONLY` | real Qwen run | reference renders as a labeled link-out card (permission pending / external-only) |
+| `REFERENCE_RECREATION` | rights `APPROVED` reference (mirrored, sha-verified) **+** real Qwen run | side-by-side "Community Gallery Reference vs Qwen Recreation" |
+| `VERIFIED_GPT_COMPARISON` | reviewed community GPT submission with run evidence | true model-vs-model comparison |
+
+Hard rules (CI-enforced by `tools/validate_gallery.py`):
+
+1. **A reference image is never called verified GPT output.** Its label is
+   always "Community Gallery Reference — Model Unverified": the library
+   attributes it to GPT Image community posts, but no API/run evidence exists.
+2. **A reference never changes a case status.** Displaying one does not move
+   `OPEN_CHALLENGE` → anything. Only reviewed GPT submissions do.
+3. **Mirroring is permission-gated**: an image byte enters
+   `gallery/reference/images/` only when its ledger record is `APPROVED`
+   (`gallery/reference/index.json`), and its sha256 must equal the audited
+   upstream fingerprint at the pinned library commit. `tools/mirror_reference.py`
+   refuses everything else; the validator fails any violation.
+4. **No hotlinking**: upstream enforces hotlink protection and this project
+   does not embed the library's bytes by reference either.
+5. **Aspect honesty**: when the reference and the Qwen canvas differ in ratio
+   (5 of 12 cases), both are shown complete (`contain`), the dimensions are
+   disclosed, and the drag-slider is disabled (it would hide content).
+6. **Derived prompts are labeled**: case-390's template fill (`Japan`) differs
+   from its Istanbul reference — the pairing is labeled *derived*, and the
+   exact-prompt variant `case-390t` (Turkey, inferred parameter, real run)
+   exists for a true same-prompt pairing. The original Japan case and its run
+   record are immutable.
+
+Rights statuses: `APPROVED` / `EXTERNAL_LINK_ONLY` / `PENDING_PERMISSION` /
+`BLOCKED` — per-image records with authors, post URLs, fingerprints and
+evidence links live in `gallery/reference/index.json`; the workflow and
+ready-to-send request letters are in `docs/PERMISSION_REQUEST_KIT.md`.
+
 ## The Qwen side (what "real" means here)
 
 Every Qwen image in this repo satisfies all of the following, machine-checked
@@ -87,8 +127,12 @@ never promoted on looks.
 case schema → prompt sha256 recompute → image sha256 recompute → PNG
 dimensions vs canvas → model/weights pins present → provenance chain present →
 duplicate prompt/image detection → secret scan across all tracked text files →
-site-data image paths exist → status-vs-evidence consistency. CI then builds
-the site (`npm ci && npm run build`) — typecheck + production build must pass.
+site-data image paths exist → status-vs-evidence consistency → **rights-ledger
+schema → mirror gate (no reference image without APPROVED + sha match) →
+no-hotlink scan → site reference blocks match the ledger → README/site counts
+derive from the ledger → the historical 12-run session stays intact**. CI then
+builds the site (`npm ci && npm run build`) — typecheck + production build must
+pass — and checks that every case has committed web derivatives + a social card.
 
 ## What this project does NOT claim
 

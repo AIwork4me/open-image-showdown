@@ -132,6 +132,18 @@
       "height": 720,
       "prompt_sha256": "4e590d6ca18bdf7f3701705240c63e86f7b7d6ddb996609405d80ee32b7fdb4a",
       "status": "OPEN_CHALLENGE"
+    },
+    {
+      "case_id": "case-390t",
+      "variant_of": "case-390",
+      "title_en": "Felt Diorama: Turkey (reference-pairing variant)",
+      "title_zh": "羊毛毡微缩世界·土耳其（配对变体）",
+      "category": "Scenes & Storytelling",
+      "aspect": "2:3",
+      "width": 832,
+      "height": 1248,
+      "prompt_sha256": "20284d61af6bd7b93d6b74b8c122f6c984c01c8b39eae6a3e941dbff409903ed",
+      "status": "OPEN_CHALLENGE"
     }
   ]
 }

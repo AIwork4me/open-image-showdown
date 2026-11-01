@@ -4,6 +4,23 @@ export type CaseStatus =
   | 'REVIEWED_COMPARISON'
   | 'BLOCKED';
 
+/** Rights status of a library reference image (mirrors the rights ledger).
+ *  Only APPROVED (+ mirrored, sha-verified) references may be rendered. */
+export type ReferencePermission =
+  | 'APPROVED'
+  | 'EXTERNAL_LINK_ONLY'
+  | 'PENDING_PERMISSION'
+  | 'BLOCKED';
+
+/** How a case page presents its comparison. Derived, never hand-set:
+ *  VERIFIED_GPT_COMPARISON  reviewed community GPT submission exists
+ *  REFERENCE_RECREATION     rights-APPROVED library reference + real Qwen run
+ *  QWEN_ONLY                real Qwen run; reference is a labeled link-out */
+export type DisplayMode =
+  | 'VERIFIED_GPT_COMPARISON'
+  | 'REFERENCE_RECREATION'
+  | 'QWEN_ONLY';
+
 export interface Reference {
   library: string;
   library_url: string;
@@ -13,6 +30,30 @@ export interface Reference {
   source_label: string | null;
   source_url: string | null;
   source_note: string;
+}
+
+/** Library reference image record (from gallery/reference/index.json).
+ *  A reference image is a COMMUNITY GALLERY REFERENCE — its generating model
+ *  is unverified and it is NEVER labeled as a verified GPT Image 2 output. */
+export interface ReferenceImage {
+  display_permission: ReferencePermission;
+  renderable: boolean;          // APPROVED + mirrored + file exists
+  image: string | null;         // site asset path when renderable
+  image_sha256: string;         // audited upstream fingerprint
+  width: number;                // upstream reference dims (facts, always present)
+  height: number;
+  original_author: string;
+  original_post_url: string | null;
+  original_author_profile_url: string | null;
+  library_case_url: string;     // pinned-commit link (never mutable main)
+  source_commit_sha: string;
+  model_identity: string;       // always contains UNVERIFIED
+  prompt_match_level: 'EXACT' | 'DERIVED_TEMPLATE_FILL';
+  prompt_match_note: string;
+  aspect_match: boolean;        // reference aspect vs Qwen canvas within 2%
+  aspect_disclosure_required: boolean;
+  attribution: string;
+  reuse_restrictions: string;
 }
 
 export interface QwenGeneration {
@@ -36,7 +77,8 @@ export interface QwenGeneration {
 }
 
 export interface QwenSide {
-  image: string;
+  image: string;             // original PNG (full resolution, provenance-pinned)
+  image_web: string | null;  // committed webp derivative for inline display
   image_sha256: string;
   width: number;
   height: number;
@@ -66,6 +108,9 @@ export interface Submission {
 export interface Case {
   case_id: string;
   status: CaseStatus;
+  display_mode: DisplayMode;
+  variant_of: string | null;    // set for reference-pairing variants (case-390t)
+  variant_kind: string | null;
   blocked_reason: string | null;
   title: { en: string; zh: string; library_title_zh: string };
   category: string;
@@ -82,6 +127,7 @@ export interface Case {
     description: string;
   } | null;
   reference: Reference;
+  reference_image: ReferenceImage | null;
   notes: string[];
   qwen: QwenSide | null;
   gpt: {
@@ -100,12 +146,16 @@ export interface SiteModel {
   project: string;
   tagline: string;
   totals: {
-    cases: number;
-    qwen_generated: number;
+    cases: number;                 // primary (non-variant) challenges
+    variants: number;
+    qwen_generated: number;        // all real Qwen outputs incl. variants
     open_challenges: number;
     community_submitted: number;
     reviewed_comparisons: number;
     blocked: number;
+    references_total: number;      // audited reference records (12)
+    references_approved: number;   // renderable side-by-side references
+    reference_pairings_ready: number;
   };
   cases: Case[];
 }

@@ -59,3 +59,26 @@ The driver reuses the engine repo's own `bench/comfyui_client.py` primitives (wo
 ## Licensing of these outputs
 
 Generated with Qwen-Image-2.1 weights under the **Qwen Research License** (non-commercial). The images are published here as research/evaluation artifacts under **CC BY-NC 4.0** with full provenance; any commercial use requires a separate commercial license from the Qwen team.
+
+## Addendum (2026-11-01, gallery-first release): case-390t reference-pairing variant
+
+One additional real run in the same Quality profile, recorded in a separate
+session file (`gallery/qwen/case-390t.session.json`; the original 12-case
+session above is unchanged and remains the historical baseline):
+
+| Case | Canvas | Wall time | VRAM peak | Image sha256 (16) | Status |
+|---|---|---|---|---|---|
+| case-390t (Turkey) | 832×1248 | 60.4 s | 14.8 GB | `7a6530f0e6b443ce` | ok |
+
+- **Why it exists:** the case-390 reference image depicts Istanbul/Turkey while
+  the frozen primary prompt resolved the upstream `[INSERT COUNTRY NAME]`
+  template to Japan. The variant resolves it to **Turkey** — the parameter is
+  inferred from the reference image's content (mosque, Galata Tower, "TAKSİM"
+  tram, Turkish flags — visually verified 2026-11-01), **not** author-confirmed.
+  It provides an exact-template-prompt pairing for when the reference's display
+  rights are approved. See `docs/REFERENCE_IMAGE_AUDIT.md` §6.
+- **Same discipline:** engine `qwen-image-rocm@cbd9e74` (same commit as the
+  12-case session), ComfyUI `b5a43215`, weights `Comfy-Org/Qwen-Image-2.1@aacf31a6`,
+  bf16-40, euler/simple, cfg 1.0, seed 42, one image, unedited PNG, run record
+  committed (`gallery/qwen/case-390t.run.json`).
+- The primary `case-390` (Japan) prompt, run record and image are untouched.
