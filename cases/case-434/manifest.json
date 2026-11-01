@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "case_id": "case-434",
+  "status": "OPEN_CHALLENGE",
+  "blocked_reason": null,
+  "title": {
+    "en": "Tokyo Street Film Portrait",
+    "zh": "东京街头胶片人像",
+    "library_title_zh": "东京街头胶片人像"
+  },
+  "category": "Photography & Realism",
+  "summary": {
+    "one_liner": null
+  },
+  "reference": {
+    "library": "freestylefly/awesome-gpt-image-2",
+    "library_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+    "library_case_id": 434,
+    "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/docs/gallery-part-2.md#case-434",
+    "library_license": "MIT",
+    "source_label": "@BubbleBrain",
+    "source_url": "https://x.com/BubbleBrain/status/2055491616392052887",
+    "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
+  },
+  "prompt": {
+    "frozen": true,
+    "language": "en",
+    "file": "prompt.txt",
+    "sha256": "889c680679937c43c5d0314476f426d8fb53091031c035a0833c83888e094ec4",
+    "bytes": 1927,
+    "chars": 1923,
+    "derivation": null,
+    "freeze_policy": "prompt.txt is the canonical artifact (UTF-8, no trailing newline). After gallery publication the prompt text is immutable; corrections require a new case id."
+  },
+  "canvas": {
+    "aspect_ratio": "9:16",
+    "width": 720,
+    "height": 1280,
+    "megapixels": 0.9216,
+    "multiple_of": 16
+  },
+  "qwen_plan": {
+    "mode": "quality",
+    "steps": 40,
+    "cfg": 1.0,
+    "sampler": "euler",
+    "scheduler": "simple",
+    "negative_prompt": "",
+    "seed": 42,
+    "engine_manifest": "p4-qs-quality-1024x1024",
+    "width": 720,
+    "height": 1280,
+    "weights_repo": "Comfy-Org/Qwen-Image-2.1",
+    "weights_revision": "aacf31a6d48e707f352ecba714cee0680da3479b",
+    "comfyui_commit": "b5a432157de6b8884f81104cd02926adf4d597e4",
+    "engine_repo": "AIwork4me/qwen-image-rocm",
+    "gpu": "AMD Radeon RX 7900 XTX 24 GB (gfx1100, native Windows ROCm)"
+  },
+  "gpt_plan": {
+    "model": "gpt-image-2-2026-04-21",
+    "model_pinned_snapshot": true,
+    "size": "1024x1536",
+    "size_note": "Intended closest supported size; exact allowed sizes are frozen in P4 against the official Images API spec before any contributor run.",
+    "byok": true,
+    "project_has_no_openai_key": true
+  },
+  "verification": {
+    "gpt_side": "PENDING_COMMUNITY_SUBMISSION",
+    "rules": "Model attribution is never inferred from visual similarity. COMMUNITY_SUBMITTED -> REVIEWED_COMPARISON only after maintainer review of run evidence per METHODOLOGY.md."
+  },
+  "notes": [
+    "Embeds a Midjourney-style '--ar 9:16' parameter and the artist signature string 'BubbleBrain'; both kept verbatim — every model receives the same literal text.",
+    "Longest single-block style chain among the 12."
+  ]
+}

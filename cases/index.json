@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "case_id": "case-1",
+      "title_en": "Urban Metabolism Atlas",
+      "title_zh": "城市生命系统图谱",
+      "category": "UI & Interfaces",
+      "aspect": "9:16",
+      "width": 720,
+      "height": 1280,
+      "prompt_sha256": "fe1d4a9b24c1329b9e8905d1ee45ce3ef3e2665b0d5ce9c095c246156d9ad94e",
+      "status": "OPEN_CHALLENGE"
+    },
+    {
+      "case_id": "case-13",
+      "title_en": "Math Exam Paper Photo",
+      "title_zh": "数学试卷实拍照片",
+      "category": "Documents & Publishing",
+      "aspect": "1:1",
+      "width": 1024,
+      "height": 1024,
+      "prompt_sha256": "a662cac8ae4793156ea0a0158ce9888644b3b0a3ef829e8253f8b4fa65004e2e",
+      "status": "OPEN_CHALLENGE"
+    },
+    {
+      "case_id": "case-14",
+      "title_en": "Tomato & Egg Recipe Infographic",
+      "title_zh": "番茄炒蛋食谱信息图",
+      "category": "Charts & Infographics",
+      "aspect": "9:16",
+      "width": 720,
+      "height": 1280,
+      "prompt_sha256": "84063e04c693df807d4a229a88a19a642cf7a15be4d1dc9326bd11343e499f03",
+      "status": "OPEN_CHALLENGE"
+    },
+    {
+      "case_id": "case-344",
+      "title_en": "NOIR Streetwear Campaign",
+      "title_zh": "NOIR 街头服饰 Campaign",
+      "category": "Brand & Logos",
+      "aspect": "1:1",
+      "width": 1024,
+      "height": 1024,
+      "prompt_sha256": "355b4407b601254b23cfd541d71d548884bca225f57b6ce39f25f81e56915eb6",
+      "status": "OPEN_CHALLENGE"
+    },
+    {
+      "case_id": "case-443",
+      "title_en": "Exploded Taco Infographic",
+      "title_zh": "塔可爆炸拆解信息图",
+      "category": "Charts & Infographics",
+      "aspect": "2:3",
+      "width": 832,
+      "height": 1248,
+      "prompt_sha256": "c9bd4f23e9fad229382532b1cab65104943328360db035ed57a75a01e468b40b",
+      "status": "OPEN_CHALLENGE"
+    },
+    {
+      "case_id": "case-510",
+      "title_en": "Bichon Shop App Icon",
+      "title_zh": "Bichon Shop 拟物 App 图标",
+      "category": "Brand & Logos",
+      "aspect": "1:1",
+      "width": 1024,
+      "height": 1024,
+      "prompt_sha256": "6427e7f61957e58d42fbcca7bca757d65c99489587f471ce4bfe8f402f1008de",
+      "status": "OPEN_CHALLENGE"
+    },
+    {
+      "case_id": "case-414",
+      "title_en": "Morning Bedroom Photography",
+      "title_zh": "室内晨间写实摄影",
+      "category": "Photography & Realism",
+      "aspect": "2:3",
+      "width": 832,
+      "height": 1248,
+      "prompt_sha256": "d1851e75e25cbf5cdc5c9d5e4d02ba08755c7e3e68736b9d5c94ee020916bd97",
+      "status": "OPEN_CHALLENGE"
+    },
+    {
+      "case_id": "case-434",
+      "title_en": "Tokyo Street Film Portrait",
+      "title_zh": "东京街头胶片人像",
+      "category": "Photography & Realism",
+      "aspect": "9:16",
+      "width": 720,
+      "height": 1280,
+      "prompt_sha256": "889c680679937c43c5d0314476f426d8fb53091031c035a0833c83888e094ec4",
+      "status": "OPEN_CHALLENGE"
+    },
+    {
+      "case_id": "case-419",
+      "title_en": "Croissant Baker Storyboard",
+      "title_zh": "可颂烘焙流程 Storyboard",
+      "category": "Scenes & Storytelling",
+      "aspect": "16:9",
+      "width": 1280,
+      "height": 720,
+      "prompt_sha256": "e7a6a2a6d628bed2d3c2d607188ef06769f94039d69860de72652ac116be8d85",
+      "status": "OPEN_CHALLENGE"
+    },
+    {
+      "case_id": "case-390",
+      "title_en": "Felt Diorama: Japan",
+      "title_zh": "羊毛毡微缩世界·日本",
+      "category": "Scenes & Storytelling",
+      "aspect": "2:3",
+      "width": 832,
+      "height": 1248,
+      "prompt_sha256": "99b43b5f66e0f4290beee06daff51ce2c9e641ce4cf96c12e2d40dd4ad2fb226",
+      "status": "OPEN_CHALLENGE"
+    },
+    {
+      "case_id": "case-396",
+      "title_en": "Vintage Dragon Encyclopedia",
+      "title_zh": "龙类物种复古百科海报",
+      "category": "Posters & Typography",
+      "aspect": "1:1.414 (A4 portrait)",
+      "width": 768,
+      "height": 1088,
+      "prompt_sha256": "b3a7f6daa4401a6c67e814b9fc15fdb9b858bd791294b28f976e696c922966a2",
+      "status": "OPEN_CHALLENGE"
+    },
+    {
+      "case_id": "case-474",
+      "title_en": "Minimal Travel Poster Series",
+      "title_zh": "四城极简旅行海报系列",
+      "category": "Posters & Typography",
+      "aspect": "16:9",
+      "width": 1280,
+      "height": 720,
+      "prompt_sha256": "4e590d6ca18bdf7f3701705240c63e86f7b7d6ddb996609405d80ee32b7fdb4a",
+      "status": "OPEN_CHALLENGE"
+    }
+  ]
+}

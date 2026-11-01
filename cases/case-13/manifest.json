@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "case_id": "case-13",
+  "status": "OPEN_CHALLENGE",
+  "blocked_reason": null,
+  "title": {
+    "en": "Math Exam Paper Photo",
+    "zh": "数学试卷实拍照片",
+    "library_title_zh": "信息图可视化设计"
+  },
+  "category": "Documents & Publishing",
+  "summary": {
+    "one_liner": null
+  },
+  "reference": {
+    "library": "freestylefly/awesome-gpt-image-2",
+    "library_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+    "library_case_id": 13,
+    "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/docs/gallery-part-1.md#case-13",
+    "library_license": "MIT",
+    "source_label": "小红书号94156710894",
+    "source_url": null,
+    "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
+  },
+  "prompt": {
+    "frozen": true,
+    "language": "en",
+    "file": "prompt.txt",
+    "sha256": "a662cac8ae4793156ea0a0158ce9888644b3b0a3ef829e8253f8b4fa65004e2e",
+    "bytes": 506,
+    "chars": 494,
+    "derivation": null,
+    "freeze_policy": "prompt.txt is the canonical artifact (UTF-8, no trailing newline). After gallery publication the prompt text is immutable; corrections require a new case id."
+  },
+  "canvas": {
+    "aspect_ratio": "1:1",
+    "width": 1024,
+    "height": 1024,
+    "megapixels": 1.0486,
+    "multiple_of": 16
+  },
+  "qwen_plan": {
+    "mode": "quality",
+    "steps": 40,
+    "cfg": 1.0,
+    "sampler": "euler",
+    "scheduler": "simple",
+    "negative_prompt": "",
+    "seed": 42,
+    "engine_manifest": "p4-qs-quality-1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "weights_repo": "Comfy-Org/Qwen-Image-2.1",
+    "weights_revision": "aacf31a6d48e707f352ecba714cee0680da3479b",
+    "comfyui_commit": "b5a432157de6b8884f81104cd02926adf4d597e4",
+    "engine_repo": "AIwork4me/qwen-image-rocm",
+    "gpu": "AMD Radeon RX 7900 XTX 24 GB (gfx1100, native Windows ROCm)"
+  },
+  "gpt_plan": {
+    "model": "gpt-image-2-2026-04-21",
+    "model_pinned_snapshot": true,
+    "size": "1024x1024",
+    "size_note": "Intended closest supported size; exact allowed sizes are frozen in P4 against the official Images API spec before any contributor run.",
+    "byok": true,
+    "project_has_no_openai_key": true
+  },
+  "verification": {
+    "gpt_side": "PENDING_COMMUNITY_SUBMISSION",
+    "rules": "Model attribution is never inferred from visual similarity. COMMUNITY_SUBMITTED -> REVIEWED_COMPARISON only after maintainer review of run evidence per METHODOLOGY.md."
+  },
+  "notes": [
+    "Upstream prompt text contains original spacing typos (e.g. 'inblack', 'asmartphone'); frozen verbatim — fixing them would silently edit the source prompt.",
+    "Chinese text content inside an English prompt (mixed-language stress)."
+  ]
+}

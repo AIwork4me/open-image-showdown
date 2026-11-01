@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "case_id": "case-396",
+  "status": "OPEN_CHALLENGE",
+  "blocked_reason": null,
+  "title": {
+    "en": "Vintage Dragon Encyclopedia",
+    "zh": "龙类物种复古百科海报",
+    "library_title_zh": "龙类物种复古百科海报"
+  },
+  "category": "Posters & Typography",
+  "summary": {
+    "one_liner": null
+  },
+  "reference": {
+    "library": "freestylefly/awesome-gpt-image-2",
+    "library_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+    "library_case_id": 396,
+    "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/docs/gallery-part-2.md#case-396",
+    "library_license": "MIT",
+    "source_label": "@sha_zdiii",
+    "source_url": "https://x.com/sha_zdiii/status/2052237839119835280",
+    "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
+  },
+  "prompt": {
+    "frozen": true,
+    "language": "en",
+    "file": "prompt.txt",
+    "sha256": "b3a7f6daa4401a6c67e814b9fc15fdb9b858bd791294b28f976e696c922966a2",
+    "bytes": 911,
+    "chars": 911,
+    "derivation": null,
+    "freeze_policy": "prompt.txt is the canonical artifact (UTF-8, no trailing newline). After gallery publication the prompt text is immutable; corrections require a new case id."
+  },
+  "canvas": {
+    "aspect_ratio": "1:1.414 (A4 portrait)",
+    "width": 768,
+    "height": 1088,
+    "megapixels": 0.8356,
+    "multiple_of": 16
+  },
+  "qwen_plan": {
+    "mode": "quality",
+    "steps": 40,
+    "cfg": 1.0,
+    "sampler": "euler",
+    "scheduler": "simple",
+    "negative_prompt": "",
+    "seed": 42,
+    "engine_manifest": "p4-qs-quality-1024x1024",
+    "width": 768,
+    "height": 1088,
+    "weights_repo": "Comfy-Org/Qwen-Image-2.1",
+    "weights_revision": "aacf31a6d48e707f352ecba714cee0680da3479b",
+    "comfyui_commit": "b5a432157de6b8884f81104cd02926adf4d597e4",
+    "engine_repo": "AIwork4me/qwen-image-rocm",
+    "gpu": "AMD Radeon RX 7900 XTX 24 GB (gfx1100, native Windows ROCm)"
+  },
+  "gpt_plan": {
+    "model": "gpt-image-2-2026-04-21",
+    "model_pinned_snapshot": true,
+    "size": "1024x1536",
+    "size_note": "Intended closest supported size; exact allowed sizes are frozen in P4 against the official Images API spec before any contributor run.",
+    "byok": true,
+    "project_has_no_openai_key": true
+  },
+  "verification": {
+    "gpt_side": "PENDING_COMMUNITY_SUBMISSION",
+    "rules": "Model attribution is never inferred from visual similarity. COMMUNITY_SUBMITTED -> REVIEWED_COMPARISON only after maintainer review of run evidence per METHODOLOGY.md."
+  },
+  "notes": [
+    "A4 ratio approximated as 768x1088 (1:1.4167, 0.84 MP) — closest 16-px-multiple canvas within budget.",
+    "Ten infographic sections + engraved-sketch marginalia."
+  ]
+}
