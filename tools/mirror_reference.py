@@ -37,9 +37,16 @@ def fail(msg: str) -> None:
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--case", required=True, help="case id, e.g. case-443")
+    ap.add_argument("--ledger", default=str(LEDGER), help="ledger path (tests point this at a temp copy)")
+    ap.add_argument("--images-dir", default=str(IMAGES_DIR), help="mirror destination dir")
+    ap.add_argument("--source-file", default=None,
+                    help="offline fallback: local copy of the pinned upstream bytes "
+                         "(sha256 must still equal the audited image_sha256)")
     args = ap.parse_args()
 
-    ledger = json.loads(LEDGER.read_text(encoding="utf-8"))
+    ledger_path = Path(args.ledger)
+    images_dir = Path(args.images_dir)
+    ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
     rec = next((r for r in ledger["references"] if r["case_id"] == args.case), None)
     if rec is None:
         fail(f"{args.case}: no record in the rights ledger")
@@ -58,10 +65,14 @@ def main() -> None:
     path = rec["source_file_path"]
     url = f"https://raw.githubusercontent.com/{repo}/{sha}/{path}"
 
-    print(f"downloading pinned bytes: {url}")
-    with tempfile.NamedTemporaryFile(delete=False, suffix=".jpg") as tmp:
-        urllib.request.urlretrieve(url, tmp.name)
-        data = Path(tmp.name).read_bytes()
+    if args.source_file:
+        print(f"reading local pinned-byte copy: {args.source_file}")
+        data = Path(args.source_file).read_bytes()
+    else:
+        print(f"downloading pinned bytes: {url}")
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".jpg") as tmp:
+            urllib.request.urlretrieve(url, tmp.name)
+            data = Path(tmp.name).read_bytes()
 
     digest = hashlib.sha256(data).hexdigest()
     if digest != rec["image_sha256"]:
@@ -71,11 +82,11 @@ def main() -> None:
             "re-audit the case before mirroring (do NOT relax this check)."
         )
 
-    IMAGES_DIR.mkdir(parents=True, exist_ok=True)
-    dest = IMAGES_DIR / f"{args.case}.jpg"
+    images_dir.mkdir(parents=True, exist_ok=True)
+    dest = images_dir / f"{args.case}.jpg"
     dest.write_bytes(data)
     rec["mirror"] = {"path": f"gallery/reference/images/{args.case}.jpg", "sha256_verified": True}
-    LEDGER.write_text(json.dumps(ledger, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    ledger_path.write_text(json.dumps(ledger, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"mirrored {dest} ({len(data)} bytes, sha256 verified) — ledger mirror block updated")
 
 

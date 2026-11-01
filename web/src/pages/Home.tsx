@@ -6,13 +6,15 @@ function pick<T>(arr: T[], n: number): T[] {
   return arr.slice(0, n);
 }
 
-/** The hero case: first rights-approved pairing if one exists, otherwise a
- *  curated visually-strong case (its reference renders as a link-out card
- *  until permissions arrive — never a fake image). */
+/** The hero case: the curated strongest pairing (#443 taco) when its reference
+ *  is rights-cleared, else the first approved pairing, else a curated case
+ *  (reference renders as a link-out card — never a fake image). */
 function heroCase() {
   const primary = siteModel.cases.filter((c) => !c.variant_of && c.status !== 'BLOCKED');
-  const paired = primary.find((c) => c.display_mode === 'REFERENCE_RECREATION' && c.qwen);
-  return paired ?? primary.find((c) => c.case_id === 'case-443' && c.qwen) ?? primary.find((c) => c.qwen) ?? null;
+  const paired = primary.filter((c) => c.display_mode === 'REFERENCE_RECREATION' && c.qwen);
+  return paired.find((c) => c.case_id === 'case-443') ?? paired[0]
+    ?? primary.find((c) => c.case_id === 'case-443' && c.qwen)
+    ?? primary.find((c) => c.qwen) ?? null;
 }
 
 export default function Home() {
@@ -147,11 +149,25 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <div className="callout">
-            <b>Left side: community references, rights-gated. Right side: always real.</b> Every card's
-            Qwen image is a genuine local run with its provenance committed. The community reference
-            beside it appears as an image only after its original author approves — until then you get
-            the honest link-out you see now. A reference is <b>never</b> labeled as a verified GPT
-            Image 2 output; that label is reserved for reviewed submissions with run evidence.{' '}
+            {t.references_approved === t.references_total ? (
+              <>
+                <b>Left: community references, mirrored with each author's permission.</b>{' '}
+                All {t.references_total} original authors approved display with attribution
+                (owner-recorded, 2026-11-02) — each mirrored byte is sha256-verified against the
+                audited upstream fingerprint. Right: always real — every Qwen image is a genuine
+                local run with committed provenance.
+              </>
+            ) : (
+              <>
+                <b>Left side: community references, rights-gated. Right side: always real.</b> Every
+                card's Qwen image is a genuine local run with its provenance committed. A community
+                reference appears as an image only after its original author approves (
+                {t.references_approved}/{t.references_total} cleared) — until then you get an honest
+                link-out, never a placeholder.
+              </>
+            )}{' '}
+            A reference is <b>never</b> labeled as a verified GPT Image 2 output — its generating
+            model is unverified; that label is reserved for reviewed submissions with run evidence.{' '}
             {variantCases.length > 0 && (
               <>
                 Case #390 also ships an exact-prompt Turkey variant (

@@ -52,16 +52,16 @@
       },
       "aspect_match": true,
       "aspect_disclosure_required": false,
-      "rights_basis": "No redistribution license located. Library MIT covers its own code/docs only; library disclaimer (README §Disclaimer, commit 63e6176f) states it does not own third-party images. Author permission required before mirroring.",
+      "rights_basis": "Original author approved display in this non-commercial project with attribution (owner-recorded 2026-11-02, channel: XHS (xiaohongshu) DM). Copyright remains with the author; display-only, no re-licensing, removal on request.",
       "rights_evidence_url": null,
       "attribution": "Image © original author (小红书号 insight_express), collected by awesome-gpt-image-2 (no public post URL)",
-      "display_permission": "PENDING_PERMISSION",
-      "permission_requested_utc": null,
-      "permission_evidence": null,
+      "display_permission": "APPROVED",
+      "permission_requested_utc": "2026-11-02",
+      "permission_evidence": "Owner-reported author approval received via XHS (xiaohongshu) DM and recorded 2026-11-02 per owner instruction (owner message to build agent, 2026-11-02: 9 X authors + 3 xiaohongshu authors approved). Per-reply evidence links may be appended by the owner at any time.",
       "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project.",
       "mirror": {
-        "path": null,
-        "sha256_verified": false
+        "path": "gallery/reference/images/case-1.jpg",
+        "sha256_verified": true
       }
     },
     {
@@ -90,16 +90,16 @@
       },
       "aspect_match": false,
       "aspect_disclosure_required": true,
-      "rights_basis": "No redistribution license located. Library MIT covers its own code/docs only; library disclaimer (README §Disclaimer, commit 63e6176f) states it does not own third-party images. Author permission required before mirroring.",
+      "rights_basis": "Original author approved display in this non-commercial project with attribution (owner-recorded 2026-11-02, channel: XHS (xiaohongshu) DM). Copyright remains with the author; display-only, no re-licensing, removal on request.",
       "rights_evidence_url": null,
       "attribution": "Image © original author (小红书号 94156710894), collected by awesome-gpt-image-2 (no public post URL)",
-      "display_permission": "PENDING_PERMISSION",
-      "permission_requested_utc": null,
-      "permission_evidence": null,
+      "display_permission": "APPROVED",
+      "permission_requested_utc": "2026-11-02",
+      "permission_evidence": "Owner-reported author approval received via XHS (xiaohongshu) DM and recorded 2026-11-02 per owner instruction (owner message to build agent, 2026-11-02: 9 X authors + 3 xiaohongshu authors approved). Per-reply evidence links may be appended by the owner at any time.",
       "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project.",
       "mirror": {
-        "path": null,
-        "sha256_verified": false
+        "path": "gallery/reference/images/case-13.jpg",
+        "sha256_verified": true
       }
     },
     {
@@ -128,16 +128,16 @@
       },
       "aspect_match": true,
       "aspect_disclosure_required": false,
-      "rights_basis": "No redistribution license located. Library MIT covers its own code/docs only; library disclaimer (README §Disclaimer, commit 63e6176f) states it does not own third-party images. Author permission required before mirroring.",
+      "rights_basis": "Original author approved display in this non-commercial project with attribution (owner-recorded 2026-11-02, channel: XHS (xiaohongshu) DM). Copyright remains with the author; display-only, no re-licensing, removal on request.",
       "rights_evidence_url": null,
       "attribution": "Image © original author (小红书号 Roy_Jay), collected by awesome-gpt-image-2 (no public post URL)",
-      "display_permission": "PENDING_PERMISSION",
-      "permission_requested_utc": null,
-      "permission_evidence": null,
+      "display_permission": "APPROVED",
+      "permission_requested_utc": "2026-11-02",
+      "permission_evidence": "Owner-reported author approval received via XHS (xiaohongshu) DM and recorded 2026-11-02 per owner instruction (owner message to build agent, 2026-11-02: 9 X authors + 3 xiaohongshu authors approved). Per-reply evidence links may be appended by the owner at any time.",
       "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project.",
       "mirror": {
-        "path": null,
-        "sha256_verified": false
+        "path": "gallery/reference/images/case-14.jpg",
+        "sha256_verified": true
       }
     },
     {
@@ -166,16 +166,16 @@
       },
       "aspect_match": false,
       "aspect_disclosure_required": true,
-      "rights_basis": "No redistribution license located. Library MIT covers its own code/docs only; library disclaimer (README §Disclaimer, commit 63e6176f) states it does not own third-party images. Author permission required before mirroring.",
+      "rights_basis": "Original author approved display in this non-commercial project with attribution (owner-recorded 2026-11-02, channel: X reply/DM). Copyright remains with the author; display-only, no re-licensing, removal on request.",
       "rights_evidence_url": null,
       "attribution": "Image © original author (@Daniel_adsss), collected by awesome-gpt-image-2, source post: https://x.com/Daniel_adsss/status/2048542581638701446",
-      "display_permission": "PENDING_PERMISSION",
-      "permission_requested_utc": null,
-      "permission_evidence": null,
+      "display_permission": "APPROVED",
+      "permission_requested_utc": "2026-11-02",
+      "permission_evidence": "Owner-reported author approval received via X reply/DM and recorded 2026-11-02 per owner instruction (owner message to build agent, 2026-11-02: 9 X authors + 3 xiaohongshu authors approved). Per-reply evidence links may be appended by the owner at any time.",
       "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project.",
       "mirror": {
-        "path": null,
-        "sha256_verified": false
+        "path": "gallery/reference/images/case-344.jpg",
+        "sha256_verified": true
       }
     },
     {
@@ -204,16 +204,16 @@
       },
       "aspect_match": false,
       "aspect_disclosure_required": true,
-      "rights_basis": "No redistribution license located. Library MIT covers its own code/docs only; library disclaimer (README §Disclaimer, commit 63e6176f) states it does not own third-party images. Author permission required before mirroring.",
+      "rights_basis": "Original author approved display in this non-commercial project with attribution (owner-recorded 2026-11-02, channel: X reply/DM). Copyright remains with the author; display-only, no re-licensing, removal on request.",
       "rights_evidence_url": null,
       "attribution": "Image © original author (@Strength04_X), collected by awesome-gpt-image-2, source post: https://x.com/Strength04_X/status/2056018963084226866",
-      "display_permission": "PENDING_PERMISSION",
-      "permission_requested_utc": null,
-      "permission_evidence": null,
+      "display_permission": "APPROVED",
+      "permission_requested_utc": "2026-11-02",
+      "permission_evidence": "Owner-reported author approval received via X reply/DM and recorded 2026-11-02 per owner instruction (owner message to build agent, 2026-11-02: 9 X authors + 3 xiaohongshu authors approved). Per-reply evidence links may be appended by the owner at any time.",
       "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project.",
       "mirror": {
-        "path": null,
-        "sha256_verified": false
+        "path": "gallery/reference/images/case-443.jpg",
+        "sha256_verified": true
       }
     },
     {
@@ -242,16 +242,16 @@
       },
       "aspect_match": true,
       "aspect_disclosure_required": false,
-      "rights_basis": "No redistribution license located. Library MIT covers its own code/docs only; library disclaimer (README §Disclaimer, commit 63e6176f) states it does not own third-party images. Author permission required before mirroring.",
+      "rights_basis": "Original author approved display in this non-commercial project with attribution (owner-recorded 2026-11-02, channel: X reply/DM). Copyright remains with the author; display-only, no re-licensing, removal on request.",
       "rights_evidence_url": null,
       "attribution": "Image © original author (@iamaiistudio), collected by awesome-gpt-image-2, source post: https://x.com/iamaiistudio/status/2071923809788285125",
-      "display_permission": "PENDING_PERMISSION",
-      "permission_requested_utc": null,
-      "permission_evidence": null,
+      "display_permission": "APPROVED",
+      "permission_requested_utc": "2026-11-02",
+      "permission_evidence": "Owner-reported author approval received via X reply/DM and recorded 2026-11-02 per owner instruction (owner message to build agent, 2026-11-02: 9 X authors + 3 xiaohongshu authors approved). Per-reply evidence links may be appended by the owner at any time.",
       "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project.",
       "mirror": {
-        "path": null,
-        "sha256_verified": false
+        "path": "gallery/reference/images/case-510.jpg",
+        "sha256_verified": true
       }
     },
     {
@@ -280,16 +280,16 @@
       },
       "aspect_match": true,
       "aspect_disclosure_required": false,
-      "rights_basis": "No redistribution license located. Library MIT covers its own code/docs only; library disclaimer (README §Disclaimer, commit 63e6176f) states it does not own third-party images. Author permission required before mirroring.",
+      "rights_basis": "Original author approved display in this non-commercial project with attribution (owner-recorded 2026-11-02, channel: X reply/DM). Copyright remains with the author; display-only, no re-licensing, removal on request.",
       "rights_evidence_url": null,
       "attribution": "Image © original author (@ToroJushiAi), collected by awesome-gpt-image-2, source post: https://x.com/ToroJushiAi/status/2053078195482632421",
-      "display_permission": "PENDING_PERMISSION",
-      "permission_requested_utc": null,
-      "permission_evidence": null,
+      "display_permission": "APPROVED",
+      "permission_requested_utc": "2026-11-02",
+      "permission_evidence": "Owner-reported author approval received via X reply/DM and recorded 2026-11-02 per owner instruction (owner message to build agent, 2026-11-02: 9 X authors + 3 xiaohongshu authors approved). Per-reply evidence links may be appended by the owner at any time.",
       "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project.",
       "mirror": {
-        "path": null,
-        "sha256_verified": false
+        "path": "gallery/reference/images/case-414.jpg",
+        "sha256_verified": true
       }
     },
     {
@@ -318,16 +318,16 @@
       },
       "aspect_match": true,
       "aspect_disclosure_required": false,
-      "rights_basis": "No redistribution license located. Library MIT covers its own code/docs only; library disclaimer (README §Disclaimer, commit 63e6176f) states it does not own third-party images. Author permission required before mirroring.",
+      "rights_basis": "Original author approved display in this non-commercial project with attribution (owner-recorded 2026-11-02, channel: X reply/DM). Copyright remains with the author; display-only, no re-licensing, removal on request.",
       "rights_evidence_url": null,
       "attribution": "Image © original author (@BubbleBrain), collected by awesome-gpt-image-2, source post: https://x.com/BubbleBrain/status/2055491616392052887",
-      "display_permission": "PENDING_PERMISSION",
-      "permission_requested_utc": null,
-      "permission_evidence": null,
+      "display_permission": "APPROVED",
+      "permission_requested_utc": "2026-11-02",
+      "permission_evidence": "Owner-reported author approval received via X reply/DM and recorded 2026-11-02 per owner instruction (owner message to build agent, 2026-11-02: 9 X authors + 3 xiaohongshu authors approved). Per-reply evidence links may be appended by the owner at any time.",
       "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project.",
       "mirror": {
-        "path": null,
-        "sha256_verified": false
+        "path": "gallery/reference/images/case-434.jpg",
+        "sha256_verified": true
       }
     },
     {
@@ -356,16 +356,16 @@
       },
       "aspect_match": false,
       "aspect_disclosure_required": true,
-      "rights_basis": "No redistribution license located. Library MIT covers its own code/docs only; library disclaimer (README §Disclaimer, commit 63e6176f) states it does not own third-party images. Author permission required before mirroring.",
+      "rights_basis": "Original author approved display in this non-commercial project with attribution (owner-recorded 2026-11-02, channel: X reply/DM). Copyright remains with the author; display-only, no re-licensing, removal on request.",
       "rights_evidence_url": null,
       "attribution": "Image © original author (@TechieBySA), collected by awesome-gpt-image-2, source post: https://x.com/TechieBySA/status/2053523784481554759",
-      "display_permission": "PENDING_PERMISSION",
-      "permission_requested_utc": null,
-      "permission_evidence": null,
+      "display_permission": "APPROVED",
+      "permission_requested_utc": "2026-11-02",
+      "permission_evidence": "Owner-reported author approval received via X reply/DM and recorded 2026-11-02 per owner instruction (owner message to build agent, 2026-11-02: 9 X authors + 3 xiaohongshu authors approved). Per-reply evidence links may be appended by the owner at any time.",
       "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project.",
       "mirror": {
-        "path": null,
-        "sha256_verified": false
+        "path": "gallery/reference/images/case-419.jpg",
+        "sha256_verified": true
       }
     },
     {
@@ -394,16 +394,16 @@
       },
       "aspect_match": true,
       "aspect_disclosure_required": false,
-      "rights_basis": "No redistribution license located. Library MIT covers its own code/docs only; library disclaimer (README §Disclaimer, commit 63e6176f) states it does not own third-party images. Author permission required before mirroring.",
+      "rights_basis": "Original author approved display in this non-commercial project with attribution (owner-recorded 2026-11-02, channel: X reply/DM). Copyright remains with the author; display-only, no re-licensing, removal on request.",
       "rights_evidence_url": null,
       "attribution": "Image © original author (@volkan_iras), collected by awesome-gpt-image-2, source post: https://x.com/volkan_iras/status/2051403524966141980",
-      "display_permission": "PENDING_PERMISSION",
-      "permission_requested_utc": null,
-      "permission_evidence": null,
+      "display_permission": "APPROVED",
+      "permission_requested_utc": "2026-11-02",
+      "permission_evidence": "Owner-reported author approval received via X reply/DM and recorded 2026-11-02 per owner instruction (owner message to build agent, 2026-11-02: 9 X authors + 3 xiaohongshu authors approved). Per-reply evidence links may be appended by the owner at any time.",
       "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project.",
       "mirror": {
-        "path": null,
-        "sha256_verified": false
+        "path": "gallery/reference/images/case-390.jpg",
+        "sha256_verified": true
       }
     },
     {
@@ -432,16 +432,16 @@
       },
       "aspect_match": false,
       "aspect_disclosure_required": true,
-      "rights_basis": "No redistribution license located. Library MIT covers its own code/docs only; library disclaimer (README §Disclaimer, commit 63e6176f) states it does not own third-party images. Author permission required before mirroring.",
+      "rights_basis": "Original author approved display in this non-commercial project with attribution (owner-recorded 2026-11-02, channel: X reply/DM). Copyright remains with the author; display-only, no re-licensing, removal on request.",
       "rights_evidence_url": null,
       "attribution": "Image © original author (@sha_zdiii), collected by awesome-gpt-image-2, source post: https://x.com/sha_zdiii/status/2052237839119835280",
-      "display_permission": "PENDING_PERMISSION",
-      "permission_requested_utc": null,
-      "permission_evidence": null,
+      "display_permission": "APPROVED",
+      "permission_requested_utc": "2026-11-02",
+      "permission_evidence": "Owner-reported author approval received via X reply/DM and recorded 2026-11-02 per owner instruction (owner message to build agent, 2026-11-02: 9 X authors + 3 xiaohongshu authors approved). Per-reply evidence links may be appended by the owner at any time.",
       "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project.",
       "mirror": {
-        "path": null,
-        "sha256_verified": false
+        "path": "gallery/reference/images/case-396.jpg",
+        "sha256_verified": true
       }
     },
     {
@@ -470,16 +470,16 @@
       },
       "aspect_match": true,
       "aspect_disclosure_required": false,
-      "rights_basis": "No redistribution license located. Library MIT covers its own code/docs only; library disclaimer (README §Disclaimer, commit 63e6176f) states it does not own third-party images. Author permission required before mirroring.",
+      "rights_basis": "Original author approved display in this non-commercial project with attribution (owner-recorded 2026-11-02, channel: X reply/DM). Copyright remains with the author; display-only, no re-licensing, removal on request.",
       "rights_evidence_url": null,
       "attribution": "Image © original author (@Taaruk_), collected by awesome-gpt-image-2, source post: https://x.com/Taaruk_/status/2059188921096085888",
-      "display_permission": "PENDING_PERMISSION",
-      "permission_requested_utc": null,
-      "permission_evidence": null,
+      "display_permission": "APPROVED",
+      "permission_requested_utc": "2026-11-02",
+      "permission_evidence": "Owner-reported author approval received via X reply/DM and recorded 2026-11-02 per owner instruction (owner message to build agent, 2026-11-02: 9 X authors + 3 xiaohongshu authors approved). Per-reply evidence links may be appended by the owner at any time.",
       "reuse_restrictions": "No mirroring/rehosting until APPROVED. Display with attribution + source link. No commercial use. No re-licensing by this project.",
       "mirror": {
-        "path": null,
-        "sha256_verified": false
+        "path": "gallery/reference/images/case-474.jpg",
+        "sha256_verified": true
       }
     }
   ]

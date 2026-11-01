@@ -65,15 +65,47 @@ def test_no_mirrored_image_without_approval():
         assert rec["mirror"]["sha256_verified"] is True
 
 
-def test_mirror_script_refuses_pending_cases():
-    """tools/mirror_reference.py must refuse a PENDING case (exit 1, REFUSED)."""
-    proc = subprocess.run(
-        [sys.executable, "-I", str(REPO / "tools" / "mirror_reference.py"), "--case", "case-443"],
-        capture_output=True, text=True, timeout=60, cwd=str(REPO),
-    )
-    assert proc.returncode == 1
-    assert "REFUSED" in proc.stderr
-    assert "APPROVED" in proc.stderr or "PENDING_PERMISSION" in proc.stderr
+def test_mirror_script_refuses_pending_and_evidenceless(tmp_path):
+    """tools/mirror_reference.py must refuse: (a) a PENDING record, (b) an
+    APPROVED record without permission evidence. Run against a temp ledger so
+    the real repo state (all 12 APPROVED) is not perturbed."""
+    script = REPO / "tools" / "mirror_reference.py"
+    ledger = load_ledger()
+
+    def run_with(mutate):
+        tmp_ledger = tmp_path / "index.json"
+        tmp_ledger.write_text(json.dumps(mutate(json.loads(json.dumps(ledger))), ensure_ascii=False), encoding="utf-8")
+        return subprocess.run(
+            [sys.executable, "-I", str(script), "--case", "case-443",
+             "--ledger", str(tmp_ledger), "--images-dir", str(tmp_path / "imgs"),
+             "--source-file", str(REPO / "gallery" / "reference" / "images" / "case-443.jpg")],
+            capture_output=True, text=True, timeout=60, cwd=str(REPO),
+        )
+
+    def to_pending(recs):
+        recs = [dict(r) for r in recs]
+        for r in recs:
+            if r["case_id"] == "case-443":
+                r["display_permission"] = "PENDING_PERMISSION"
+                r["mirror"] = {"path": None, "sha256_verified": False}
+        return recs
+
+    proc = run_with(lambda l: {**l, "references": to_pending(l["references"])})
+    assert proc.returncode == 1 and "REFUSED" in proc.stderr
+    assert "PENDING_PERMISSION" in proc.stderr
+
+    def strip_evidence(recs):
+        recs = [dict(r) for r in recs]
+        for r in recs:
+            if r["case_id"] == "case-443":
+                r["permission_evidence"] = None
+        return recs
+
+    proc = run_with(lambda l: {**l, "references": strip_evidence(l["references"])})
+    assert proc.returncode == 1 and "REFUSED" in proc.stderr
+    assert "permission_evidence" in proc.stderr
+    # nothing was written by refusals
+    assert not (tmp_path / "imgs" / "case-443.jpg").exists()
 
 
 # ----------------------------------------------------------------- count truth

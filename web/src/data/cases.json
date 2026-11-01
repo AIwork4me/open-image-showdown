@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "built_at": "2026-11-01T14:29:42Z",
+  "built_at": "2026-11-01T23:01:44Z",
   "project": "open-image-showdown",
   "tagline": "Same Prompt. Two Models. You Decide.",
   "totals": {
@@ -12,14 +12,14 @@
     "reviewed_comparisons": 0,
     "blocked": 0,
     "references_total": 12,
-    "references_approved": 0,
-    "reference_pairings_ready": 0
+    "references_approved": 12,
+    "reference_pairings_ready": 12
   },
   "cases": [
     {
       "case_id": "case-1",
       "status": "OPEN_CHALLENGE",
-      "display_mode": "QWEN_ONLY",
+      "display_mode": "REFERENCE_RECREATION",
       "variant_of": null,
       "variant_kind": null,
       "blocked_reason": null,
@@ -49,9 +49,9 @@
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
       "reference_image": {
-        "display_permission": "PENDING_PERMISSION",
-        "renderable": false,
-        "image": null,
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-1.jpg",
         "image_sha256": "eed45ad06a5db696df983c369aa2cc29dfcb406debd5c3623b0eaa9bd03daf61",
         "width": 941,
         "height": 1672,
@@ -111,7 +111,7 @@
     {
       "case_id": "case-13",
       "status": "OPEN_CHALLENGE",
-      "display_mode": "QWEN_ONLY",
+      "display_mode": "REFERENCE_RECREATION",
       "variant_of": null,
       "variant_kind": null,
       "blocked_reason": null,
@@ -141,9 +141,9 @@
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
       "reference_image": {
-        "display_permission": "PENDING_PERMISSION",
-        "renderable": false,
-        "image": null,
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-13.jpg",
         "image_sha256": "b37abba16f256a98a9d18dd64dda5c9960b763b78d8e516354dff4a8703b227f",
         "width": 647,
         "height": 1149,
@@ -203,7 +203,7 @@
     {
       "case_id": "case-14",
       "status": "OPEN_CHALLENGE",
-      "display_mode": "QWEN_ONLY",
+      "display_mode": "REFERENCE_RECREATION",
       "variant_of": null,
       "variant_kind": null,
       "blocked_reason": null,
@@ -233,9 +233,9 @@
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
       "reference_image": {
-        "display_permission": "PENDING_PERMISSION",
-        "renderable": false,
-        "image": null,
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-14.jpg",
         "image_sha256": "46ff3923a99f405ab87f2d00e05e64d129c3f64879c0b25da9ee490088143075",
         "width": 941,
         "height": 1672,
@@ -294,7 +294,7 @@
     {
       "case_id": "case-344",
       "status": "OPEN_CHALLENGE",
-      "display_mode": "QWEN_ONLY",
+      "display_mode": "REFERENCE_RECREATION",
       "variant_of": null,
       "variant_kind": null,
       "blocked_reason": null,
@@ -324,9 +324,9 @@
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
       "reference_image": {
-        "display_permission": "PENDING_PERMISSION",
-        "renderable": false,
-        "image": null,
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-344.jpg",
         "image_sha256": "035022a432aabbc4e8b03b73bf0c2bb152bfafea7bb2b9dd77b872a194fb50e2",
         "width": 1376,
         "height": 768,
@@ -385,7 +385,7 @@
     {
       "case_id": "case-443",
       "status": "OPEN_CHALLENGE",
-      "display_mode": "QWEN_ONLY",
+      "display_mode": "REFERENCE_RECREATION",
       "variant_of": null,
       "variant_kind": null,
       "blocked_reason": null,
@@ -415,9 +415,9 @@
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
       "reference_image": {
-        "display_permission": "PENDING_PERMISSION",
-        "renderable": false,
-        "image": null,
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-443.jpg",
         "image_sha256": "ac5352395e25f0dc342928357d8a88c2f4f524e9d56263804233a213805984a3",
         "width": 1254,
         "height": 1254,
@@ -477,7 +477,7 @@
     {
       "case_id": "case-510",
       "status": "OPEN_CHALLENGE",
-      "display_mode": "QWEN_ONLY",
+      "display_mode": "REFERENCE_RECREATION",
       "variant_of": null,
       "variant_kind": null,
       "blocked_reason": null,
@@ -507,9 +507,9 @@
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
       "reference_image": {
-        "display_permission": "PENDING_PERMISSION",
-        "renderable": false,
-        "image": null,
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-510.jpg",
         "image_sha256": "f2422d47e1ecc53ce285088b36b574c8c082784759a07ec3fb3e8da0545be3ec",
         "width": 1254,
         "height": 1254,
@@ -568,7 +568,7 @@
     {
       "case_id": "case-414",
       "status": "OPEN_CHALLENGE",
-      "display_mode": "QWEN_ONLY",
+      "display_mode": "REFERENCE_RECREATION",
       "variant_of": null,
       "variant_kind": null,
       "blocked_reason": null,
@@ -598,9 +598,9 @@
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
       "reference_image": {
-        "display_permission": "PENDING_PERMISSION",
-        "renderable": false,
-        "image": null,
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-414.jpg",
         "image_sha256": "dd72d7f330c906696e8806267d3819a08b2e3934ae46bc234200dcba224df037",
         "width": 1024,
         "height": 1536,
@@ -659,7 +659,7 @@
     {
       "case_id": "case-434",
       "status": "OPEN_CHALLENGE",
-      "display_mode": "QWEN_ONLY",
+      "display_mode": "REFERENCE_RECREATION",
       "variant_of": null,
       "variant_kind": null,
       "blocked_reason": null,
@@ -689,9 +689,9 @@
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
       "reference_image": {
-        "display_permission": "PENDING_PERMISSION",
-        "renderable": false,
-        "image": null,
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-434.jpg",
         "image_sha256": "dd391dffeec73e8311e53a9d9175e28d458116e7e5a021e3083861e3d983d1a8",
         "width": 941,
         "height": 1672,
@@ -751,7 +751,7 @@
     {
       "case_id": "case-419",
       "status": "OPEN_CHALLENGE",
-      "display_mode": "QWEN_ONLY",
+      "display_mode": "REFERENCE_RECREATION",
       "variant_of": null,
       "variant_kind": null,
       "blocked_reason": null,
@@ -781,9 +781,9 @@
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
       "reference_image": {
-        "display_permission": "PENDING_PERMISSION",
-        "renderable": false,
-        "image": null,
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-419.jpg",
         "image_sha256": "b5b83e4423af8550ed50bc9251e3fe3e397822f8b5936162ef1a1ff11c92777f",
         "width": 1248,
         "height": 832,
@@ -842,7 +842,7 @@
     {
       "case_id": "case-390",
       "status": "OPEN_CHALLENGE",
-      "display_mode": "QWEN_ONLY",
+      "display_mode": "REFERENCE_RECREATION",
       "variant_of": null,
       "variant_kind": null,
       "blocked_reason": null,
@@ -878,9 +878,9 @@
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
       "reference_image": {
-        "display_permission": "PENDING_PERMISSION",
-        "renderable": false,
-        "image": null,
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-390.jpg",
         "image_sha256": "a1723c725b4cdfc82afff601679b562810d7ee3d3425a052017299edece3c3da",
         "width": 1024,
         "height": 1536,
@@ -939,7 +939,7 @@
     {
       "case_id": "case-396",
       "status": "OPEN_CHALLENGE",
-      "display_mode": "QWEN_ONLY",
+      "display_mode": "REFERENCE_RECREATION",
       "variant_of": null,
       "variant_kind": null,
       "blocked_reason": null,
@@ -969,9 +969,9 @@
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
       "reference_image": {
-        "display_permission": "PENDING_PERMISSION",
-        "renderable": false,
-        "image": null,
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-396.jpg",
         "image_sha256": "1eb4b190c8379f6ed9f855b10573649f5883572c8f2e570c72cf84d552fbfc97",
         "width": 768,
         "height": 1376,
@@ -1031,7 +1031,7 @@
     {
       "case_id": "case-474",
       "status": "OPEN_CHALLENGE",
-      "display_mode": "QWEN_ONLY",
+      "display_mode": "REFERENCE_RECREATION",
       "variant_of": null,
       "variant_kind": null,
       "blocked_reason": null,
@@ -1061,9 +1061,9 @@
         "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
       },
       "reference_image": {
-        "display_permission": "PENDING_PERMISSION",
-        "renderable": false,
-        "image": null,
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-474.jpg",
         "image_sha256": "6e78abf6c2c9890785d03f1b83c4de582ae80293e8dc7f8b5381cc3fab2910d8",
         "width": 1080,
         "height": 608,
@@ -1122,7 +1122,7 @@
     {
       "case_id": "case-390t",
       "status": "OPEN_CHALLENGE",
-      "display_mode": "QWEN_ONLY",
+      "display_mode": "REFERENCE_RECREATION",
       "variant_of": "case-390",
       "variant_kind": "reference_pairing_variant",
       "blocked_reason": null,
@@ -1158,9 +1158,9 @@
         "source_note": "Variant of case-390 created for the reference pairing: the library's reference image for case 390 depicts Istanbul/Turkey (visually verified 2026-11-01), while the primary frozen prompt resolved the template variable to Japan. This variant resolves the same template to Turkey so the eventual reference comparison is an exact-prompt pairing. The library's image is NOT reused in this project unless its rights record is APPROVED (gallery/reference/index.json)."
       },
       "reference_image": {
-        "display_permission": "PENDING_PERMISSION",
-        "renderable": false,
-        "image": null,
+        "display_permission": "APPROVED",
+        "renderable": true,
+        "image": "gallery/reference/case-390.jpg",
         "image_sha256": "a1723c725b4cdfc82afff601679b562810d7ee3d3425a052017299edece3c3da",
         "width": 1024,
         "height": 1536,

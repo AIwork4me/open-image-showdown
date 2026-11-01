@@ -7,7 +7,7 @@ This project separates five legal layers. Nothing in one layer overrides another
 | **Code** | `tools/`, `web/`, `tests/`, `.github/`, scripts | **MIT** (see [LICENSE](LICENSE)) |
 | **Case prompts** | The 12 frozen prompt texts in `cases/*/prompt.txt` | Republished from the MIT-licensed [awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2) library, attribution preserved per case (see each manifest's `reference` block) |
 | **Qwen-side images & run records** | `gallery/qwen/*` | **CC BY-NC 4.0** — generated with Qwen-Image-2.1 weights governed by the **Qwen Research License** (non-commercial) |
-| **Reference images** | `gallery/reference/images/*` (only when present) | **Remain with their original authors.** Mirrored only with recorded author permission (`APPROVED` in [gallery/reference/index.json](gallery/reference/index.json)); attribution + source links per record |
+| **Reference images** | `gallery/reference/images/*` | **Remain with their original authors.** Mirrored (12/12, 2026-11-02) with recorded author permission (`APPROVED` in [gallery/reference/index.json](gallery/reference/index.json), owner-recorded evidence); attribution + source links per record |
 | **GPT-side community images** | `submissions/**` | Owned by their contributors; submitted under the contribution terms (non-exclusive display/distribute license to this project, CC BY 4.0 display) |
 | **Model weights** | never committed, never rehosted | Qwen: Qwen Research License (Alibaba / Hangzhou Tongyi Laboratory). OpenAI: OpenAI terms apply to contributors' own API usage |
 

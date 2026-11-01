@@ -2,6 +2,12 @@
 
 Status date: 2026-11-01 · For the owner to send. **No reference image is mirrored until its ledger entry flips to `APPROVED`.**
 
+> **✅ Outcome update (2026-11-02):** the owner reported that **all 12 original authors approved**
+> (9 via X reply/DM, 3 via 小红书 DM). All 12 ledger records are `APPROVED` with owner-recorded
+> evidence, all 12 images mirrored and sha256-verified via `tools/mirror_reference.py`. The
+> letters below are retained for provenance and for any future case additions. Per-reply
+> evidence links can be appended to the ledger's `permission_evidence` fields at any time.
+
 ## Why this kit exists
 
 The 12 comparison references are community images collected by

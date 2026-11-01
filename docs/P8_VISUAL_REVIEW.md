@@ -62,3 +62,22 @@ reference link-out visible).
   moment an approval lands.
 - Screens were captured at 1440×900, 390×844 (CSS 375), plus 640px-class media queries exercised
   via CSS review; 430px was not separately screenshotted (same breakpoint bucket as 390).
+
+---
+
+## Addendum — re-review after 12/12 author approvals (2026-11-02)
+
+The owner reported all 12 original authors approved (9 X reply/DM + 3 小红书 DM; owner-recorded
+evidence in the ledger). All 12 references were mirrored via the gated script (each byte
+sha256-verified against the audited upstream fingerprint), and every surface was re-verified
+in a fresh browser session against the rebuilt production bundle:
+
+| Check | Result | Evidence |
+|---|---|---|
+| Home hero pair renders the REAL reference image beside the real Qwen image; count line reads "12 community gallery references × 13 real Qwen reproductions" | ✅ | `web-home-desktop-12refs.png` |
+| case-443: reference panel (permission-labeled, Model Unverified) + Qwen panel + different-canvas disclosure; 0 broken images; no overflow | ✅ | `web-case-443-desktop-12refs.png` |
+| case-390: Istanbul reference beside Japan output with exact-prompt variant note | ✅ | `web-case-390-desktop-12refs.png` |
+| Mobile home 390/375px | ✅ scrollWidth == viewport, 0 broken | session log |
+| README en/zh gallery-refs markers == ledger (12) | ✅ CI gate | validator PASS, 48/48 tests |
+
+Verdict: **PASS** — the gallery is fully lit with all side-by-side pairs real and rights-cleared.

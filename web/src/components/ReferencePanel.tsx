@@ -115,6 +115,18 @@ export default function ReferencePanel({
         <span className="chip mono" title={ri.image_sha256}>
           sha {ri.image_sha256.slice(0, 10)}…
         </span>
+        <span className="chip link-chip">
+          <a href={asset(ri.image!)} target="_blank" rel="noreferrer">
+            full size ↗
+          </a>
+        </span>
+        {ri.original_post_url && (
+          <span className="chip link-chip">
+            <a href={ri.original_post_url} target="_blank" rel="noreferrer">
+              original post ↗
+            </a>
+          </span>
+        )}
       </div>
     </div>
   );
