@@ -123,5 +123,12 @@
       "width": 1280,
       "height": 720
     }
+  ],
+  "variant_sessions": [
+    {
+      "file": "case-390t.session.json",
+      "session": "p2-quality-390t-variant",
+      "note": "reference-pairing variant (Turkey template fill, inferred parameter) generated 2026-11-01 with identical engine pins; primary 12-case session above is unchanged"
+    }
   ]
 }

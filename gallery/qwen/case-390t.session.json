@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "session": "p2-quality-390t-variant",
+  "base_url": "http://127.0.0.1:8189",
+  "mode": "quality (bf16, 40 steps)",
+  "generated_utc": "2026-11-01T14:05:53+00:00",
+  "environment": {
+    "engine_repo": "AIwork4me/qwen-image-rocm",
+    "engine_commit": "cbd9e74eb121c281d97cf25130cd8de6ffa1be04",
+    "comfyui_commit": "b5a432157de6b8884f81104cd02926adf4d597e4",
+    "weights_repo": "Comfy-Org/Qwen-Image-2.1",
+    "weights_revision": "aacf31a6d48e707f352ecba714cee0680da3479b",
+    "engine_manifest": "p4-qs-quality-1024x1024",
+    "gpu_devices": [
+      {
+        "name": "cuda:0 AMD Radeon RX 7900 XTX : native",
+        "type": "cuda",
+        "index": 0,
+        "vram_total": 25753026560,
+        "vram_free": 25586434048,
+        "torch_vram_total": 2097152,
+        "torch_vram_free": 2097152
+      }
+    ],
+    "comfyui_version": "0.43.0",
+    "os": "win32",
+    "client_python": "3.12.16"
+  },
+  "runs": [
+    {
+      "case_id": "case-390t",
+      "status": "ok",
+      "total_s": 60.372,
+      "image_sha256": "7a6530f0e6b443cedb6b9fe5ee5fb90ea0cee9aca05bad8a68eb237520ec6da5",
+      "width": 832,
+      "height": 1248
+    }
+  ]
+}

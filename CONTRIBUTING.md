@@ -63,7 +63,17 @@ prompt text under MIT, and ideally a public source link. Good suggestions
 stress text rendering, layout, photorealism, or style — the axes this
 showdown measures.
 
-### 3. Improve the project itself
+### 3. Help clear a reference permission
+
+The left side of every comparison is a community gallery reference that
+displays inline only after its **original author approves**. If you are one of
+the credited authors (or can reach one), one reply is enough — the letters and
+recipient list are in
+[docs/PERMISSION_REQUEST_KIT.md](docs/PERMISSION_REQUEST_KIT.md). Maintainers
+record the approval in [gallery/reference/index.json](gallery/reference/index.json)
+and mirror the image via the gated script; CI verifies everything.
+
+### 4. Improve the project itself
 
 Code, site, validation, docs — normal PRs. Run the gate locally first:
 
@@ -78,13 +88,18 @@ cd web && npm ci && npm run build
 1. **Never commit secrets.** No API keys, tokens, or `.env` files. The
    validator scans every text file for key-shaped strings.
 2. **Never edit frozen prompts or pasted run records.** `cases/*/prompt.txt`
-   and `gallery/**` are immutable history. Changes require a new case id or a
-   documented re-run.
+   and `gallery/qwen/**` are immutable history. Changes require a new case id
+   or a documented re-run (case-390t is the template: new id, recorded
+   derivation, real run — the Japan case it derives from is untouched).
 3. **Never relabel model identity.** GPT images only via their evidence tier;
    never mark anything `REVIEWED_COMPARISON` in your own PR — that's the
-   maintainer review gate.
+   maintainer review gate. Reference images are *never* labeled verified GPT.
 4. **No model weights** (or pieces of them) in this repo, ever.
-5. **No upstream library images.** Prompt text (MIT) only, with attribution.
+5. **No upstream library images without recorded author permission.** Prompt
+   text (MIT) is republished with attribution; images are mirrored only from
+   an `APPROVED` rights-ledger record with a sha256 match, never hotlinked,
+   never "just downloaded". Any PR adding reference bytes without the ledger
+   entry fails CI.
 
 ## Recognition
 

@@ -5,15 +5,25 @@ import StatusBadge from '../components/StatusBadge';
 import PromptBlock from '../components/PromptBlock';
 import Lightbox from '../components/Lightbox';
 import CompareSlider from '../components/CompareSlider';
+import ReferencePanel from '../components/ReferencePanel';
 import type { Case } from '../types';
 
 function fmtSeconds(s: number) {
   return `${s.toFixed(1)} s`;
 }
 
+/** Two images may use the drag-slider only when their aspect ratios match
+ *  (within 2%) — otherwise information near edges would be hidden. */
+function aspectRatioClose(a: { width: number; height: number }, b: { width: number; height: number }) {
+  const ra = a.width / a.height;
+  const rb = b.width / b.height;
+  return Math.abs(ra - rb) / rb < 0.02;
+}
+
 export default function CaseDetail() {
   const { caseId } = useParams();
   const [lightbox, setLightbox] = useState<{ src: string; cap: string } | null>(null);
+  const [useSlider, setUseSlider] = useState(false);
   // Blind A/B: randomize which side renders left, decided once per case view.
   const [blindFlip] = useState(() => Math.random() < 0.5);
   const c: Case | undefined = siteModel.cases.find((x) => x.case_id === caseId);
@@ -32,20 +42,22 @@ export default function CaseDetail() {
   const accepted = c.submissions.filter((s) => s.state === 'accepted');
   const gpt = accepted[0] ?? null; // first reviewed submission
   const shareUrl = `${window.location.origin}${window.location.pathname}#/case/${c.case_id}`;
+  const ri = c.reference_image;
+  const variant = siteModel.cases.find((v) => v.variant_of === c.case_id);
+  const parent = c.variant_of ? siteModel.cases.find((p) => p.case_id === c.variant_of) : null;
+  const sliderAllowed =
+    !!ri?.renderable && !!c.qwen && aspectRatioClose(ri, c.qwen) && !ri.aspect_disclosure_required;
 
   const gptPanel = gpt ? (
     <div className="panel side-openai">
       <div className="panel-head">
-        GPT Image 2
-        <span className="sub">
-          {gpt.evidence.model_snapshot ?? gpt.evidence.model} · contributor run
-        </span>
+        GPT Image 2 <span className="sub">verified · {gpt.evidence.model_snapshot ?? gpt.evidence.model}</span>
       </div>
       <div className="img-holder">
         <img
           src={asset(gpt.image)}
           alt={`${c.title.en} — GPT Image 2 output`}
-          onClick={() => setLightbox({ src: asset(gpt.image), cap: `${c.title.en} — GPT Image 2` })}
+          onClick={() => setLightbox({ src: asset(gpt.image), cap: `${c.title.en} — GPT Image 2 (reviewed submission)` })}
         />
       </div>
       <div className="panel-foot">
@@ -57,7 +69,7 @@ export default function CaseDetail() {
   ) : (
     <div className="panel side-openai">
       <div className="panel-head">
-        GPT Image 2
+        Verified GPT Image 2
         <span className="sub">model: {c.gpt.model}</span>
       </div>
       <div className="pending-slot">
@@ -66,10 +78,11 @@ export default function CaseDetail() {
           Community submission pending
         </span>
         <div>
-          <p className="big">No GPT Image 2 result exists for this case yet.</p>
+          <p className="big">No verified GPT Image 2 result exists for this case yet.</p>
           <p>
-            This slot stays empty on purpose — it will never hold a placeholder or any image of
-            unverified origin.
+            This slot stays empty on purpose — it will never hold a placeholder, a library image,
+            or any image of unverified origin. The community gallery reference above is a separate,
+            clearly-labeled thing and never counts as the GPT side.
           </p>
           <a className="btn primary" href="#/contribute">
             Generate it with your key →
@@ -93,19 +106,22 @@ export default function CaseDetail() {
       </div>
       <div className="img-holder">
         <img
-          src={asset(c.qwen.image)}
+          src={asset(c.qwen.image_web ?? c.qwen.image)}
           alt={`${c.title.en} — Qwen-Image 2.1 output`}
           onClick={() => setLightbox({ src: asset(c.qwen!.image), cap: `${c.title.en} — Qwen-Image 2.1` })}
         />
       </div>
       <div className="panel-foot">
-        <span className="chip">
-          {c.qwen.generation.size}
-        </span>
+        <span className="chip">{c.qwen.generation.size}</span>
         <span className="chip">{fmtSeconds(c.qwen.generation.wall_time_s)} wall</span>
         <span className="chip">RX 7900 XTX · ROCm</span>
         <span className="chip mono" title={c.qwen.image_sha256}>
           sha {c.qwen.image_sha256.slice(0, 10)}…
+        </span>
+        <span className="chip link-chip">
+          <a href={asset(c.qwen.image)} target="_blank" rel="noreferrer">
+            full resolution ↗
+          </a>
         </span>
       </div>
     </div>
@@ -126,8 +142,6 @@ export default function CaseDetail() {
   );
 
   const [leftPanel, rightPanel] = blindFlip && gpt && c.qwen ? [qwenPanel, gptPanel] : [gptPanel, qwenPanel];
-  const leftLabel = blindFlip && gpt && c.qwen ? 'B' : 'A';
-  const rightLabel = blindFlip && gpt && c.qwen ? 'A' : 'B';
 
   const derivationNote = useMemo(
     () =>
@@ -146,7 +160,7 @@ export default function CaseDetail() {
     <main>
       <div className="container case-hero">
         <a className="back" href="#/">
-          ← all challenges
+          ← all comparisons
         </a>
         <h1>{c.title.en}</h1>
         <p className="zh">{c.title.zh}</p>
@@ -158,6 +172,7 @@ export default function CaseDetail() {
             canvas {c.canvas.width}×{c.canvas.height}
           </span>
           {c.prompt_derivation && <span className="chip">derived prompt</span>}
+          {c.variant_of && <span className="chip">reference-pairing variant of #{c.variant_of.replace('case-', '')}</span>}
         </div>
         {c.blocked_reason && (
           <div className="callout warn" style={{ marginTop: 12 }}>
@@ -166,19 +181,105 @@ export default function CaseDetail() {
         )}
       </div>
 
+      {/* ---- Display mode 1 (default): Gallery Reference vs Qwen Recreation ---- */}
       <div className="container compare-wrap">
+        <div className="section-head">
+          <h2 className="small">Gallery Reference vs Qwen Recreation</h2>
+          {ri && (
+            <span className="count">
+              prompt match: <b>{ri.prompt_match_level === 'EXACT' ? 'exact' : 'derived (recorded)'}</b>
+              {sliderAllowed && (
+                <>
+                  {' '}·
+                  <button className="link chip" onClick={() => setUseSlider(!useSlider)}>
+                    {useSlider ? 'side-by-side view' : 'slider view'}
+                  </button>
+                </>
+              )}
+            </span>
+          )}
+        </div>
+
+        {useSlider && sliderAllowed && ri?.renderable && c.qwen ? (
+          <>
+            <CompareSlider
+              leftSrc={asset(ri.image!)}
+              rightSrc={asset(c.qwen.image)}
+              leftLabel="Reference · unverified"
+              rightLabel="Qwen 2.1"
+              alt={c.title.en}
+            />
+            <div className="compare-grid" style={{ marginTop: 14 }}>
+              <ReferencePanel c={c} onZoom={(s, cap) => setLightbox({ src: s, cap })} />
+              {qwenPanel}
+            </div>
+          </>
+        ) : (
+          <div className="compare-grid">
+            <ReferencePanel c={c} onZoom={(s, cap) => setLightbox({ src: s, cap })} />
+            {qwenPanel}
+          </div>
+        )}
+
+        {ri?.aspect_disclosure_required && c.qwen && (
+          <div className="callout" style={{ marginTop: 14 }}>
+            <b>Different canvases — nothing is cropped.</b> The community reference is {ri.width}×{ri.height} (
+            {(ri.width / ri.height).toFixed(3)} ratio); this Qwen canvas is {c.qwen.width}×{c.qwen.height} (
+            {(c.qwen.width / c.qwen.height).toFixed(3)} ratio). The two images were generated on different
+            canvas shapes, so each is shown complete at its own ratio (letterboxed where needed) — this is
+            not a same-canvas A/B.
+          </div>
+        )}
+        {ri?.prompt_match_level === 'DERIVED_TEMPLATE_FILL' && !c.variant_of && (
+          <div className="callout warn" style={{ marginTop: 12 }}>
+            <b>Not an exact-prompt pairing.</b> The frozen prompt resolves an upstream template variable
+            differently from what the reference image depicts — see the derivation note below and the{' '}
+            <a href={`${repoUrl}/blob/main/docs/REFERENCE_IMAGE_AUDIT.md#6-case-390-remediation-critical-case-fix`}>
+              audit's remediation
+            </a>
+            .
+          </div>
+        )}
+        {variant && (
+          <div className="callout" style={{ marginTop: 12 }}>
+            <b>Exact-prompt variant available.</b> The reference depicts a different value of the template
+            variable than the frozen prompt;{' '}
+            <a href={`#/case/${variant.case_id}`}>
+              {variant.title.en} (#{variant.case_id.replace('case-', '')})
+            </a>{' '}
+            re-runs the same upstream template with the inferred parameter for a true exact-prompt pairing.
+          </div>
+        )}
+        {parent && (
+          <div className="callout" style={{ marginTop: 12 }}>
+            <b>Variant case.</b> This is a reference-pairing variant of{' '}
+            <a href={`#/case/${parent.case_id}`}>#{parent.case_id.replace('case-', '')}</a> — the primary frozen
+            case and its run record are unchanged. The parameter that differs (here: the country) was inferred
+            from the reference image's content, <b>not</b> confirmed by the original author.
+          </div>
+        )}
+      </div>
+
+      {/* ---- Display mode 2: Verified GPT Image 2 vs Qwen (review-gated) ---- */}
+      <div className="container compare-wrap">
+        <div className="section-head">
+          <h2 className="small">Verified GPT Image 2 vs Qwen</h2>
+          <span className="count">
+            {gpt ? 'reviewed community submission — real comparison' : 'empty until a reviewed submission exists'}
+          </span>
+        </div>
         {gpt && c.qwen ? (
           <>
             <CompareSlider
               leftSrc={asset(blindFlip ? c.qwen.image : gpt.image)}
               rightSrc={asset(blindFlip ? gpt.image : c.qwen.image)}
-              leftLabel={leftLabel}
-              rightLabel={rightLabel}
+              leftLabel={blindFlip ? 'B' : 'A'}
+              rightLabel={blindFlip ? 'A' : 'B'}
               alt={c.title.en}
             />
             <p className="blind-note">
-              Sides are labeled <b>A / B</b> and randomized on each visit — future blind-rating
-              flows build on this. Which is which? Check the run metadata below after you judge.
+              Sides are labeled <b>A / B</b> and randomized on each visit — future blind-rating flows build on
+              this. Which is which? Check the run metadata below after you judge.
             </p>
             <div className="compare-grid" style={{ marginTop: 14 }}>
               {leftPanel}
@@ -301,7 +402,9 @@ uv run --no-project python -I tools/generate_gpt.py --case ${c.case_id}
                     <th>Prompt library</th>
                     <td>
                       <a href={c.reference.library_url}>{c.reference.library}</a> ({c.reference.library_license}) ·{' '}
-                      <a href={c.reference.library_case_url ?? c.reference.library_url}>case #{c.reference.library_case_id}</a>
+                      <a href={ri?.library_case_url ?? c.reference.library_url}>
+                        case #{c.reference.library_case_id}
+                      </a>
                     </td>
                   </tr>
                   <tr>
@@ -316,6 +419,40 @@ uv run --no-project python -I tools/generate_gpt.py --case ${c.case_id}
                       )}
                     </td>
                   </tr>
+                  {ri && (
+                    <>
+                      <tr>
+                        <th>Reference image</th>
+                        <td>
+                          {ri.renderable ? (
+                            <>
+                              mirrored with permission · {ri.width}×{ri.height}
+                            </>
+                          ) : (
+                            <>
+                              <span className="muted">not mirrored — {ri.display_permission}</span>
+                              <br />
+                              <a href={ri.library_case_url}>view at library (pinned commit) ↗</a>
+                            </>
+                          )}
+                          <br />
+                          <span className="muted">model identity: {ri.model_identity}</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Prompt correspondence</th>
+                        <td>
+                          {ri.prompt_match_level === 'EXACT'
+                            ? 'exact — frozen prompt byte-identical to upstream'
+                            : 'derived — template variable resolved before freeze (recorded)'}
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Rights / reuse</th>
+                        <td>{ri.reuse_restrictions}</td>
+                      </tr>
+                    </>
+                  )}
                   <tr>
                     <th>Reuse scope</th>
                     <td>{c.reference.source_note}</td>

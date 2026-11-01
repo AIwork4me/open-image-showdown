@@ -23,10 +23,10 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Contract tests (BYOK API contract, security invariants)
-        run: uv run --no-project --with pytest --python 3.12 python -I -m pytest tests/ -q
+      - name: Contract tests (BYOK API contract, security invariants, reference rights)
+        run: uv run --no-project --with pytest --with pillow --python 3.12 python -I -m pytest tests/ -q
 
-      - name: Gallery integrity (schema, sha256, dims, provenance, duplicates, secrets, paths)
+      - name: Gallery integrity (schema, sha256, dims, provenance, duplicates, secrets, paths, rights ledger, mirror gate, count truth)
         run: uv run --no-project --python 3.12 python -I tools/validate_gallery.py
 
       - name: Repo hygiene — no key-shaped strings in tracked files
@@ -54,11 +54,16 @@ jobs:
           npm ci
           npm run build
 
-      - name: Sanity — built data and images exist
+      - name: Sanity — built data, images, derivatives and social cards exist
         run: |
           test -f dist/index.html
           test "$(ls dist/gallery/qwen/*.png | wc -l)" -ge 12
+          test "$(ls dist/gallery/qwen/*.webp | wc -l)" -ge 13
+          test "$(ls dist/social/*.png | wc -l)" -ge 14
           grep -q "Open Image Showdown" dist/index.html
+          # no reference image may ship unless its rights record is APPROVED
+          test -z "$(ls dist/gallery/reference/*.jpg 2>/dev/null)" \
+            || grep -q '"display_permission": "APPROVED"' ../gallery/reference/index.json
 
   mobile-build:
     name: mobile build sanity

@@ -498,3 +498,71 @@ img { display: block; max-width: 100%; }
 .small { font-size: 13px; }
 .not-found { padding: 90px 0; text-align: center; color: var(--text-dim); }
 .not-found h1 { font-size: 42px; color: var(--text); }
+
+/* ------------------------------------------------- gallery-first: reference side */
+.hero-count { margin: 14px 0 0; font-size: 15.5px; color: var(--text-dim); }
+.hero-count b { color: var(--text); }
+.hero-pair {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 16px;
+  margin: 26px 0 4px;
+  align-items: stretch;
+}
+@media (max-width: 860px) { .hero-pair { grid-template-columns: 1fr; } }
+.hero-pair .img-holder img { width: 100%; height: auto; }
+
+.side-ref .panel-head { color: #e2b93b; }
+.side-ref { border-top: 2px solid rgba(226, 185, 59, 0.55); }
+.ref-linkout {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 22px;
+  text-align: left;
+}
+.ref-linkout .big { font-size: 14.5px; color: var(--text-dim); margin: 0; line-height: 1.55; }
+.ref-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.ref-why { font-size: 12.5px; color: var(--text-faint); margin: 0; line-height: 1.55; }
+.ref-why a { color: var(--text-dim); text-decoration: underline; }
+
+/* dual-thumb case cards */
+.case-card .thumb.dual { display: grid; grid-template-columns: 1fr 1fr; position: relative; aspect-ratio: 4 / 3; }
+.case-card .thumb.dual .ref-half,
+.case-card .thumb.dual .qwen-half { position: relative; overflow: hidden; background: var(--bg-soft); }
+.case-card .thumb.dual img {
+  width: 100%; height: 100%;
+  object-fit: contain;   /* never crop infographics / dense layouts */
+  background: var(--bg-soft);
+}
+.case-card .thumb.dual .ref-half.pending {
+  display: grid; place-items: center; gap: 4px; padding: 10px;
+  border-right: 1px dashed var(--line);
+  background: repeating-linear-gradient(45deg, var(--bg-soft) 0 10px, var(--bg-card) 10px 20px);
+}
+.case-card .thumb.dual .ref-pending-text { font-size: 11px; color: var(--text-faint); text-align: center; line-height: 1.4; }
+.case-card .side-label {
+  position: absolute; bottom: 8px; left: 8px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 999px;
+  background: rgba(8, 8, 16, 0.78); border: 1px solid var(--line);
+  color: var(--text-dim); white-space: nowrap; max-width: calc(100% - 16px);
+  overflow: hidden; text-overflow: ellipsis;
+}
+.case-card .side-label.ref { color: #e2b93b; }
+.case-card .side-label.qwen { color: #a99cff; }
+.case-card .qwen-half { border-left: 1px solid var(--line-soft); }
+.warn-chip { color: var(--warn); border-color: rgba(226, 185, 59, 0.4); }
+.link-chip a, .chip.link-chip { color: var(--openai); }
+.section-head h2.small { font-size: 19px; }
+.compare-wrap .section-head { margin-bottom: 12px; display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+
+/* reference images inside compare grid keep their true ratio */
+.panel .img-holder img { object-fit: contain; }
+
+@media (max-width: 640px) {
+  .hero-pair { gap: 10px; }
+  .ref-linkout { padding: 16px; }
+  .ref-actions .btn { width: 100%; }
+  .case-card .thumb.dual { aspect-ratio: 1 / 1; }
+}
