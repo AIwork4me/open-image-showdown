@@ -1,0 +1,831 @@
+{
+  "schema_version": 1,
+  "built_at": "2026-11-01T13:11:17Z",
+  "project": "open-image-showdown",
+  "tagline": "Same Prompt. Two Models. You Decide.",
+  "totals": {
+    "cases": 12,
+    "qwen_generated": 12,
+    "open_challenges": 12,
+    "community_submitted": 0,
+    "reviewed_comparisons": 0,
+    "blocked": 0
+  },
+  "cases": [
+    {
+      "case_id": "case-1",
+      "status": "OPEN_CHALLENGE",
+      "blocked_reason": null,
+      "title": {
+        "en": "Urban Metabolism Atlas",
+        "zh": "城市生命系统图谱",
+        "library_title_zh": "信息图可视化设计"
+      },
+      "category": "UI & Interfaces",
+      "aspect": "9:16",
+      "canvas": {
+        "width": 720,
+        "height": 1280
+      },
+      "prompt": "Vertical 9:16 isometric cutaway infographic \"城市生命系统图谱 / Urban Metabolism Atlas\". Smart city from sky to bedrock: skyscrapers, streets, subway, utility tunnels, water/sewage/gas/heating pipes, fiber, data center, flood tanks, aquifers, geothermal wells, bedrock. Color-coded flows for power/water/data/traffic/waste. 12 numbered panels bilingual CN/EN: 能源/水循环/交通/数据/垃圾/建筑/公共服务/ 物流/气候韧性/生态/地质/治理看板. 24h timeline at bottom. Style: engineering white paper + scientific atlas, light paper bg, crisp lines, 8K. No cyberpunk, no gibberish text, must show both above AND below ground.",
+      "prompt_sha256": "fe1d4a9b24c1329b9e8905d1ee45ce3ef3e2665b0d5ce9c095c246156d9ad94e",
+      "prompt_language": "en",
+      "prompt_derivation": null,
+      "reference": {
+        "library": "freestylefly/awesome-gpt-image-2",
+        "library_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+        "library_case_id": 1,
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/docs/gallery-part-1.md#case-1",
+        "library_license": "MIT",
+        "source_label": "小红书号insight_express",
+        "source_url": null,
+        "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
+      },
+      "notes": [
+        "Prompt demands 12 numbered bilingual CN/EN panels — extreme typography stress test.",
+        "First-ever non-square canvas on this GPU stack; same ~0.92 MP budget as validated 1024^2."
+      ],
+      "qwen": {
+        "image": "gallery/qwen/case-1.png",
+        "image_sha256": "302815bcbf90801d354238b2976b7b889ec1ba25712126dcf7514fb4863fcb79",
+        "width": 720,
+        "height": 1280,
+        "generation": {
+          "model": "Qwen-Image-2.1",
+          "weights_repo": "Comfy-Org/Qwen-Image-2.1",
+          "weights_revision": "aacf31a6d48e707f352ecba714cee0680da3479b",
+          "comfyui_commit": "b5a432157de6b8884f81104cd02926adf4d597e4",
+          "engine_repo": "AIwork4me/qwen-image-rocm",
+          "engine_commit": "cbd9e74eb121c281d97cf25130cd8de6ffa1be04",
+          "gpu": "AMD Radeon RX 7900 XTX 24 GB (gfx1100, native Windows ROCm)",
+          "precision": "bf16",
+          "steps": 40,
+          "cfg": 1,
+          "sampler": "euler/simple",
+          "seed": 42,
+          "size": "720x1280",
+          "wall_time_s": 55.478,
+          "vram_peak_mb": 14788.8,
+          "generated_utc": "2026-11-01T12:48:12+00:00",
+          "non_square_probe": true
+        },
+        "license": "CC BY-NC 4.0 (generated with Qwen-Image-2.1 under the Qwen Research License)"
+      },
+      "gpt": {
+        "planned_size": "720x1280",
+        "planned_quality": "medium",
+        "model": "gpt-image-2-2026-04-21",
+        "byok": true,
+        "submissions": 0
+      },
+      "submissions": []
+    },
+    {
+      "case_id": "case-13",
+      "status": "OPEN_CHALLENGE",
+      "blocked_reason": null,
+      "title": {
+        "en": "Math Exam Paper Photo",
+        "zh": "数学试卷实拍照片",
+        "library_title_zh": "信息图可视化设计"
+      },
+      "category": "Documents & Publishing",
+      "aspect": "1:1",
+      "canvas": {
+        "width": 1024,
+        "height": 1024
+      },
+      "prompt": "A realistic photo of a Chinese high school math exam paper, printed inblack and white on slightly gray paper, titled “数学试卷”, with multiplechoice questions and math formulas, including a small 3D geometrycube diagram. The paper is photographed casually with asmartphone, slightly tilted, with uneven lighting, soft shadows, andminor blur. The text is in Chinese with a mix of bold title font andstandard serif body font. Realistic paper texture, exam layout,authentic classroom test sheet style.",
+      "prompt_sha256": "a662cac8ae4793156ea0a0158ce9888644b3b0a3ef829e8253f8b4fa65004e2e",
+      "prompt_language": "en",
+      "prompt_derivation": null,
+      "reference": {
+        "library": "freestylefly/awesome-gpt-image-2",
+        "library_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+        "library_case_id": 13,
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/docs/gallery-part-1.md#case-13",
+        "library_license": "MIT",
+        "source_label": "小红书号94156710894",
+        "source_url": null,
+        "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
+      },
+      "notes": [
+        "Upstream prompt text contains original spacing typos (e.g. 'inblack', 'asmartphone'); frozen verbatim — fixing them would silently edit the source prompt.",
+        "Chinese text content inside an English prompt (mixed-language stress)."
+      ],
+      "qwen": {
+        "image": "gallery/qwen/case-13.png",
+        "image_sha256": "f30f22a231e0b4b94480fa90d67cf0b4631452e70bc21d820c050ec8cebdd844",
+        "width": 1024,
+        "height": 1024,
+        "generation": {
+          "model": "Qwen-Image-2.1",
+          "weights_repo": "Comfy-Org/Qwen-Image-2.1",
+          "weights_revision": "aacf31a6d48e707f352ecba714cee0680da3479b",
+          "comfyui_commit": "b5a432157de6b8884f81104cd02926adf4d597e4",
+          "engine_repo": "AIwork4me/qwen-image-rocm",
+          "engine_commit": "cbd9e74eb121c281d97cf25130cd8de6ffa1be04",
+          "gpu": "AMD Radeon RX 7900 XTX 24 GB (gfx1100, native Windows ROCm)",
+          "precision": "bf16",
+          "steps": 40,
+          "cfg": 1,
+          "sampler": "euler/simple",
+          "seed": 42,
+          "size": "1024x1024",
+          "wall_time_s": 56.718,
+          "vram_peak_mb": 15319.7,
+          "generated_utc": "2026-11-01T12:49:09+00:00",
+          "non_square_probe": false
+        },
+        "license": "CC BY-NC 4.0 (generated with Qwen-Image-2.1 under the Qwen Research License)"
+      },
+      "gpt": {
+        "planned_size": "1024x1024",
+        "planned_quality": "medium",
+        "model": "gpt-image-2-2026-04-21",
+        "byok": true,
+        "submissions": 0
+      },
+      "submissions": []
+    },
+    {
+      "case_id": "case-14",
+      "status": "OPEN_CHALLENGE",
+      "blocked_reason": null,
+      "title": {
+        "en": "Tomato & Egg Recipe Infographic",
+        "zh": "番茄炒蛋食谱信息图",
+        "library_title_zh": "信息图可视化设计"
+      },
+      "category": "Charts & Infographics",
+      "aspect": "9:16",
+      "canvas": {
+        "width": 720,
+        "height": 1280
+      },
+      "prompt": "视觉设计规格描述：画幅比 9:16（竖版手机信息图）；背景纹理为具有呼吸感的米色手工纸（Handmade Washi Paper），带微小纤维纹理，边角有轻微水渍晕染；配色方案为熟番茄红（#E23A28）、初榨橄榄油金黄（#F2C94C）、嫩草绿（#6FCF97）、碳黑墨线；排版逻辑为顶端大标题、中间 Z 字形流线、底部全景成品、留白艺术化处理。食谱内容策划：1）顶部标题《番茄炒蛋：国民灵魂料理》，手绘书法体，侧边盖红色“厨师推荐”微型印章。2）步骤区块（Z 动线排版）：步骤1 挑选与备菜（左上）：三个番茄、四枚土鸡蛋、一簇葱花；说明：番茄切小块，鸡蛋打散均匀；厨师秘技：番茄去皮后切块，汁水更浓郁，口感更丝滑；心得：选熟透番茄，成功一半。步骤2 蛋液的魔法（右上）：手持筷子快速搅动蛋液，泛起气泡与动感线；说明：加少许盐和几滴温水；厨师秘技：加温水或白醋，鸡蛋更蓬松；心得：搅打充分，空气是蓬松秘密。步骤3 烈火蓬松蛋（左中）：铁锅中蛋液迅速膨胀如云朵，水彩表现热气；说明：油热下锅，快速划散，八成熟盛出；厨师秘技：油温高，烟起即入，瞬间锁水；心得：宁可稍嫩，不可过老。步骤4 番茄出浓汁（右中）：番茄翻滚，边缘半融化，亮红汤汁流淌；说明：煸炒至出汁，加少许糖和盐；厨师秘技：铲子轻压加速出汁，可加一勺番茄酱提色；心得：糖中和酸度、提鲜。步骤5 最后的合奏（左下）：鸡蛋回锅与番茄汁交织，撒葱花；说明：让鸡蛋吸饱番茄汁，关火装盘；厨师秘技：出锅前滴几滴芝麻油提香；心得：动作要快，保持鲜亮色泽。3）底部成品插图：青花边陶瓷深盘装满番茄炒蛋，红亮汁水包裹金黄大块鸡蛋，葱花点缀，水彩渲染半透明酱汁质感，边缘有袅袅热气；视觉感：看了就想立刻盛一碗大米饭。4）底部中央署名：[ 摄影师的厨房日记 · 2025 ]。",
+      "prompt_sha256": "84063e04c693df807d4a229a88a19a642cf7a15be4d1dc9326bd11343e499f03",
+      "prompt_language": "zh",
+      "prompt_derivation": null,
+      "reference": {
+        "library": "freestylefly/awesome-gpt-image-2",
+        "library_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+        "library_case_id": 14,
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/docs/gallery-part-1.md#case-14",
+        "library_license": "MIT",
+        "source_label": "小红书号Roy_Jay",
+        "source_url": null,
+        "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
+      },
+      "notes": [
+        "Dense Chinese typography: 5 recipe steps, chef tips, calligraphy title, seal stamp, signature line."
+      ],
+      "qwen": {
+        "image": "gallery/qwen/case-14.png",
+        "image_sha256": "09ab26a0784deb48c10880eaddf0981dda07c229ac7f959be80af034e72f71f2",
+        "width": 720,
+        "height": 1280,
+        "generation": {
+          "model": "Qwen-Image-2.1",
+          "weights_repo": "Comfy-Org/Qwen-Image-2.1",
+          "weights_revision": "aacf31a6d48e707f352ecba714cee0680da3479b",
+          "comfyui_commit": "b5a432157de6b8884f81104cd02926adf4d597e4",
+          "engine_repo": "AIwork4me/qwen-image-rocm",
+          "engine_commit": "cbd9e74eb121c281d97cf25130cd8de6ffa1be04",
+          "gpu": "AMD Radeon RX 7900 XTX 24 GB (gfx1100, native Windows ROCm)",
+          "precision": "bf16",
+          "steps": 40,
+          "cfg": 1,
+          "sampler": "euler/simple",
+          "seed": 42,
+          "size": "720x1280",
+          "wall_time_s": 50.448,
+          "vram_peak_mb": 14732.5,
+          "generated_utc": "2026-11-01T12:50:00+00:00",
+          "non_square_probe": true
+        },
+        "license": "CC BY-NC 4.0 (generated with Qwen-Image-2.1 under the Qwen Research License)"
+      },
+      "gpt": {
+        "planned_size": "720x1280",
+        "planned_quality": "medium",
+        "model": "gpt-image-2-2026-04-21",
+        "byok": true,
+        "submissions": 0
+      },
+      "submissions": []
+    },
+    {
+      "case_id": "case-344",
+      "status": "OPEN_CHALLENGE",
+      "blocked_reason": null,
+      "title": {
+        "en": "NOIR Streetwear Campaign",
+        "zh": "NOIR 街头服饰 Campaign",
+        "library_title_zh": "NOIR 街头服饰 Campaign"
+      },
+      "category": "Brand & Logos",
+      "aspect": "1:1",
+      "canvas": {
+        "width": 1024,
+        "height": 1024
+      },
+      "prompt": "Create a premium, highly realistic 1:1 campaign poster for NOIR, a modern streetwear brand. Show one hero oversized hoodie as the main focus against a gritty urban backdrop with wet concrete floors, dramatic low lighting, subtle smoke in the air and a raw street energy. Add bold minimal typography with the brand name NOIR and a short campaign headline like \"Wear the Dark.\" Make it feel like a real high-end streetwear editorial, sharp detail, realistic fabric textures, modern and edgy, deep black tones with subtle grey accents, no clutter, no collage.",
+      "prompt_sha256": "355b4407b601254b23cfd541d71d548884bca225f57b6ce39f25f81e56915eb6",
+      "prompt_language": "en",
+      "prompt_derivation": null,
+      "reference": {
+        "library": "freestylefly/awesome-gpt-image-2",
+        "library_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+        "library_case_id": 344,
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/docs/gallery-part-2.md#case-344",
+        "library_license": "MIT",
+        "source_label": "@Daniel_adsss",
+        "source_url": "https://x.com/Daniel_adsss/status/2048542581638701446",
+        "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
+      },
+      "notes": [
+        "Prompt itself specifies 1:1; minimal text (brand name + short headline)."
+      ],
+      "qwen": {
+        "image": "gallery/qwen/case-344.png",
+        "image_sha256": "e1fe81b9def9a52fc0ced04679833aac6348f4ea23e9772ec2e4ee0647e5b6da",
+        "width": 1024,
+        "height": 1024,
+        "generation": {
+          "model": "Qwen-Image-2.1",
+          "weights_repo": "Comfy-Org/Qwen-Image-2.1",
+          "weights_revision": "aacf31a6d48e707f352ecba714cee0680da3479b",
+          "comfyui_commit": "b5a432157de6b8884f81104cd02926adf4d597e4",
+          "engine_repo": "AIwork4me/qwen-image-rocm",
+          "engine_commit": "cbd9e74eb121c281d97cf25130cd8de6ffa1be04",
+          "gpu": "AMD Radeon RX 7900 XTX 24 GB (gfx1100, native Windows ROCm)",
+          "precision": "bf16",
+          "steps": 40,
+          "cfg": 1,
+          "sampler": "euler/simple",
+          "seed": 42,
+          "size": "1024x1024",
+          "wall_time_s": 55.364,
+          "vram_peak_mb": 14456.1,
+          "generated_utc": "2026-11-01T12:50:57+00:00",
+          "non_square_probe": false
+        },
+        "license": "CC BY-NC 4.0 (generated with Qwen-Image-2.1 under the Qwen Research License)"
+      },
+      "gpt": {
+        "planned_size": "1024x1024",
+        "planned_quality": "medium",
+        "model": "gpt-image-2-2026-04-21",
+        "byok": true,
+        "submissions": 0
+      },
+      "submissions": []
+    },
+    {
+      "case_id": "case-443",
+      "status": "OPEN_CHALLENGE",
+      "blocked_reason": null,
+      "title": {
+        "en": "Exploded Taco Infographic",
+        "zh": "塔可爆炸拆解信息图",
+        "library_title_zh": "塔可爆炸拆解信息图"
+      },
+      "category": "Charts & Infographics",
+      "aspect": "2:3",
+      "canvas": {
+        "width": 832,
+        "height": 1248
+      },
+      "prompt": "Create a hyper-realistic exploded vertical infographic composition of tacos.\n\nTop → Bottom structure:\nFresh Lettuce (crisp green texture with natural folds)\n→ Tomato & Salsa Layer (juicy diced tomatoes and salsa mix)\n→ Melted Cheese (smooth cheddar texture)\n→ Grilled Meat Filling (juicy seasoned meat detail)\n→ Taco Shell Base (crispy golden shell texture)\nPerfect vertical alignment, rustic background, soft studio lighting, realistic shadows beneath each floating element.\n\nAdd clean infographic text labels with thin pointer lines using these exact labels:\n“Lettuce”\n“Salsa”\n“Cheese”\n“Meat”\n“Shell”\nUltra-detailed food textures, premium commercial aesthetic, 8K.",
+      "prompt_sha256": "c9bd4f23e9fad229382532b1cab65104943328360db035ed57a75a01e468b40b",
+      "prompt_language": "en",
+      "prompt_derivation": null,
+      "reference": {
+        "library": "freestylefly/awesome-gpt-image-2",
+        "library_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+        "library_case_id": 443,
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/docs/gallery-part-2.md#case-443",
+        "library_license": "MIT",
+        "source_label": "@Strength04_X",
+        "source_url": "https://x.com/Strength04_X/status/2056018963084226866",
+        "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
+      },
+      "notes": [
+        "Prompt says 'vertical' without a ratio; 2:3 chosen at the full 1.04 MP budget.",
+        "Five exact English labels required (Lettuce/Salsa/Cheese/Meat/Shell)."
+      ],
+      "qwen": {
+        "image": "gallery/qwen/case-443.png",
+        "image_sha256": "4081af22c2ad53f6799c6fd1deaac8a94f7c683af3f9573ec0d1cd327eb0fdc6",
+        "width": 832,
+        "height": 1248,
+        "generation": {
+          "model": "Qwen-Image-2.1",
+          "weights_repo": "Comfy-Org/Qwen-Image-2.1",
+          "weights_revision": "aacf31a6d48e707f352ecba714cee0680da3479b",
+          "comfyui_commit": "b5a432157de6b8884f81104cd02926adf4d597e4",
+          "engine_repo": "AIwork4me/qwen-image-rocm",
+          "engine_commit": "cbd9e74eb121c281d97cf25130cd8de6ffa1be04",
+          "gpu": "AMD Radeon RX 7900 XTX 24 GB (gfx1100, native Windows ROCm)",
+          "precision": "bf16",
+          "steps": 40,
+          "cfg": 1,
+          "sampler": "euler/simple",
+          "seed": 42,
+          "size": "832x1248",
+          "wall_time_s": 57.313,
+          "vram_peak_mb": 14613.2,
+          "generated_utc": "2026-11-01T12:51:54+00:00",
+          "non_square_probe": true
+        },
+        "license": "CC BY-NC 4.0 (generated with Qwen-Image-2.1 under the Qwen Research License)"
+      },
+      "gpt": {
+        "planned_size": "832x1248",
+        "planned_quality": "medium",
+        "model": "gpt-image-2-2026-04-21",
+        "byok": true,
+        "submissions": 0
+      },
+      "submissions": []
+    },
+    {
+      "case_id": "case-510",
+      "status": "OPEN_CHALLENGE",
+      "blocked_reason": null,
+      "title": {
+        "en": "Bichon Shop App Icon",
+        "zh": "Bichon Shop 拟物 App 图标",
+        "library_title_zh": "Bichon Shop 拟物 App 图标"
+      },
+      "category": "Brand & Logos",
+      "aspect": "1:1",
+      "canvas": {
+        "width": 1024,
+        "height": 1024
+      },
+      "prompt": "A macOS app icon for an app named 'Bichon Shop'. A single squircle icon with smooth continuous rounded corners, centered on a white canvas with padding, occupying about 80% of the canvas. Modern light skeuomorphic macOS App Store style. Only one icon.",
+      "prompt_sha256": "6427e7f61957e58d42fbcca7bca757d65c99489587f471ce4bfe8f402f1008de",
+      "prompt_language": "en",
+      "prompt_derivation": null,
+      "reference": {
+        "library": "freestylefly/awesome-gpt-image-2",
+        "library_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+        "library_case_id": 510,
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/docs/gallery-part-2.md#case-510",
+        "library_license": "MIT",
+        "source_label": "@iamaiistudio",
+        "source_url": "https://x.com/iamaiistudio/status/2071923809788285125",
+        "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
+      },
+      "notes": [
+        "Lightest text load of the 12 — clean-app-icon contrast case."
+      ],
+      "qwen": {
+        "image": "gallery/qwen/case-510.png",
+        "image_sha256": "db9144e8cc828f5bf93f5eea8d1e0c24c31de1f75d734f2e5b066cf49841f0d4",
+        "width": 1024,
+        "height": 1024,
+        "generation": {
+          "model": "Qwen-Image-2.1",
+          "weights_repo": "Comfy-Org/Qwen-Image-2.1",
+          "weights_revision": "aacf31a6d48e707f352ecba714cee0680da3479b",
+          "comfyui_commit": "b5a432157de6b8884f81104cd02926adf4d597e4",
+          "engine_repo": "AIwork4me/qwen-image-rocm",
+          "engine_commit": "cbd9e74eb121c281d97cf25130cd8de6ffa1be04",
+          "gpu": "AMD Radeon RX 7900 XTX 24 GB (gfx1100, native Windows ROCm)",
+          "precision": "bf16",
+          "steps": 40,
+          "cfg": 1,
+          "sampler": "euler/simple",
+          "seed": 42,
+          "size": "1024x1024",
+          "wall_time_s": 57.258,
+          "vram_peak_mb": 16345.8,
+          "generated_utc": "2026-11-01T12:52:52+00:00",
+          "non_square_probe": false
+        },
+        "license": "CC BY-NC 4.0 (generated with Qwen-Image-2.1 under the Qwen Research License)"
+      },
+      "gpt": {
+        "planned_size": "1024x1024",
+        "planned_quality": "medium",
+        "model": "gpt-image-2-2026-04-21",
+        "byok": true,
+        "submissions": 0
+      },
+      "submissions": []
+    },
+    {
+      "case_id": "case-414",
+      "status": "OPEN_CHALLENGE",
+      "blocked_reason": null,
+      "title": {
+        "en": "Morning Bedroom Photography",
+        "zh": "室内晨间写实摄影",
+        "library_title_zh": "室内晨间写实摄影"
+      },
+      "category": "Photography & Realism",
+      "aspect": "2:3",
+      "canvas": {
+        "width": 832,
+        "height": 1248
+      },
+      "prompt": "A close-medium shot of a young Japanese woman in her bedroom on an ordinary morning, captured in authentic daily life photography as a natural candid moment. She is seated sideways on the edge of the bed, not fully awake yet, photographed from a slightly elevated three-quarter angle with cool-to-warm morning window light entering from the left.\nEast Asian young woman in her early 20s. Almond-shaped eyes with soft natural single eyelids, slightly elongated eye corners, still carrying the heaviness of just waking. Straight refined nose with a delicate bridge. Skin tone fair to light beige — skin subsurface scattering visible under the soft directional morning window light, specular micro-highlights catching gently on her cheekbone and nose ridge, fine skin texture perceptible, no makeup. Naturally straight fine black hair loosely gathered, slightly disheveled from sleep.\nShe wears a loose oversized cotton sleep shirt and soft shorts, nothing styled. Her gaze drifts toward the window, posture relaxed and unhurried, one hand resting on her knee, the other barely holding a phone face-down. The bedroom background suggests real life — slightly unmade linen, a potted plant near the window partially in shadow, small cluttered bedside items. Two or three stray hairs fall across her cheek in natural asymmetric displacement, not geometrically placed.\nSoft directional morning light from a side window, cool-to-warm transition across her face and shoulder, long gentle shadows on the bedding behind her. The mood is quietly adrift — not sad, not performing, just suspended in the unhurried first minutes of the day. Subtle ISO 400 film grain in shadow areas, photographic noise texture not CG render smoothness. Aspect ratio 2:3. No watermark, no text overlay, not cartoon, not digitally painted, not illustration, not anime.",
+      "prompt_sha256": "d1851e75e25cbf5cdc5c9d5e4d02ba08755c7e3e68736b9d5c94ee020916bd97",
+      "prompt_language": "en",
+      "prompt_derivation": null,
+      "reference": {
+        "library": "freestylefly/awesome-gpt-image-2",
+        "library_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+        "library_case_id": 414,
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/docs/gallery-part-2.md#case-414",
+        "library_license": "MIT",
+        "source_label": "@ToroJushiAi",
+        "source_url": "https://x.com/ToroJushiAi/status/2053078195482632421",
+        "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
+      },
+      "notes": [
+        "Prompt specifies 'Aspect ratio 2:3' and forbids watermarks/text."
+      ],
+      "qwen": {
+        "image": "gallery/qwen/case-414.png",
+        "image_sha256": "db9dbcde3c226adcf5f728a702702b544d195aaaf37f7fe76fa64d51c57a343b",
+        "width": 832,
+        "height": 1248,
+        "generation": {
+          "model": "Qwen-Image-2.1",
+          "weights_repo": "Comfy-Org/Qwen-Image-2.1",
+          "weights_revision": "aacf31a6d48e707f352ecba714cee0680da3479b",
+          "comfyui_commit": "b5a432157de6b8884f81104cd02926adf4d597e4",
+          "engine_repo": "AIwork4me/qwen-image-rocm",
+          "engine_commit": "cbd9e74eb121c281d97cf25130cd8de6ffa1be04",
+          "gpu": "AMD Radeon RX 7900 XTX 24 GB (gfx1100, native Windows ROCm)",
+          "precision": "bf16",
+          "steps": 40,
+          "cfg": 1,
+          "sampler": "euler/simple",
+          "seed": 42,
+          "size": "832x1248",
+          "wall_time_s": 53.276,
+          "vram_peak_mb": 14610.5,
+          "generated_utc": "2026-11-01T12:53:46+00:00",
+          "non_square_probe": true
+        },
+        "license": "CC BY-NC 4.0 (generated with Qwen-Image-2.1 under the Qwen Research License)"
+      },
+      "gpt": {
+        "planned_size": "832x1248",
+        "planned_quality": "medium",
+        "model": "gpt-image-2-2026-04-21",
+        "byok": true,
+        "submissions": 0
+      },
+      "submissions": []
+    },
+    {
+      "case_id": "case-434",
+      "status": "OPEN_CHALLENGE",
+      "blocked_reason": null,
+      "title": {
+        "en": "Tokyo Street Film Portrait",
+        "zh": "东京街头胶片人像",
+        "library_title_zh": "东京街头胶片人像"
+      },
+      "category": "Photography & Realism",
+      "aspect": "9:16",
+      "canvas": {
+        "width": 720,
+        "height": 1280
+      },
+      "prompt": "film photography, candid street snapshot aesthetic, razor-sharp focus on subject, shallow depth of field with soft blurred urban background, bright daylight, slightly overexposed highlights, vivid contrast, subtle analog film texture, heavy film grain, nostalgic cinematic atmosphere, Tokyo backstreet neighborhood scene near a quiet train station, narrow pedestrian street lined with Japanese convenience stores, vintage vending machines, small ramen shops, hanging signs with faded typography, bicycles parked along tiled sidewalks, utility poles and overhead wires stretching across the sky, scattered fallen leaves on the ground, distant pedestrians and passing taxis softly blurred in the background, warm afternoon sunlight with deep blue sky, realistic street fashion photography style, effortless cool street vibe, vibrant colors with slightly muted faded film tones, beautiful 19-year-old Chinese female influencer, fair porcelain skin with cold pale undertones, exquisite natural makeup, glossy soft lips, defined brows, delicate lashes, soft messy long black hair with natural flowing curves, wearing an off-shoulder white fluffy faux fur jacket, playful yet subtly seductive expression, lazy dreamy vintage filter, ultra high-quality details, intentionally mundane phone-camera snapshot feeling, casual accidental composition, imperfect framing, realistic iPhone photography texture, spontaneous candid energy, highly attractive girl casually posing in the middle of the sidewalk, body facing away from the camera while turning her head back toward the lens with direct eye contact, relaxed posture, soft wind moving her hair, emotional youthful atmosphere, modern Asian street fashion editorial, soft haze, layered composition, masterpiece, best quality, ultra detailed, slight motion blur from slow shutter, authentic everyday realism, “BubbleBrain” small handwritten signature text on bottom corner --ar 9:16",
+      "prompt_sha256": "889c680679937c43c5d0314476f426d8fb53091031c035a0833c83888e094ec4",
+      "prompt_language": "en",
+      "prompt_derivation": null,
+      "reference": {
+        "library": "freestylefly/awesome-gpt-image-2",
+        "library_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+        "library_case_id": 434,
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/docs/gallery-part-2.md#case-434",
+        "library_license": "MIT",
+        "source_label": "@BubbleBrain",
+        "source_url": "https://x.com/BubbleBrain/status/2055491616392052887",
+        "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
+      },
+      "notes": [
+        "Embeds a Midjourney-style '--ar 9:16' parameter and the artist signature string 'BubbleBrain'; both kept verbatim — every model receives the same literal text.",
+        "Longest single-block style chain among the 12."
+      ],
+      "qwen": {
+        "image": "gallery/qwen/case-434.png",
+        "image_sha256": "7b82b4bcfaa315f2e03b7d6f02b7fa33db77d22a12e979309c0a502e3525c8b1",
+        "width": 720,
+        "height": 1280,
+        "generation": {
+          "model": "Qwen-Image-2.1",
+          "weights_repo": "Comfy-Org/Qwen-Image-2.1",
+          "weights_revision": "aacf31a6d48e707f352ecba714cee0680da3479b",
+          "comfyui_commit": "b5a432157de6b8884f81104cd02926adf4d597e4",
+          "engine_repo": "AIwork4me/qwen-image-rocm",
+          "engine_commit": "cbd9e74eb121c281d97cf25130cd8de6ffa1be04",
+          "gpu": "AMD Radeon RX 7900 XTX 24 GB (gfx1100, native Windows ROCm)",
+          "precision": "bf16",
+          "steps": 40,
+          "cfg": 1,
+          "sampler": "euler/simple",
+          "seed": 42,
+          "size": "720x1280",
+          "wall_time_s": 52.529,
+          "vram_peak_mb": 14566.7,
+          "generated_utc": "2026-11-01T12:54:39+00:00",
+          "non_square_probe": true
+        },
+        "license": "CC BY-NC 4.0 (generated with Qwen-Image-2.1 under the Qwen Research License)"
+      },
+      "gpt": {
+        "planned_size": "720x1280",
+        "planned_quality": "medium",
+        "model": "gpt-image-2-2026-04-21",
+        "byok": true,
+        "submissions": 0
+      },
+      "submissions": []
+    },
+    {
+      "case_id": "case-419",
+      "status": "OPEN_CHALLENGE",
+      "blocked_reason": null,
+      "title": {
+        "en": "Croissant Baker Storyboard",
+        "zh": "可颂烘焙流程 Storyboard",
+        "library_title_zh": "可颂烘焙流程 Storyboard"
+      },
+      "category": "Scenes & Storytelling",
+      "aspect": "16:9",
+      "canvas": {
+        "width": 1280,
+        "height": 720
+      },
+      "prompt": "Create a crisp, clean infographic storyboard poster for THE CROISSANT BAKER. Wide 16:9 layout, white background, black borders, bold black typography, premium Pixar 3D stylized rendering, bright vivid colors — warm golden yellows, rich buttery creams, flaky browns, soft pastry whites, warm French bakery morning light.\nTop header:\n\nTHE CROISSANT BAKER\nTOTAL VIDEO TIME: 12 SECONDS\n8 SHOTS · WARM · FLAKY · IRRESISTIBLE\nLegend icons: ACTION, HEAT, TIME HINT, INGREDIENT\nThin warm golden accent line running full width beneath header\n\nSame Pixar-style young French male baker throughout: white baker's jacket, flour-dusted hands, warm authentic French boulangerie setting, marble countertop, warm morning light streaming through windows, bread racks in background. Bright, warm, delicious. Every panel a completely different composition and color.\n8 panels:\n\nTHE OPENER — Wide shot of baker arriving at the boulangerie before dawn, tying apron, switching on the warm kitchen lights, marble counter visible, bread racks behind, flour dusting the air, full world established, bright and cinematic\nTHE BUTTER BLOCK — Baker slams a massive cold block of European butter onto the marble counter with both hands, dramatic impact, flour cloud puffing up, close-up on hands, this is the bones moment — the start of everything\nTHE LAMINATION — Baker folding the dough over the butter block precisely, rolling pin pressing down hard, layers building, side angle shot showing the beautiful layering beginning, confident and skilled\nTHE ROLL — Dough rolled out into a large thin sheet, baker leaning into the rolling pin with full body weight, marble counter, flour dusting everywhere, wide shot showing the scale of the dough\nTHE SHAPE — Triangles cut from the dough, baker rolling each one from the wide end into a tight crescent, hands moving fast and confident, close-up on the shaping, beautiful and precise\nTHE EGG WASH — Baker brushing golden egg wash over each shaped croissant with a pastry brush, each one glistening beautifully, close-up overhead angle, warm golden color, stunning composition\nTHE OVEN — Croissants slid into the blazing hot oven on a tray, oven door closed, through the oven glass croissants visibly puffing and turning deep golden, layers separating dramatically, warm orange glow\nTHE TEAR — Baker pulls a perfect golden croissant from the rack, holds it up, tears it open slowly revealing hundreds of impossibly flaky buttery layers inside, steam escaping, butter glistening — this is the cheese pull moment, the hero shot of the entire video\n\nFooter:\n\nVIDEO FLOW: 8 shots × 1.5s = 12 seconds. Butter block to the tear.\nCAMERA TIPS: wide on opener, close-up on butter slam and shaping, side angle on lamination, overhead on egg wash, oven glass for panel 7, extreme close-up on the tear reveal\nLIGHT & STYLE: warm golden French bakery morning light, buttery cream tones, flour dust in the air, bright vivid Pixar colors, shallow depth of field on close-ups\nBAKER NOTES: one baker, one perfect croissant, one irresistible tear. The lamination layers and the final tear are everything — make them stunning.",
+      "prompt_sha256": "e7a6a2a6d628bed2d3c2d607188ef06769f94039d69860de72652ac116be8d85",
+      "prompt_language": "en",
+      "prompt_derivation": null,
+      "reference": {
+        "library": "freestylefly/awesome-gpt-image-2",
+        "library_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+        "library_case_id": 419,
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/docs/gallery-part-2.md#case-419",
+        "library_license": "MIT",
+        "source_label": "@TechieBySA",
+        "source_url": "https://x.com/TechieBySA/status/2053523784481554759",
+        "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
+      },
+      "notes": [
+        "Prompt specifies 'Wide 16:9 layout'; 8 storyboard panels + header/footer typography."
+      ],
+      "qwen": {
+        "image": "gallery/qwen/case-419.png",
+        "image_sha256": "ba97688334781f89cb38d41298a703b4066c17849a458307ac6ae33d695d6951",
+        "width": 1280,
+        "height": 720,
+        "generation": {
+          "model": "Qwen-Image-2.1",
+          "weights_repo": "Comfy-Org/Qwen-Image-2.1",
+          "weights_revision": "aacf31a6d48e707f352ecba714cee0680da3479b",
+          "comfyui_commit": "b5a432157de6b8884f81104cd02926adf4d597e4",
+          "engine_repo": "AIwork4me/qwen-image-rocm",
+          "engine_commit": "cbd9e74eb121c281d97cf25130cd8de6ffa1be04",
+          "gpu": "AMD Radeon RX 7900 XTX 24 GB (gfx1100, native Windows ROCm)",
+          "precision": "bf16",
+          "steps": 40,
+          "cfg": 1,
+          "sampler": "euler/simple",
+          "seed": 42,
+          "size": "1280x720",
+          "wall_time_s": 52.463,
+          "vram_peak_mb": 14605.8,
+          "generated_utc": "2026-11-01T12:55:32+00:00",
+          "non_square_probe": true
+        },
+        "license": "CC BY-NC 4.0 (generated with Qwen-Image-2.1 under the Qwen Research License)"
+      },
+      "gpt": {
+        "planned_size": "1280x720",
+        "planned_quality": "medium",
+        "model": "gpt-image-2-2026-04-21",
+        "byok": true,
+        "submissions": 0
+      },
+      "submissions": []
+    },
+    {
+      "case_id": "case-390",
+      "status": "OPEN_CHALLENGE",
+      "blocked_reason": null,
+      "title": {
+        "en": "Felt Diorama: Japan",
+        "zh": "羊毛毡微缩世界·日本",
+        "library_title_zh": "羊毛毡国家微缩世界"
+      },
+      "category": "Scenes & Storytelling",
+      "aspect": "2:3",
+      "canvas": {
+        "width": 832,
+        "height": 1248
+      },
+      "prompt": "Country: Japan\n\nA miniature felt diorama made of fluffy yarn, wool, and needlework, designed as a single cohesive small world (not a collage), reflecting the real landscape, culture, and daily life of the country.\n\nStructure:\n- Select 4–7 naturally integrated elements (landscape, architecture, transport, street life, culture)\n- Everything must flow together as one environment\n\nForeground:\nEveryday life — small shops, cafes, markets, people interacting, local clothing, street details, subtle movement, warm human presence\n\nMidground:\nConnecting flow — streets, bridges, rivers, paths, transport, cultural spaces that guide the eye naturally from front to back\n\nBackground:\nOne strong identity anchor — landmark, skyline, mountain, or symbolic landscape clearly representing the country (keep it clean, not overcrowded)\n\nStyle:\nHandmade wool felt, yarn, needle-felt textures, visible fibers, soft edges, miniature craftsmanship, premium diorama realism\n\nLighting:\nWarm golden hour or bright noon, soft shadows, clear visibility, gentle glow enhancing depth\n\nColor:\nSoft but saturated palette reflecting the country’s natural tones (greens, sky blues, architectural hues, cultural accents), warm and balanced\n\nComposition:\nVertical frame, balanced or centered perspective, slight top-down or immersive angle, clear foreground–midground–background depth\n\nMood:\nWarm, emotional, calm, refined — like a handcrafted fairy-tale version of real life (not childish)\n\nRules:\n- No logos or text overlays\n- No collage-style composition\n- No random symbolic clutter\n- Keep it realistic but stylized as a handmade miniature world\n\nQuality:\n16K, ultra-detailed, hyper-realistic miniature textures, cinematic depth, sharp focus\n\noutput_goal:\nA single, cohesive felt diorama world that instantly conveys the identity and atmosphere of the chosen country through integrated landscape, culture, and daily life",
+      "prompt_sha256": "99b43b5f66e0f4290beee06daff51ce2c9e641ce4cf96c12e2d40dd4ad2fb226",
+      "prompt_language": "en",
+      "prompt_derivation": {
+        "type": "template-variable-fill",
+        "variable": "[INSERT COUNTRY NAME]",
+        "value": "Japan",
+        "upstream_prompt_sha256": "160b0b607287ee6f7278f49839eaba18a00340a7b7b10ed503cf7a6761026644",
+        "description": "Upstream template variable replaced with 'Japan' exactly once before freeze; this is the only modification applied to any of the 12 prompts."
+      },
+      "reference": {
+        "library": "freestylefly/awesome-gpt-image-2",
+        "library_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+        "library_case_id": 390,
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/docs/gallery-part-2.md#case-390",
+        "library_license": "MIT",
+        "source_label": "@volkan_iras",
+        "source_url": "https://x.com/volkan_iras/status/2051403524966141980",
+        "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
+      },
+      "notes": [
+        "Upstream prompt carries the template variable '[INSERT COUNTRY NAME]'; resolved to 'Japan' before freeze (strong identity anchor, rich street life suits the diorama structure). Derivation recorded; upstream sha256 preserved."
+      ],
+      "qwen": {
+        "image": "gallery/qwen/case-390.png",
+        "image_sha256": "5c9e0c4eb9eed2fa04021c0cee1d605bf98c4bd7afb02536c47028b191e0825a",
+        "width": 832,
+        "height": 1248,
+        "generation": {
+          "model": "Qwen-Image-2.1",
+          "weights_repo": "Comfy-Org/Qwen-Image-2.1",
+          "weights_revision": "aacf31a6d48e707f352ecba714cee0680da3479b",
+          "comfyui_commit": "b5a432157de6b8884f81104cd02926adf4d597e4",
+          "engine_repo": "AIwork4me/qwen-image-rocm",
+          "engine_commit": "cbd9e74eb121c281d97cf25130cd8de6ffa1be04",
+          "gpu": "AMD Radeon RX 7900 XTX 24 GB (gfx1100, native Windows ROCm)",
+          "precision": "bf16",
+          "steps": 40,
+          "cfg": 1,
+          "sampler": "euler/simple",
+          "seed": 42,
+          "size": "832x1248",
+          "wall_time_s": 57.452,
+          "vram_peak_mb": 14458.9,
+          "generated_utc": "2026-11-01T12:56:30+00:00",
+          "non_square_probe": true
+        },
+        "license": "CC BY-NC 4.0 (generated with Qwen-Image-2.1 under the Qwen Research License)"
+      },
+      "gpt": {
+        "planned_size": "832x1248",
+        "planned_quality": "medium",
+        "model": "gpt-image-2-2026-04-21",
+        "byok": true,
+        "submissions": 0
+      },
+      "submissions": []
+    },
+    {
+      "case_id": "case-396",
+      "status": "OPEN_CHALLENGE",
+      "blocked_reason": null,
+      "title": {
+        "en": "Vintage Dragon Encyclopedia",
+        "zh": "龙类物种复古百科海报",
+        "library_title_zh": "龙类物种复古百科海报"
+      },
+      "category": "Posters & Typography",
+      "aspect": "1:1.414 (A4 portrait)",
+      "canvas": {
+        "width": 768,
+        "height": 1088
+      },
+      "prompt": "Create a highly detailed A4 vertical vintage fantasy encyclopedia style dragon species poster.\n\nStyle: medieval creature atlas, ancient mythology manuscript, museum fantasy archive, old explorer journal.\n\nMain subject:\na massive hyper realistic dragon standing proudly in center with detailed scales, smoke from nostrils, giant wings partially open.\n\nBackground:\nstormy mountains, ancient ruins, fog layers, burnt parchment texture.\n\nColor palette:\ndark emerald, ash gray, faded gold, ancient brown, deep crimson.\n\nInclude infographic sections:\nSpecies Type,\nFire Capacity,\nWing Structure,\nTemperament Scale,\nHabitat Region,\nBattle Strength,\nAncient Legends,\nScale Patterns,\nSkull Diagram,\nHunter Notes.\n\nAdd:\nengraved fantasy sketches,\nancient symbols,\nold map textures,\nink grain,\ncollectible poster layout.\n\nNO modern UI.\nNO futuristic elements.\nNO flat minimalism.\n\nUltra detailed.\n8K printable masterpiece.",
+      "prompt_sha256": "b3a7f6daa4401a6c67e814b9fc15fdb9b858bd791294b28f976e696c922966a2",
+      "prompt_language": "en",
+      "prompt_derivation": null,
+      "reference": {
+        "library": "freestylefly/awesome-gpt-image-2",
+        "library_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+        "library_case_id": 396,
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/docs/gallery-part-2.md#case-396",
+        "library_license": "MIT",
+        "source_label": "@sha_zdiii",
+        "source_url": "https://x.com/sha_zdiii/status/2052237839119835280",
+        "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
+      },
+      "notes": [
+        "A4 ratio approximated as 768x1088 (1:1.4167, 0.84 MP) — closest 16-px-multiple canvas within budget.",
+        "Ten infographic sections + engraved-sketch marginalia."
+      ],
+      "qwen": {
+        "image": "gallery/qwen/case-396.png",
+        "image_sha256": "6c9d7e15fa9714850feba9b60427c7a02227c5542ef99290b7d306b444c0a71a",
+        "width": 768,
+        "height": 1088,
+        "generation": {
+          "model": "Qwen-Image-2.1",
+          "weights_repo": "Comfy-Org/Qwen-Image-2.1",
+          "weights_revision": "aacf31a6d48e707f352ecba714cee0680da3479b",
+          "comfyui_commit": "b5a432157de6b8884f81104cd02926adf4d597e4",
+          "engine_repo": "AIwork4me/qwen-image-rocm",
+          "engine_commit": "cbd9e74eb121c281d97cf25130cd8de6ffa1be04",
+          "gpu": "AMD Radeon RX 7900 XTX 24 GB (gfx1100, native Windows ROCm)",
+          "precision": "bf16",
+          "steps": 40,
+          "cfg": 1,
+          "sampler": "euler/simple",
+          "seed": 42,
+          "size": "768x1088",
+          "wall_time_s": 46.411,
+          "vram_peak_mb": 15009.8,
+          "generated_utc": "2026-11-01T12:57:17+00:00",
+          "non_square_probe": true
+        },
+        "license": "CC BY-NC 4.0 (generated with Qwen-Image-2.1 under the Qwen Research License)"
+      },
+      "gpt": {
+        "planned_size": "768x1088",
+        "planned_quality": "medium",
+        "model": "gpt-image-2-2026-04-21",
+        "byok": true,
+        "submissions": 0
+      },
+      "submissions": []
+    },
+    {
+      "case_id": "case-474",
+      "status": "OPEN_CHALLENGE",
+      "blocked_reason": null,
+      "title": {
+        "en": "Minimal Travel Poster Series",
+        "zh": "四城极简旅行海报系列",
+        "library_title_zh": "四城极简旅行海报系列"
+      },
+      "category": "Posters & Typography",
+      "aspect": "16:9",
+      "canvas": {
+        "width": 1280,
+        "height": 720
+      },
+      "prompt": "Minimalist flat travel poster illustration series of iconic destinations around the world, clean vector art style, Scandinavian color palette, soft pastel tones, calm atmospheric scenery, Hallstatt Austria lakeside village with alpine mountains and reflections, Bergen Norway colorful harbor houses with fjord background, Kyoto Japan traditional riverside town with cherry blossoms and pagoda, Santorini Greece white architecture with blue domes overlooking the sea, ultra clean composition, geometric landscape shapes, smooth gradients, elegant typography with destination names, modern tourism poster aesthetic, serene travel mood, crisp vector lines, cinematic wide-angle scenery, peaceful skies with stylized clouds, highly detailed environment art, contemporary flat illustration, premium editorial travel design, balanced composition, minimal shadows, dreamy vacation atmosphere, soft morning lighting, high-end Airbnb poster vibe, Behance trending style, 4k, ultra detailed",
+      "prompt_sha256": "4e590d6ca18bdf7f3701705240c63e86f7b7d6ddb996609405d80ee32b7fdb4a",
+      "prompt_language": "en",
+      "prompt_derivation": null,
+      "reference": {
+        "library": "freestylefly/awesome-gpt-image-2",
+        "library_url": "https://github.com/freestylefly/awesome-gpt-image-2",
+        "library_case_id": 474,
+        "library_case_url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/main/docs/gallery-part-2.md#case-474",
+        "library_license": "MIT",
+        "source_label": "@Taaruk_",
+        "source_url": "https://x.com/Taaruk_/status/2059188921096085888",
+        "source_note": "Prompt republished under the library's MIT grant with attribution. The library's image for this case is NOT reused in this project."
+      },
+      "notes": [
+        "Four named destinations in one wide canvas; destination-name typography in elegant type."
+      ],
+      "qwen": {
+        "image": "gallery/qwen/case-474.png",
+        "image_sha256": "ab78464ba34e038a9caffaf9de5a150da3ced02fecab264c467fe4e81cb47bb8",
+        "width": 1280,
+        "height": 720,
+        "generation": {
+          "model": "Qwen-Image-2.1",
+          "weights_repo": "Comfy-Org/Qwen-Image-2.1",
+          "weights_revision": "aacf31a6d48e707f352ecba714cee0680da3479b",
+          "comfyui_commit": "b5a432157de6b8884f81104cd02926adf4d597e4",
+          "engine_repo": "AIwork4me/qwen-image-rocm",
+          "engine_commit": "cbd9e74eb121c281d97cf25130cd8de6ffa1be04",
+          "gpu": "AMD Radeon RX 7900 XTX 24 GB (gfx1100, native Windows ROCm)",
+          "precision": "bf16",
+          "steps": 40,
+          "cfg": 1,
+          "sampler": "euler/simple",
+          "seed": 42,
+          "size": "1280x720",
+          "wall_time_s": 51.347,
+          "vram_peak_mb": 14523.5,
+          "generated_utc": "2026-11-01T12:58:09+00:00",
+          "non_square_probe": true
+        },
+        "license": "CC BY-NC 4.0 (generated with Qwen-Image-2.1 under the Qwen Research License)"
+      },
+      "gpt": {
+        "planned_size": "1280x720",
+        "planned_quality": "medium",
+        "model": "gpt-image-2-2026-04-21",
+        "byok": true,
+        "submissions": 0
+      },
+      "submissions": []
+    }
+  ]
+}

@@ -5,6 +5,13 @@ import type { SiteModel } from '../types';
 export const siteModel = site as unknown as SiteModel;
 export const repoUrl = 'https://github.com/AIwork4me/open-image-showdown';
 
+/** Resolve a site-root-relative asset path against the deploy base
+ * (GitHub Pages serves under /open-image-showdown/). */
+export function asset(path: string): string {
+  const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+  return `${base}/${path.replace(/^\//, '')}`;
+}
+
 export default function Layout() {
   return (
     <>

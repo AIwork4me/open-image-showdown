@@ -1,4 +1,4 @@
-import { siteModel, repoUrl } from '../components/Layout';
+import { siteModel, repoUrl, asset } from '../components/Layout';
 import CaseCard from '../components/CaseCard';
 
 function pick<T>(arr: T[], n: number): T[] {
@@ -64,7 +64,7 @@ export default function Home() {
             <div className="hero-strip">
               {heroCases.map((c) => (
                 <a key={c.case_id} href={`#/case/${c.case_id}`}>
-                  <img src={c.qwen!.image} alt={`${c.title.en} — Qwen-Image 2.1`} />
+                  <img src={asset(c.qwen!.image)} alt={`${c.title.en} — Qwen-Image 2.1`} />
                   <span className="cap">
                     <b>{c.title.en}</b>
                     Qwen-Image 2.1 · {c.canvas.width}×{c.canvas.height} · seed {c.qwen!.generation.seed}

@@ -1,12 +1,13 @@
 import type { Case } from '../types';
 import StatusBadge from './StatusBadge';
+import { asset } from './Layout';
 
 export default function CaseCard({ c }: { c: Case }) {
   return (
     <a className="case-card" href={`#/case/${c.case_id}`}>
       <div className="thumb">
         {c.qwen ? (
-          <img src={c.qwen.image} alt={`${c.title.en} — Qwen-Image 2.1 output`} loading="lazy" />
+          <img src={asset(c.qwen.image)} alt={`${c.title.en} — Qwen-Image 2.1 output`} loading="lazy" />
         ) : (
           <div className="pending">Qwen generation pending / failed — see case page</div>
         )}

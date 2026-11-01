@@ -55,7 +55,7 @@ function collectSubmissions(caseId) {
     out.push({
       id: entry,
       state: rec.review?.state ?? 'pending', // pending | accepted | rejected
-      image: `/gallery/${dest}`,
+      image: `gallery/${dest}`,
       image_sha256: rec.image.sha256 ?? sha256(readFileSync(imgAbs)),
       submitted_by: rec.submitted_by ?? 'anonymous',
       submitted_at: rec.submitted_at ?? null,
@@ -100,7 +100,7 @@ function build() {
       mkdirSync(join(outGallery, 'qwen'), { recursive: true });
       copyFileSync(pngPath, join(outGallery, dest));
       qwen = {
-        image: `/gallery/${dest}`,
+        image: `gallery/${dest}`,
         image_sha256: run.image.sha256,
         width: run.image.width,
         height: run.image.height,

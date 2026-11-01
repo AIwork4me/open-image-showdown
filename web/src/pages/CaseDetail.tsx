@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { siteModel, repoUrl } from '../components/Layout';
+import { siteModel, repoUrl, asset } from '../components/Layout';
 import StatusBadge from '../components/StatusBadge';
 import PromptBlock from '../components/PromptBlock';
 import Lightbox from '../components/Lightbox';
@@ -43,9 +43,9 @@ export default function CaseDetail() {
       </div>
       <div className="img-holder">
         <img
-          src={gpt.image}
+          src={asset(gpt.image)}
           alt={`${c.title.en} — GPT Image 2 output`}
-          onClick={() => setLightbox({ src: gpt.image, cap: `${c.title.en} — GPT Image 2` })}
+          onClick={() => setLightbox({ src: asset(gpt.image), cap: `${c.title.en} — GPT Image 2` })}
         />
       </div>
       <div className="panel-foot">
@@ -93,9 +93,9 @@ export default function CaseDetail() {
       </div>
       <div className="img-holder">
         <img
-          src={c.qwen.image}
+          src={asset(c.qwen.image)}
           alt={`${c.title.en} — Qwen-Image 2.1 output`}
-          onClick={() => setLightbox({ src: c.qwen!.image, cap: `${c.title.en} — Qwen-Image 2.1` })}
+          onClick={() => setLightbox({ src: asset(c.qwen!.image), cap: `${c.title.en} — Qwen-Image 2.1` })}
         />
       </div>
       <div className="panel-foot">
@@ -170,8 +170,8 @@ export default function CaseDetail() {
         {gpt && c.qwen ? (
           <>
             <CompareSlider
-              leftSrc={blindFlip ? c.qwen.image : gpt.image}
-              rightSrc={blindFlip ? gpt.image : c.qwen.image}
+              leftSrc={asset(blindFlip ? c.qwen.image : gpt.image)}
+              rightSrc={asset(blindFlip ? gpt.image : c.qwen.image)}
               leftLabel={leftLabel}
               rightLabel={rightLabel}
               alt={c.title.en}
@@ -324,6 +324,10 @@ uv run --no-project python -I tools/generate_gpt.py --case ${c.case_id}
                     <th>Share this case</th>
                     <td>
                       <code>{shareUrl}</code>
+                      <br />
+                      <a href={asset(`social/${c.case_id}.png`)} target="_blank" rel="noreferrer">
+                        1200×630 social preview image →
+                      </a>
                     </td>
                   </tr>
                 </tbody>

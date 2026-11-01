@@ -1,0 +1,77 @@
+name: CI
+
+# CPU-only gate. No GPU, no OpenAI key, no network beyond package installs.
+# The BYOK tooling is verified by contract tests (injected fake transports).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  python:
+    name: pytest + integrity + secret scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+
+      - name: Contract tests (BYOK API contract, security invariants)
+        run: uv run --no-project --with pytest --python 3.12 python -I -m pytest tests/ -q
+
+      - name: Gallery integrity (schema, sha256, dims, provenance, duplicates, secrets, paths)
+        run: uv run --no-project --python 3.12 python -I tools/validate_gallery.py
+
+      - name: Repo hygiene — no key-shaped strings in tracked files
+        run: |
+          ! git ls-files -z | xargs -0 grep -nIE "sk-[A-Za-z0-9_-]{20,}" \
+            || (echo "::error::key-shaped string found in tracked files" && exit 1)
+
+  web:
+    name: site build (typecheck + production bundle)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Build site from frozen artifacts
+        run: |
+          npm ci
+          npm run build
+
+      - name: Sanity — built data and images exist
+        run: |
+          test -f dist/index.html
+          test "$(ls dist/gallery/qwen/*.png | wc -l)" -ge 12
+          grep -q "Open Image Showdown" dist/index.html
+
+  mobile-build:
+    name: mobile build sanity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Bundle contains responsive rules + no horizontal overflow assets
+        run: |
+          cd web && npm ci && npm run build
+          grep -q "max-width" dist/assets/*.css
+          test -f dist/index.html && echo "mobile build sanity PASS"

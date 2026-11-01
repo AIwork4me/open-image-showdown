@@ -22,7 +22,9 @@ sys.path.insert(0, str(REPO / "tools"))
 import gpt_client  # noqa: E402
 import generate_gpt  # noqa: E402
 
-FAKE_KEY = "sk-test-DO-NOT-USE-0000000000000000000000000000"
+# Deliberately NOT key-shaped (no sk- prefix) so the repo secret scanner
+# stays zero-allowlist: any key-looking string in the tree fails validation.
+FAKE_KEY = "TEST-KEY-FIXTURE-NOT-A-REAL-KEY-000000000000"
 
 
 def tiny_png(width: int = 4, height: int = 4) -> bytes:
